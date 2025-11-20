@@ -16,9 +16,15 @@ class HomeController extends Controller
             ->whereHas('pricing')
             ->get();
 
-        // Get categories for filtering
         $categories = Category::mainCategories()->get();
 
-        return view('web.home', compact('products', 'categories'));
+        $freshProducts = Product::with(['pricing', 'category', 'priceHistory'])
+            ->whereHas('pricing')
+            ->where('status', '1')
+            ->latest()
+            ->take(8)
+            ->get();
+
+        return view('web.home', compact('products', 'categories', 'freshProducts'));
     }
 }
