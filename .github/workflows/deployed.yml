@@ -31,3 +31,4 @@ jobs:
             /opt/alt/php82/usr/bin/php artisan view:clear
             /opt/alt/php82/usr/bin/php artisan migrate --force
             /opt/alt/php82/usr/bin/php artisan db:seed --class=UserSeeder
+            /opt/alt/php82/usr/bin/php artisan storage:link
