@@ -22,6 +22,7 @@ jobs:
           REMOTE_PORT: ${{ secrets.ssh_port }}
           SOURCE: ./
           TARGET: /home/u128827813/domains/test.pearl-developer.com/public_html/aarshinternational
+          ARGS: "-avz --exclude='.env' --exclude='.env.*' --exclude='.git'"
 
           SCRIPT_AFTER: |
             cd /home/u128827813/domains/test.pearl-developer.com/public_html/aarshinternational
