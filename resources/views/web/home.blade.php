@@ -302,7 +302,7 @@
 				<div class="fresh-prod-header">
 					<div class="fresh-prod-content">
 						<h2>Products Latest Price</h2>
-						<p class="fresh-prod-subtitle">Real-time price tracking with daily comparisons</p>
+						<p class="fresh-prod-subtitle mb-0">Real-time price tracking with daily comparisons</p>
 					</div>
 
 					<!-- Tab Navigation -->

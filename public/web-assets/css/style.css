@@ -10756,6 +10756,11 @@ input[type=text]:focus {
             font-weight: 500;
             color: #333;
         }
+        .fresh-prod-image img {
+          width: 80px;
+          height: 50px;
+          object-fit: contain;
+        }
 
         .fresh-prod-emoji {
             font-size: 20px;
