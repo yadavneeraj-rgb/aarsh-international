@@ -32,21 +32,21 @@
                     <div class="col-lg-6 position-relative">
                         <div class="product10_thumb img_moving_anim1 position-relative d-flex justify-content-center align-items-center">
                             @if($product->image)
-                                <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}">
-                                <div class="product10_back_thumb1 position-absolute">
+                                <img src="{{ asset('storage/' . $product->image) }}" class="w-100" alt="{{ $product->name }}">
+                                <!-- <div class="product10_back_thumb1 position-absolute">
                                     <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}">
-                                </div>
-                                <div class="product10_back_thumb2 position-absolute">
+                                </div> -->
+                                <!-- <div class="product10_back_thumb2 position-absolute">
                                     <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}">
-                                </div>
+                                </div> -->
                             @else
-                                <img src="{{ asset('web-assets/images/product3.png') }}" alt="image_not_found">
-                                <div class="product10_back_thumb1 position-absolute">
+                                <img src="{{ asset('web-assets/images/product3.png') }}" class="w-100" alt="image_not_found">
+                                <!-- <div class="product10_back_thumb1 position-absolute">
                                     <img src="{{ asset('web-assets/images/product3.png') }}" alt="image_not_found">
-                                </div>
-                                <div class="product10_back_thumb2 position-absolute">
+                                </div> -->
+                                <!-- <div class="product10_back_thumb2 position-absolute">
                                     <img src="{{ asset('web-assets/images/product3.png') }}" alt="image_not_found">
-                                </div>
+                                </div> -->
                             @endif
                         </div>
                     </div>
