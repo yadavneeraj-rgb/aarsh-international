@@ -32,7 +32,7 @@ Route::controller(HomeController::class)->group(function () {
 
 // Public Routes
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/about', [HomeController::class, 'about'])->name('about');
+Route::get('/about', [AboutController::class, 'about'])->name('about');
 Route::get('/products', [\App\Http\Controllers\Web\ProductController::class, 'product'])->name('products');
 Route::get('/products/{id}', [\App\Http\Controllers\Web\ProductController::class, 'show'])->name('products.show');
 Route::get('/contact', [ContactController::class, 'contact'])->name('contact');
