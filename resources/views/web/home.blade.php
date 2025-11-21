@@ -49,7 +49,7 @@
 				<div class="row align-items-center">
 					<div class="col-md-6">
 						<div class="product_gallery aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
-							<img src="{{asset("web-assets/sale8.png")}}" alt="image_not_found">
+							<img src="{{asset("web-assets/images/sale8.png")}}" alt="image_not_found">
 						</div>
 					</div>
 					<div class="col-md-6">
@@ -186,7 +186,8 @@
 			</div>
 		</div>
 		<!-- banner side image start -->
-		<img class="category_left_thumb position-absolute" src="{{asset("web-assets/images/shape3.png")}}" alt="image_not_found">
+		<img class="category_left_thumb position-absolute" src="{{asset("web-assets/images/shape3.png")}}"
+			alt="image_not_found">
 		<!-- banner side image end -->
 	</section>
 	<!-- category section end -->
@@ -288,7 +289,8 @@
 			</div>
 		</div>
 		<!-- banner side image start -->
-		<img class="sale_right_thumb position-absolute" src="{{asset("web-assets/images/shape4.png")}}" alt="image_not_found">
+		<img class="sale_right_thumb position-absolute" src="{{asset("web-assets/images/shape4.png")}}"
+			alt="image_not_found">
 		<!-- banner side image end -->
 	</section>
 	<!-- sale section start -->
@@ -495,1957 +497,297 @@
 	</section>
 
 	<!-- product section start -->
-	<section class="product_section sec_space_xxs_50" data-aos="fade-up" data-aos-duration="2000">
-		<div class="container">
-			<div class="row align-items-center">
-				<div class="col-lg-6">
-					<div class="product_sec_content">
-						<div class="product_sec_sub_title d-flex align-items-center pb-2">
-							<i class="far fa-circle"></i>
-							<i class="far fa-circle"></i>
-							<i class="far fa-circle"></i>
+<section class="product_section sec_space_xxs_50" data-aos="fade-up" data-aos-duration="2000">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="product_sec_content">
+                    <div class="product_sec_sub_title d-flex align-items-center pb-2">
+                        <i class="far fa-circle"></i>
+                        <i class="far fa-circle"></i>
+                        <i class="far fa-circle"></i>
+                    </div>
+                    <h2 class="product_sec_title pb-3">Our Fresh Products</h2>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <ul class="product_tabnav_1 nav nav-pills ul_li_right mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link rounded-pill me-1 active" id="pills-all-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-all" type="button" role="tab" aria-controls="pills-all"
+                            aria-selected="true">All</button>
+                    </li>
+                    @foreach($categories->take(4) as $category)
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link rounded-pill me-1" id="pills-{{ $category->slug }}-tab"
+                                data-bs-toggle="pill" data-bs-target="#pills-{{ $category->slug }}" type="button"
+                                role="tab" aria-controls="pills-{{ $category->slug }}" aria-selected="false">
+                                {{ $category->name }}
+                            </button>
+                        </li>
+                    @endforeach
+                </ul>
+            </div>
+        </div>
 
-						</div>
-						<h2 class="product_sec_title pb-3">Our Fresh Products</h2>
-					</div>
-				</div>
-				<div class="col-lg-6">
-					<ul class="product_tabnav_1 nav nav-pills ul_li_right mb-3" id="pills-tab" role="tablist">
-						<li class="nav-item" role="presentation">
-							<button class="nav-link rounded-pill me-1 active" id="pills-all-tab" data-bs-toggle="pill"
-								data-bs-target="#pills-all" type="button" role="tab" aria-controls="pills-all"
-								aria-selected="true">All</button>
-						</li>
-						<li class="nav-item" role="presentation">
-							<button class="nav-link rounded-pill me-1" id="pills-vegetables-tab" data-bs-toggle="pill"
-								data-bs-target="#pills-vegetables" type="button" role="tab" aria-controls="pills-vegetables"
-								aria-selected="false">Vegetables</button>
-						</li>
-						<li class="nav-item" role="presentation">
-							<button class="nav-link rounded-pill me-1" id="pills-fruits-tab" data-bs-toggle="pill"
-								data-bs-target="#pills-fruits" type="button" role="tab" aria-controls="pills-fruits"
-								aria-selected="false">Fruits</button>
-						</li>
-						<li class="nav-item" role="presentation">
-							<button class="nav-link rounded-pill me-1" id="pills-bread-tab" data-bs-toggle="pill"
-								data-bs-target="#pills-bread" type="button" role="tab" aria-controls="pills-bread"
-								aria-selected="false">Bread</button>
-						</li>
-						<li class="nav-item" role="presentation">
-							<button class="nav-link rounded-pill me-1" id="pills-meat-tab" data-bs-toggle="pill"
-								data-bs-target="#pills-meat" type="button" role="tab" aria-controls="pills-meat"
-								aria-selected="false">Meat</button>
-						</li>
-					</ul>
-				</div>
-			</div>
+        <div class="tab-content" id="pills-tabContent">
 
-			<div class="tab-content" id="pills-tabContent">
-				<div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab">
-					<div class="row g-4">
-						<div class="col-sm-6 col-md-6 col-xl-3">
-							<div class="product_layout_1 overflow-hidden position-relative">
-								<div class="product_layout_content bg-white position-relative">
-									<div class="product_image_wrap">
-										<a class="product_image d-flex justify-content-center align-items-center"
-											href="shop-list.html" target="_blank">
-											<img class="pic-1" src="{{asset("web-assets/images/product1.png")}}" alt="image_not_found">
-											<img class="pic-2" src="{{asset("web-assets/images/product2.png")}}" alt="image_not_found">
-										</a>
-										<ul class="product_badge_group ul_li_block">
-											<li><span
-													class="product_badge badge_meats position-absolute rounded-pill text-uppercase">Meats</span>
-											</li>
-											<li><span
-													class="product_badge badge_discount position-absolute rounded-pill">-27%</span>
-											</li>
-										</ul>
-										<ul class="product_action_btns ul_li_block d-flex">
-											<li><a class="tooltips" data-placement="top" title="Search Product" href="#!"><i
-														class="fas fa-search"></i></a></li>
-											<li><a class="tooltips" data-placement="top" title="Add To Cart"
-													href="#product_quick_view" data-bs-toggle="modal"><i
-														class="fas fa-shopping-bag"></i></a></li>
-										</ul>
-									</div>
-									<div class="rating_wrap d-flex">
-										<ul class="rating_star ul_li">
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li><i class="far fa-star"></i></li>
-										</ul>
-										<span class="shop_review_text">( 4.0 )</span>
-									</div>
-									<div class="product_content">
-										<h3 class="product_title">
-											<a href="shop-list.html" target="_blank">Fresh Cabbage</a>
-										</h3>
-										<div class="product_price">
-											<span class="sale_price pe-1">$50.00</span>
-											<del>$65.00</del>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-6 col-xl-3">
-							<div class="product_layout_1 overflow-hidden position-relative">
-								<div class="product_layout_content bg-white position-relative">
-									<div class="product_image_wrap">
-										<a class="product_image d-flex justify-content-center align-items-center"
-											href="shop-list.html" target="_blank">
-											<img class="pic-1" src="{{asset("web-assets/images/product2.png")}}" alt="image_not_found">
-											<img class="pic-2" src="{{asset("web-assets/images/product3.png")}}" alt="image_not_found">
-										</a>
-										<ul class="product_badge_group ul_li_block">
-											<li><span
-													class="product_badge badge_meats position-absolute rounded-pill text-uppercase">Meats</span>
-											</li>
-											<li><span
-													class="product_badge badge_discount position-absolute rounded-pill">-27%</span>
-											</li>
-										</ul>
-										<ul class="product_action_btns ul_li_block d-flex">
-											<li><a class="tooltips" data-placement="top" title="Search Product" href="#!"><i
-														class="fas fa-search"></i></a></li>
-											<li><a class="tooltips" data-placement="top" title="Add To Cart"
-													href="#product_quick_view" data-bs-toggle="modal"><i
-														class="fas fa-shopping-bag"></i></a></li>
-										</ul>
-									</div>
-									<div class="rating_wrap d-flex">
-										<ul class="rating_star ul_li">
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li><i class="far fa-star"></i></li>
-										</ul>
-										<span class="shop_review_text">( 4.0 )</span>
-									</div>
-									<div class="product_content">
-										<h3 class="product_title">
-											<a href="shop-list.html" target="_blank">Fresh Cabbage</a>
-										</h3>
-										<div class="product_price">
-											<span class="sale_price pe-1">$50.00</span>
-											<del>$65.00</del>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-6 col-xl-3">
-							<div class="product_layout_1 overflow-hidden position-relative">
-								<div class="product_layout_content bg-white position-relative">
-									<div class="product_image_wrap">
-										<a class="product_image d-flex justify-content-center align-items-center"
-											href="shop-list.html" target="_blank">
-											<img class="pic-1" src="{{asset("web-assets/images/product3.png")}}" alt="image_not_found">
-											<img class="pic-2" src="{{asset("web-assets/images/product4.png")}}" alt="image_not_found">
-										</a>
-										<ul class="product_badge_group ul_li_block">
-											<li><span
-													class="product_badge badge_meats position-absolute rounded-pill text-uppercase">Meats</span>
-											</li>
-											<li><span
-													class="product_badge badge_discount position-absolute rounded-pill">-27%</span>
-											</li>
-										</ul>
-										<ul class="product_action_btns ul_li_block d-flex">
-											<li><a class="tooltips" data-placement="top" title="Search Product" href="#!"><i
-														class="fas fa-search"></i></a></li>
-											<li><a class="tooltips" data-placement="top" title="Add To Cart"
-													href="#product_quick_view" data-bs-toggle="modal"><i
-														class="fas fa-shopping-bag"></i></a></li>
-										</ul>
-									</div>
-									<div class="rating_wrap d-flex">
-										<ul class="rating_star ul_li">
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li><i class="far fa-star"></i></li>
-										</ul>
-										<span class="shop_review_text">( 4.0 )</span>
-									</div>
-									<div class="product_content">
-										<h3 class="product_title">
-											<a href="shop-list.html" target="_blank">Fresh Cabbage</a>
-										</h3>
-										<div class="product_price">
-											<span class="sale_price pe-1">$50.00</span>
-											<del>$65.00</del>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-6 col-xl-3">
-							<div class="product_layout_1 overflow-hidden position-relative">
-								<div class="product_layout_content bg-white position-relative">
-									<div class="product_image_wrap">
-										<a class="product_image d-flex justify-content-center align-items-center"
-											href="shop-list.html" target="_blank">
-											<img class="pic-1" src="{{asset("web-assets/images/product4.png")}}" alt="image_not_found">
-											<img class="pic-2" src="{{asset("web-assets/images/product5.png")}}" alt="image_not_found">
-										</a>
-										<ul class="product_badge_group ul_li_block">
-											<li><span
-													class="product_badge badge_meats position-absolute rounded-pill text-uppercase">Meats</span>
-											</li>
-											<li><span
-													class="product_badge badge_discount position-absolute rounded-pill">-27%</span>
-											</li>
-										</ul>
-										<ul class="product_action_btns ul_li_block d-flex">
-											<li><a class="tooltips" data-placement="top" title="Search Product" href="#!"><i
-														class="fas fa-search"></i></a></li>
-											<li><a class="tooltips" data-placement="top" title="Add To Cart"
-													href="#product_quick_view" data-bs-toggle="modal"><i
-														class="fas fa-shopping-bag"></i></a></li>
-										</ul>
-									</div>
-									<div class="rating_wrap d-flex">
-										<ul class="rating_star ul_li">
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li><i class="far fa-star"></i></li>
-										</ul>
-										<span class="shop_review_text">( 4.0 )</span>
-									</div>
-									<div class="product_content">
-										<h3 class="product_title">
-											<a href="shop-list.html" target="_blank">Fresh Cabbage</a>
-										</h3>
-										<div class="product_price">
-											<span class="sale_price pe-1">$50.00</span>
-											<del>$65.00</del>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-6 col-xl-3">
-							<div class="product_layout_1 overflow-hidden position-relative">
-								<div class="product_layout_content bg-white position-relative">
-									<div class="product_image_wrap">
-										<a class="product_image d-flex justify-content-center align-items-center"
-											href="shop-list.html" target="_blank">
-											<img class="pic-1" src="{{asset("web-assets/images/product5.png")}}" alt="image_not_found">
-											<img class="pic-2" src="{{asset("web-assets/images/product6.png")}}" alt="image_not_found">
-										</a>
-										<ul class="product_badge_group ul_li_block">
-											<li><span
-													class="product_badge badge_meats position-absolute rounded-pill text-uppercase">Meats</span>
-											</li>
-											<li><span
-													class="product_badge badge_discount position-absolute rounded-pill">-27%</span>
-											</li>
-										</ul>
-										<ul class="product_action_btns ul_li_block d-flex">
-											<li><a class="tooltips" data-placement="top" title="Search Product" href="#!"><i
-														class="fas fa-search"></i></a></li>
-											<li><a class="tooltips" data-placement="top" title="Add To Cart"
-													href="#product_quick_view" data-bs-toggle="modal"><i
-														class="fas fa-shopping-bag"></i></a></li>
-										</ul>
-									</div>
-									<div class="rating_wrap d-flex">
-										<ul class="rating_star ul_li">
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li><i class="far fa-star"></i></li>
-										</ul>
-										<span class="shop_review_text">( 4.0 )</span>
-									</div>
-									<div class="product_content">
-										<h3 class="product_title">
-											<a href="shop-list.html" target="_blank">Fresh Cabbage</a>
-										</h3>
-										<div class="product_price">
-											<span class="sale_price pe-1">$50.00</span>
-											<del>$65.00</del>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-6 col-xl-3">
-							<div class="product_layout_1 overflow-hidden position-relative">
-								<div class="product_layout_content bg-white position-relative">
-									<div class="product_image_wrap">
-										<a class="product_image d-flex justify-content-center align-items-center"
-											href="shop-list.html" target="_blank">
-											<img class="pic-1" src="{{asset("web-assets/images/product6.png")}}" alt="image_not_found">
-											<img class="pic-2" src="{{asset("web-assets/images/product7.png")}}" alt="image_not_found">
-										</a>
-										<ul class="product_badge_group ul_li_block">
-											<li><span
-													class="product_badge badge_meats position-absolute rounded-pill text-uppercase">Meats</span>
-											</li>
-											<li><span
-													class="product_badge badge_discount position-absolute rounded-pill">-27%</span>
-											</li>
-										</ul>
-										<ul class="product_action_btns ul_li_block d-flex">
-											<li><a class="tooltips" data-placement="top" title="Search Product" href="#!"><i
-														class="fas fa-search"></i></a></li>
-											<li><a class="tooltips" data-placement="top" title="Add To Cart"
-													href="#product_quick_view" data-bs-toggle="modal"><i
-														class="fas fa-shopping-bag"></i></a></li>
-										</ul>
-									</div>
-									<div class="rating_wrap d-flex">
-										<ul class="rating_star ul_li">
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li><i class="far fa-star"></i></li>
-										</ul>
-										<span class="shop_review_text">( 4.0 )</span>
-									</div>
-									<div class="product_content">
-										<h3 class="product_title">
-											<a href="shop-list.html" target="_blank">Fresh Cabbage</a>
-										</h3>
-										<div class="product_price">
-											<span class="sale_price pe-1">$50.00</span>
-											<del>$65.00</del>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-6 col-xl-3">
-							<div class="product_layout_1 overflow-hidden position-relative">
-								<div class="product_layout_content bg-white position-relative">
-									<div class="product_image_wrap">
-										<a class="product_image d-flex justify-content-center align-items-center"
-											href="shop-list.html" target="_blank">
-											<img class="pic-1" src="{{asset("web-assets/images/product7.png")}}" alt="image_not_found">
-											<img class="pic-2" src="{{asset("web-assets/images/product10.png")}}" alt="image_not_found">
-										</a>
-										<ul class="product_badge_group ul_li_block">
-											<li><span
-													class="product_badge badge_meats position-absolute rounded-pill text-uppercase">Meats</span>
-											</li>
-											<li><span
-													class="product_badge badge_discount position-absolute rounded-pill">-27%</span>
-											</li>
-										</ul>
-										<ul class="product_action_btns ul_li_block d-flex">
-											<li><a class="tooltips" data-placement="top" title="Search Product" href="#!"><i
-														class="fas fa-search"></i></a></li>
-											<li><a class="tooltips" data-placement="top" title="Add To Cart"
-													href="#product_quick_view" data-bs-toggle="modal"><i
-														class="fas fa-shopping-bag"></i></a></li>
-										</ul>
-									</div>
-									<div class="rating_wrap d-flex">
-										<ul class="rating_star ul_li">
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li><i class="far fa-star"></i></li>
-										</ul>
-										<span class="shop_review_text">( 4.0 )</span>
-									</div>
-									<div class="product_content">
-										<h3 class="product_title">
-											<a href="shop-list.html" target="_blank">Fresh Cabbage</a>
-										</h3>
-										<div class="product_price">
-											<span class="sale_price pe-1">$50.00</span>
-											<del>$65.00</del>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-6 col-xl-3">
-							<div class="product_layout_1 overflow-hidden position-relative">
-								<div class="product_layout_content bg-white position-relative">
-									<div class="product_image_wrap">
-										<a class="product_image d-flex justify-content-center align-items-center"
-											href="shop-list.html" target="_blank">
-											<img class="pic-1" src="{{asset("web-assets/images/product8.png")}}" alt="image_not_found">
-											<img class="pic-2" src="{{asset("web-assets/images/product11.png")}}" alt="image_not_found">
-										</a>
-										<ul class="product_badge_group ul_li_block">
-											<li><span
-													class="product_badge badge_meats position-absolute rounded-pill text-uppercase">Meats</span>
-											</li>
-											<li><span
-													class="product_badge badge_discount position-absolute rounded-pill">-27%</span>
-											</li>
-										</ul>
-										<ul class="product_action_btns ul_li_block d-flex">
-											<li><a class="tooltips" data-placement="top" title="Search Product" href="#!"><i
-														class="fas fa-search"></i></a></li>
-											<li><a class="tooltips" data-placement="top" title="Add To Cart"
-													href="#product_quick_view" data-bs-toggle="modal"><i
-														class="fas fa-shopping-bag"></i></a></li>
-										</ul>
-									</div>
-									<div class="rating_wrap d-flex">
-										<ul class="rating_star ul_li">
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li><i class="far fa-star"></i></li>
-										</ul>
-										<span class="shop_review_text">( 4.0 )</span>
-									</div>
-									<div class="product_content">
-										<h3 class="product_title">
-											<a href="shop-list.html" target="_blank">Fresh Cabbage</a>
-										</h3>
-										<div class="product_price">
-											<span class="sale_price pe-1">$50.00</span>
-											<del>$65.00</del>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+            <!-- ============================
+                 ALL PRODUCTS TAB
+            ============================ -->
+            <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab">
+                <div class="row g-4">
+                    @foreach($freshProducts as $product)
+                        <div class="col-sm-6 col-md-6 col-xl-3">
+                            <div class="product_layout_1 overflow-hidden position-relative">
+                                <div class="product_layout_content bg-white position-relative">
+                                    <div class="product_image_wrap">
+                                        <a class="product_image d-flex justify-content-center align-items-center"
+                                            href="{{ route('products') }}" >
+                                            @if($product->image)
+                                                <img class="pic-1" src="{{ asset('storage/' . $product->image) }}"
+                                                    alt="{{ $product->name }}">
+                                                <img class="pic-2" src="{{ asset('storage/' . $product->image) }}"
+                                                    alt="{{ $product->name }}">
+                                            @else
+                                                <img class="pic-1" src="{{ asset('web-assets/images/product1.png') }}"
+                                                    alt="image_not_found">
+                                                <img class="pic-2" src="{{ asset('web-assets/images/product2.png') }}"
+                                                    alt="image_not_found">
+                                            @endif
+                                        </a>
 
-				<div class="tab-pane fade" id="pills-vegetables" role="tabpanel" aria-labelledby="pills-vegetables-tab">
-					<div class="row g-4">
-						<div class="col-sm-6 col-md-6 col-xl-3">
-							<div class="product_layout_1 overflow-hidden position-relative">
-								<div class="product_layout_content bg-white position-relative">
-									<div class="product_image_wrap">
-										<a class="product_image d-flex justify-content-center align-items-center"
-											href="shop-list.html" target="_blank">
-											<img class="pic-1" src="{{asset("web-assets/images/product1.png")}}" alt="image_not_found">
-											<img class="pic-2" src="{{asset("web-assets/images/product2.png")}}" alt="image_not_found">
-										</a>
-										<ul class="product_badge_group ul_li_block">
-											<li><span
-													class="product_badge badge_meats position-absolute rounded-pill text-uppercase">Meats</span>
-											</li>
-											<li><span
-													class="product_badge badge_discount position-absolute rounded-pill">-27%</span>
-											</li>
-										</ul>
-										<ul class="product_action_btns ul_li_block d-flex">
-											<li><a class="tooltips" data-placement="top" title="Search Product" href="#!"><i
-														class="fas fa-search"></i></a></li>
-											<li><a class="tooltips" data-placement="top" title="Add To Cart"
-													href="#product_quick_view" data-bs-toggle="modal"><i
-														class="fas fa-shopping-bag"></i></a></li>
-										</ul>
-									</div>
-									<div class="rating_wrap d-flex">
-										<ul class="rating_star ul_li">
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li><i class="far fa-star"></i></li>
-										</ul>
-										<span class="shop_review_text">( 4.0 )</span>
-									</div>
-									<div class="product_content">
-										<h3 class="product_title">
-											<a href="shop-list.html" target="_blank">Fresh Cabbage</a>
-										</h3>
-										<div class="product_price">
-											<span class="sale_price pe-1">$50.00</span>
-											<del>$65.00</del>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-6 col-xl-3">
-							<div class="product_layout_1 overflow-hidden position-relative">
-								<div class="product_layout_content bg-white position-relative">
-									<div class="product_image_wrap">
-										<a class="product_image d-flex justify-content-center align-items-center"
-											href="shop-list.html" target="_blank">
-											<img class="pic-1" src="{{asset("web-assets/images/product2.png")}}" alt="image_not_found">
-											<img class="pic-2" src="{{asset("web-assets/images/product3.png")}}" alt="image_not_found">
-										</a>
-										<ul class="product_badge_group ul_li_block">
-											<li><span
-													class="product_badge badge_meats position-absolute rounded-pill text-uppercase">Meats</span>
-											</li>
-											<li><span
-													class="product_badge badge_discount position-absolute rounded-pill">-27%</span>
-											</li>
-										</ul>
-										<ul class="product_action_btns ul_li_block d-flex">
-											<li><a class="tooltips" data-placement="top" title="Search Product" href="#!"><i
-														class="fas fa-search"></i></a></li>
-											<li><a class="tooltips" data-placement="top" title="Add To Cart"
-													href="#product_quick_view" data-bs-toggle="modal"><i
-														class="fas fa-shopping-bag"></i></a></li>
-										</ul>
-									</div>
-									<div class="rating_wrap d-flex">
-										<ul class="rating_star ul_li">
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li><i class="far fa-star"></i></li>
-										</ul>
-										<span class="shop_review_text">( 4.0 )</span>
-									</div>
-									<div class="product_content">
-										<h3 class="product_title">
-											<a href="shop-list.html" target="_blank">Fresh Cabbage</a>
-										</h3>
-										<div class="product_price">
-											<span class="sale_price pe-1">$50.00</span>
-											<del>$65.00</del>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-6 col-xl-3">
-							<div class="product_layout_1 overflow-hidden position-relative">
-								<div class="product_layout_content bg-white position-relative">
-									<div class="product_image_wrap">
-										<a class="product_image d-flex justify-content-center align-items-center"
-											href="shop-list.html" target="_blank">
-											<img class="pic-1" src="{{asset("web-assets/images/product3.png")}}" alt="image_not_found">
-											<img class="pic-2" src="{{asset("web-assets/images/product4.png")}}" alt="image_not_found">
-										</a>
-										<ul class="product_badge_group ul_li_block">
-											<li><span
-													class="product_badge badge_meats position-absolute rounded-pill text-uppercase">Meats</span>
-											</li>
-											<li><span
-													class="product_badge badge_discount position-absolute rounded-pill">-27%</span>
-											</li>
-										</ul>
-										<ul class="product_action_btns ul_li_block d-flex">
-											<li><a class="tooltips" data-placement="top" title="Search Product" href="#!"><i
-														class="fas fa-search"></i></a></li>
-											<li><a class="tooltips" data-placement="top" title="Add To Cart"
-													href="#product_quick_view" data-bs-toggle="modal"><i
-														class="fas fa-shopping-bag"></i></a></li>
-										</ul>
-									</div>
-									<div class="rating_wrap d-flex">
-										<ul class="rating_star ul_li">
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li><i class="far fa-star"></i></li>
-										</ul>
-										<span class="shop_review_text">( 4.0 )</span>
-									</div>
-									<div class="product_content">
-										<h3 class="product_title">
-											<a href="shop-list.html" target="_blank">Fresh Cabbage</a>
-										</h3>
-										<div class="product_price">
-											<span class="sale_price pe-1">$50.00</span>
-											<del>$65.00</del>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-6 col-xl-3">
-							<div class="product_layout_1 overflow-hidden position-relative">
-								<div class="product_layout_content bg-white position-relative">
-									<div class="product_image_wrap">
-										<a class="product_image d-flex justify-content-center align-items-center"
-											href="shop-list.html" target="_blank">
-											<img class="pic-1" src="{{asset("web-assets/images/product4.png")}}" alt="image_not_found">
-											<img class="pic-2" src="{{asset("web-assets/images/product5.png")}}" alt="image_not_found">
-										</a>
-										<ul class="product_badge_group ul_li_block">
-											<li><span
-													class="product_badge badge_meats position-absolute rounded-pill text-uppercase">Meats</span>
-											</li>
-											<li><span
-													class="product_badge badge_discount position-absolute rounded-pill">-27%</span>
-											</li>
-										</ul>
-										<ul class="product_action_btns ul_li_block d-flex">
-											<li><a class="tooltips" data-placement="top" title="Search Product" href="#!"><i
-														class="fas fa-search"></i></a></li>
-											<li><a class="tooltips" data-placement="top" title="Add To Cart"
-													href="#product_quick_view" data-bs-toggle="modal"><i
-														class="fas fa-shopping-bag"></i></a></li>
-										</ul>
-									</div>
-									<div class="rating_wrap d-flex">
-										<ul class="rating_star ul_li">
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li><i class="far fa-star"></i></li>
-										</ul>
-										<span class="shop_review_text">( 4.0 )</span>
-									</div>
-									<div class="product_content">
-										<h3 class="product_title">
-											<a href="shop-list.html" target="_blank">Fresh Cabbage</a>
-										</h3>
-										<div class="product_price">
-											<span class="sale_price pe-1">$50.00</span>
-											<del>$65.00</del>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-6 col-xl-3">
-							<div class="product_layout_1 overflow-hidden position-relative">
-								<div class="product_layout_content bg-white position-relative">
-									<div class="product_image_wrap">
-										<a class="product_image d-flex justify-content-center align-items-center"
-											href="shop-list.html" target="_blank">
-											<img class="pic-1" src="{{asset("web-assets/images/product5.png")}}" alt="image_not_found">
-											<img class="pic-2" src="{{asset("web-assets/images/product6.png")}}" alt="image_not_found">
-										</a>
-										<ul class="product_badge_group ul_li_block">
-											<li><span
-													class="product_badge badge_meats position-absolute rounded-pill text-uppercase">Meats</span>
-											</li>
-											<li><span
-													class="product_badge badge_discount position-absolute rounded-pill">-27%</span>
-											</li>
-										</ul>
-										<ul class="product_action_btns ul_li_block d-flex">
-											<li><a class="tooltips" data-placement="top" title="Search Product" href="#!"><i
-														class="fas fa-search"></i></a></li>
-											<li><a class="tooltips" data-placement="top" title="Add To Cart"
-													href="#product_quick_view" data-bs-toggle="modal"><i
-														class="fas fa-shopping-bag"></i></a></li>
-										</ul>
-									</div>
-									<div class="rating_wrap d-flex">
-										<ul class="rating_star ul_li">
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li><i class="far fa-star"></i></li>
-										</ul>
-										<span class="shop_review_text">( 4.0 )</span>
-									</div>
-									<div class="product_content">
-										<h3 class="product_title">
-											<a href="shop-list.html" target="_blank">Fresh Cabbage</a>
-										</h3>
-										<div class="product_price">
-											<span class="sale_price pe-1">$50.00</span>
-											<del>$65.00</del>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-6 col-xl-3">
-							<div class="product_layout_1 overflow-hidden position-relative">
-								<div class="product_layout_content bg-white position-relative">
-									<div class="product_image_wrap">
-										<a class="product_image d-flex justify-content-center align-items-center"
-											href="shop-list.html" target="_blank">
-											<img class="pic-1" src="{{asset("web-assets/images/product6.png")}}" alt="image_not_found">
-											<img class="pic-2" src="{{asset("web-assets/images/product7.png")}}" alt="image_not_found">
-										</a>
-										<ul class="product_badge_group ul_li_block">
-											<li><span
-													class="product_badge badge_meats position-absolute rounded-pill text-uppercase">Meats</span>
-											</li>
-											<li><span
-													class="product_badge badge_discount position-absolute rounded-pill">-27%</span>
-											</li>
-										</ul>
-										<ul class="product_action_btns ul_li_block d-flex">
-											<li><a class="tooltips" data-placement="top" title="Search Product" href="#!"><i
-														class="fas fa-search"></i></a></li>
-											<li><a class="tooltips" data-placement="top" title="Add To Cart"
-													href="#product_quick_view" data-bs-toggle="modal"><i
-														class="fas fa-shopping-bag"></i></a></li>
-										</ul>
-									</div>
-									<div class="rating_wrap d-flex">
-										<ul class="rating_star ul_li">
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li><i class="far fa-star"></i></li>
-										</ul>
-										<span class="shop_review_text">( 4.0 )</span>
-									</div>
-									<div class="product_content">
-										<h3 class="product_title">
-											<a href="shop-list.html" target="_blank">Fresh Cabbage</a>
-										</h3>
-										<div class="product_price">
-											<span class="sale_price pe-1">$50.00</span>
-											<del>$65.00</del>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-6 col-xl-3">
-							<div class="product_layout_1 overflow-hidden position-relative">
-								<div class="product_layout_content bg-white position-relative">
-									<div class="product_image_wrap">
-										<a class="product_image d-flex justify-content-center align-items-center"
-											href="shop-list.html" target="_blank">
-											<img class="pic-1" src="{{asset("web-assets/images/product7.png")}}" alt="image_not_found">
-											<img class="pic-2" src="{{asset("web-assets/images/product8.png")}}" alt="image_not_found">
-										</a>
-										<ul class="product_badge_group ul_li_block">
-											<li><span
-													class="product_badge badge_meats position-absolute rounded-pill text-uppercase">Meats</span>
-											</li>
-											<li><span
-													class="product_badge badge_discount position-absolute rounded-pill">-27%</span>
-											</li>
-										</ul>
-										<ul class="product_action_btns ul_li_block d-flex">
-											<li><a class="tooltips" data-placement="top" title="Search Product" href="#!"><i
-														class="fas fa-search"></i></a></li>
-											<li><a class="tooltips" data-placement="top" title="Add To Cart"
-													href="#product_quick_view" data-bs-toggle="modal"><i
-														class="fas fa-shopping-bag"></i></a></li>
-										</ul>
-									</div>
-									<div class="rating_wrap d-flex">
-										<ul class="rating_star ul_li">
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li><i class="far fa-star"></i></li>
-										</ul>
-										<span class="shop_review_text">( 4.0 )</span>
-									</div>
-									<div class="product_content">
-										<h3 class="product_title">
-											<a href="shop-list.html" target="_blank">Fresh Cabbage</a>
-										</h3>
-										<div class="product_price">
-											<span class="sale_price pe-1">$50.00</span>
-											<del>$65.00</del>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-6 col-xl-3">
-							<div class="product_layout_1 overflow-hidden position-relative">
-								<div class="product_layout_content bg-white position-relative">
-									<div class="product_image_wrap">
-										<a class="product_image d-flex justify-content-center align-items-center"
-											href="shop-list.html" target="_blank">
-											<img class="pic-1" src="{{asset("web-assets/images/product8.png")}}" alt="image_not_found">
-											<img class="pic-2" src="{{asset("web-assets/images/product9.png")}}" alt="image_not_found">
-										</a>
-										<ul class="product_badge_group ul_li_block">
-											<li><span
-													class="product_badge badge_meats position-absolute rounded-pill text-uppercase">Meats</span>
-											</li>
-											<li><span
-													class="product_badge badge_discount position-absolute rounded-pill">-27%</span>
-											</li>
-										</ul>
-										<ul class="product_action_btns ul_li_block d-flex">
-											<li><a class="tooltips" data-placement="top" title="Search Product" href="#!"><i
-														class="fas fa-search"></i></a></li>
-											<li><a class="tooltips" data-placement="top" title="Add To Cart"
-													href="#product_quick_view" data-bs-toggle="modal"><i
-														class="fas fa-shopping-bag"></i></a></li>
-										</ul>
-									</div>
-									<div class="rating_wrap d-flex">
-										<ul class="rating_star ul_li">
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li><i class="far fa-star"></i></li>
-										</ul>
-										<span class="shop_review_text">( 4.0 )</span>
-									</div>
-									<div class="product_content">
-										<h3 class="product_title">
-											<a href="shop-list.html" target="_blank">Fresh Cabbage</a>
-										</h3>
-										<div class="product_price">
-											<span class="sale_price pe-1">$50.00</span>
-											<del>$65.00</del>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="tab-pane fade" id="pills-fruits" role="tabpanel" aria-labelledby="pills-fruits-tab">
-					<div class="row g-4">
-						<div class="col-sm-6 col-md-6 col-xl-3">
-							<div class="product_layout_1 overflow-hidden position-relative">
-								<div class="product_layout_content bg-white position-relative">
-									<div class="product_image_wrap">
-										<a class="product_image d-flex justify-content-center align-items-center"
-											href="shop-list.html" target="_blank">
-											<img class="pic-1" src="{{asset("web-assets/images/product5.png")}}" alt="image_not_found">
-											<img class="pic-2" src="{{asset("web-assets/images/product8.png")}}" alt="image_not_found">
-										</a>
-										<ul class="product_badge_group ul_li_block">
-											<li><span
-													class="product_badge badge_meats position-absolute rounded-pill text-uppercase">Meats</span>
-											</li>
-											<li><span
-													class="product_badge badge_discount position-absolute rounded-pill">-27%</span>
-											</li>
-										</ul>
-										<ul class="product_action_btns ul_li_block d-flex">
-											<li><a class="tooltips" data-placement="top" title="Search Product" href="#!"><i
-														class="fas fa-search"></i></a></li>
-											<li><a class="tooltips" data-placement="top" title="Add To Cart"
-													href="#product_quick_view" data-bs-toggle="modal"><i
-														class="fas fa-shopping-bag"></i></a></li>
-										</ul>
-									</div>
-									<div class="rating_wrap d-flex">
-										<ul class="rating_star ul_li">
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li><i class="far fa-star"></i></li>
-										</ul>
-										<span class="shop_review_text">( 4.0 )</span>
-									</div>
-									<div class="product_content">
-										<h3 class="product_title">
-											<a href="shop-list.html" target="_blank">Fresh Cabbage</a>
-										</h3>
-										<div class="product_price">
-											<span class="sale_price pe-1">$50.00</span>
-											<del>$65.00</del>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-6 col-xl-3">
-							<div class="product_layout_1 overflow-hidden position-relative">
-								<div class="product_layout_content bg-white position-relative">
-									<div class="product_image_wrap">
-										<a class="product_image d-flex justify-content-center align-items-center"
-											href="shop-list.html" target="_blank">
-											<img class="pic-1" src="{{asset("web-assets/images/product6.png")}}" alt="image_not_found">
-											<img class="pic-2" src="{{asset("web-assets/images/product3.png")}}" alt="image_not_found">
-										</a>
-										<ul class="product_badge_group ul_li_block">
-											<li><span
-													class="product_badge badge_meats position-absolute rounded-pill text-uppercase">Meats</span>
-											</li>
-											<li><span
-													class="product_badge badge_discount position-absolute rounded-pill">-27%</span>
-											</li>
-										</ul>
-										<ul class="product_action_btns ul_li_block d-flex">
-											<li><a class="tooltips" data-placement="top" title="Search Product" href="#!"><i
-														class="fas fa-search"></i></a></li>
-											<li><a class="tooltips" data-placement="top" title="Add To Cart"
-													href="#product_quick_view" data-bs-toggle="modal"><i
-														class="fas fa-shopping-bag"></i></a></li>
-										</ul>
-									</div>
-									<div class="rating_wrap d-flex">
-										<ul class="rating_star ul_li">
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li><i class="far fa-star"></i></li>
-										</ul>
-										<span class="shop_review_text">( 4.0 )</span>
-									</div>
-									<div class="product_content">
-										<h3 class="product_title">
-											<a href="shop-list.html" target="_blank">Fresh Cabbage</a>
-										</h3>
-										<div class="product_price">
-											<span class="sale_price pe-1">$50.00</span>
-											<del>$65.00</del>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-6 col-xl-3">
-							<div class="product_layout_1 overflow-hidden position-relative">
-								<div class="product_layout_content bg-white position-relative">
-									<div class="product_image_wrap">
-										<a class="product_image d-flex justify-content-center align-items-center"
-											href="shop-list.html" target="_blank">
-											<img class="pic-1" src="{{asset("web-assets/images/product7.png")}}" alt="image_not_found">
-											<img class="pic-2" src="{{asset("web-assets/images/product9.png")}}" alt="image_not_found">
-										</a>
-										<ul class="product_badge_group ul_li_block">
-											<li><span
-													class="product_badge badge_meats position-absolute rounded-pill text-uppercase">Meats</span>
-											</li>
-											<li><span
-													class="product_badge badge_discount position-absolute rounded-pill">-27%</span>
-											</li>
-										</ul>
-										<ul class="product_action_btns ul_li_block d-flex">
-											<li><a class="tooltips" data-placement="top" title="Search Product" href="#!"><i
-														class="fas fa-search"></i></a></li>
-											<li><a class="tooltips" data-placement="top" title="Add To Cart"
-													href="#product_quick_view" data-bs-toggle="modal"><i
-														class="fas fa-shopping-bag"></i></a></li>
-										</ul>
-									</div>
-									<div class="rating_wrap d-flex">
-										<ul class="rating_star ul_li">
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li><i class="far fa-star"></i></li>
-										</ul>
-										<span class="shop_review_text">( 4.0 )</span>
-									</div>
-									<div class="product_content">
-										<h3 class="product_title">
-											<a href="shop-list.html" target="_blank">Fresh Cabbage</a>
-										</h3>
-										<div class="product_price">
-											<span class="sale_price pe-1">$50.00</span>
-											<del>$65.00</del>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-6 col-xl-3">
-							<div class="product_layout_1 overflow-hidden position-relative">
-								<div class="product_layout_content bg-white position-relative">
-									<div class="product_image_wrap">
-										<a class="product_image d-flex justify-content-center align-items-center"
-											href="shop-list.html" target="_blank">
-											<img class="pic-1" src="{{asset("web-assets/images/product8.png")}}" alt="image_not_found">
-											<img class="pic-2" src="{{asset("web-assets/images/product6.png")}}" alt="image_not_found">
-										</a>
-										<ul class="product_badge_group ul_li_block">
-											<li><span
-													class="product_badge badge_meats position-absolute rounded-pill text-uppercase">Meats</span>
-											</li>
-											<li><span
-													class="product_badge badge_discount position-absolute rounded-pill">-27%</span>
-											</li>
-										</ul>
-										<ul class="product_action_btns ul_li_block d-flex">
-											<li><a class="tooltips" data-placement="top" title="Search Product" href="#!"><i
-														class="fas fa-search"></i></a></li>
-											<li><a class="tooltips" data-placement="top" title="Add To Cart"
-													href="#product_quick_view" data-bs-toggle="modal"><i
-														class="fas fa-shopping-bag"></i></a></li>
-										</ul>
-									</div>
-									<div class="rating_wrap d-flex">
-										<ul class="rating_star ul_li">
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li><i class="far fa-star"></i></li>
-										</ul>
-										<span class="shop_review_text">( 4.0 )</span>
-									</div>
-									<div class="product_content">
-										<h3 class="product_title">
-											<a href="shop-list.html" target="_blank">Fresh Cabbage</a>
-										</h3>
-										<div class="product_price">
-											<span class="sale_price pe-1">$50.00</span>
-											<del>$65.00</del>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-6 col-xl-3">
-							<div class="product_layout_1 overflow-hidden position-relative">
-								<div class="product_layout_content bg-white position-relative">
-									<div class="product_image_wrap">
-										<a class="product_image d-flex justify-content-center align-items-center"
-											href="shop-list.html" target="_blank">
-											<img class="pic-1" src="{{asset("web-assets/images/product7.png")}}" alt="image_not_found">
-											<img class="pic-2" src="{{asset("web-assets/images/product10.png")}}" alt="image_not_found">
-										</a>
-										<ul class="product_badge_group ul_li_block">
-											<li><span
-													class="product_badge badge_meats position-absolute rounded-pill text-uppercase">Meats</span>
-											</li>
-											<li><span
-													class="product_badge badge_discount position-absolute rounded-pill">-27%</span>
-											</li>
-										</ul>
-										<ul class="product_action_btns ul_li_block d-flex">
-											<li><a class="tooltips" data-placement="top" title="Search Product" href="#!"><i
-														class="fas fa-search"></i></a></li>
-											<li><a class="tooltips" data-placement="top" title="Add To Cart"
-													href="#product_quick_view" data-bs-toggle="modal"><i
-														class="fas fa-shopping-bag"></i></a></li>
-										</ul>
-									</div>
-									<div class="rating_wrap d-flex">
-										<ul class="rating_star ul_li">
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li><i class="far fa-star"></i></li>
-										</ul>
-										<span class="shop_review_text">( 4.0 )</span>
-									</div>
-									<div class="product_content">
-										<h3 class="product_title">
-											<a href="shop-list.html" target="_blank">Fresh Cabbage</a>
-										</h3>
-										<div class="product_price">
-											<span class="sale_price pe-1">$50.00</span>
-											<del>$65.00</del>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-6 col-xl-3">
-							<div class="product_layout_1 overflow-hidden position-relative">
-								<div class="product_layout_content bg-white position-relative">
-									<div class="product_image_wrap">
-										<a class="product_image d-flex justify-content-center align-items-center"
-											href="shop-list.html" target="_blank">
-											<img class="pic-1" src="{{asset("web-assets/images/product9.png")}}" alt="image_not_found">
-											<img class="pic-2" src="{{asset("web-assets/images/product5.png")}}" alt="image_not_found">
-										</a>
-										<ul class="product_badge_group ul_li_block">
-											<li><span
-													class="product_badge badge_meats position-absolute rounded-pill text-uppercase">Meats</span>
-											</li>
-											<li><span
-													class="product_badge badge_discount position-absolute rounded-pill">-27%</span>
-											</li>
-										</ul>
-										<ul class="product_action_btns ul_li_block d-flex">
-											<li><a class="tooltips" data-placement="top" title="Search Product" href="#!"><i
-														class="fas fa-search"></i></a></li>
-											<li><a class="tooltips" data-placement="top" title="Add To Cart"
-													href="#product_quick_view" data-bs-toggle="modal"><i
-														class="fas fa-shopping-bag"></i></a></li>
-										</ul>
-									</div>
-									<div class="rating_wrap d-flex">
-										<ul class="rating_star ul_li">
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li><i class="far fa-star"></i></li>
-										</ul>
-										<span class="shop_review_text">( 4.0 )</span>
-									</div>
-									<div class="product_content">
-										<h3 class="product_title">
-											<a href="shop-list.html" target="_blank">Fresh Cabbage</a>
-										</h3>
-										<div class="product_price">
-											<span class="sale_price pe-1">$50.00</span>
-											<del>$65.00</del>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-6 col-xl-3">
-							<div class="product_layout_1 overflow-hidden position-relative">
-								<div class="product_layout_content bg-white position-relative">
-									<div class="product_image_wrap">
-										<a class="product_image d-flex justify-content-center align-items-center"
-											href="shop-list.html" target="_blank">
-											<img class="pic-1" src="{{asset("web-assets/images/product11.png")}}" alt="image_not_found">
-											<img class="pic-2" src="{{asset("web-assets/images/product8.png")}}" alt="image_not_found">
-										</a>
-										<ul class="product_badge_group ul_li_block">
-											<li><span
-													class="product_badge badge_meats position-absolute rounded-pill text-uppercase">Meats</span>
-											</li>
-											<li><span
-													class="product_badge badge_discount position-absolute rounded-pill">-27%</span>
-											</li>
-										</ul>
-										<ul class="product_action_btns ul_li_block d-flex">
-											<li><a class="tooltips" data-placement="top" title="Search Product" href="#!"><i
-														class="fas fa-search"></i></a></li>
-											<li><a class="tooltips" data-placement="top" title="Add To Cart"
-													href="#product_quick_view" data-bs-toggle="modal"><i
-														class="fas fa-shopping-bag"></i></a></li>
-										</ul>
-									</div>
-									<div class="rating_wrap d-flex">
-										<ul class="rating_star ul_li">
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li><i class="far fa-star"></i></li>
-										</ul>
-										<span class="shop_review_text">( 4.0 )</span>
-									</div>
-									<div class="product_content">
-										<h3 class="product_title">
-											<a href="shop-list.html" target="_blank">Fresh Cabbage</a>
-										</h3>
-										<div class="product_price">
-											<span class="sale_price pe-1">$50.00</span>
-											<del>$65.00</del>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-6 col-xl-3">
-							<div class="product_layout_1 overflow-hidden position-relative">
-								<div class="product_layout_content bg-white position-relative">
-									<div class="product_image_wrap">
-										<a class="product_image d-flex justify-content-center align-items-center"
-											href="shop-list.html" target="_blank">
-											<img class="pic-1" src="{{asset("web-assets/images/product6.png")}}" alt="image_not_found">
-											<img class="pic-2" src="{{asset("web-assets/images/product10.png")}}" alt="image_not_found">
-										</a>
-										<ul class="product_badge_group ul_li_block">
-											<li><span
-													class="product_badge badge_meats position-absolute rounded-pill text-uppercase">Meats</span>
-											</li>
-											<li><span
-													class="product_badge badge_discount position-absolute rounded-pill">-27%</span>
-											</li>
-										</ul>
-										<ul class="product_action_btns ul_li_block d-flex">
-											<li><a class="tooltips" data-placement="top" title="Search Product" href="#!"><i
-														class="fas fa-search"></i></a></li>
-											<li><a class="tooltips" data-placement="top" title="Add To Cart"
-													href="#product_quick_view" data-bs-toggle="modal"><i
-														class="fas fa-shopping-bag"></i></a></li>
-										</ul>
-									</div>
-									<div class="rating_wrap d-flex">
-										<ul class="rating_star ul_li">
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li><i class="far fa-star"></i></li>
-										</ul>
-										<span class="shop_review_text">( 4.0 )</span>
-									</div>
-									<div class="product_content">
-										<h3 class="product_title">
-											<a href="shop-list.html" target="_blank">Fresh Cabbage</a>
-										</h3>
-										<div class="product_price">
-											<span class="sale_price pe-1">$50.00</span>
-											<del>$65.00</del>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="tab-pane fade" id="pills-bread" role="tabpanel" aria-labelledby="pills-bread-tab">
-					<div class="row g-4">
-						<div class="col-sm-6 col-md-6 col-xl-3">
-							<div class="product_layout_1 overflow-hidden position-relative">
-								<div class="product_layout_content bg-white position-relative">
-									<div class="product_image_wrap">
-										<a class="product_image d-flex justify-content-center align-items-center"
-											href="shop-list.html" target="_blank">
-											<img class="pic-1" src="{{asset("web-assets/images/product5.png")}}" alt="image_not_found">
-											<img class="pic-2" src="{{asset("web-assets/images/product8.png")}}" alt="image_not_found">
-										</a>
-										<ul class="product_badge_group ul_li_block">
-											<li><span
-													class="product_badge badge_meats position-absolute rounded-pill text-uppercase">Meats</span>
-											</li>
-											<li><span
-													class="product_badge badge_discount position-absolute rounded-pill">-27%</span>
-											</li>
-										</ul>
-										<ul class="product_action_btns ul_li_block d-flex">
-											<li><a class="tooltips" data-placement="top" title="Search Product" href="#!"><i
-														class="fas fa-search"></i></a></li>
-											<li><a class="tooltips" data-placement="top" title="Add To Cart"
-													href="#product_quick_view" data-bs-toggle="modal"><i
-														class="fas fa-shopping-bag"></i></a></li>
-										</ul>
-									</div>
-									<div class="rating_wrap d-flex">
-										<ul class="rating_star ul_li">
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li><i class="far fa-star"></i></li>
-										</ul>
-										<span class="shop_review_text">( 4.0 )</span>
-									</div>
-									<div class="product_content">
-										<h3 class="product_title">
-											<a href="shop-list.html" target="_blank">Fresh Cabbage</a>
-										</h3>
-										<div class="product_price">
-											<span class="sale_price pe-1">$50.00</span>
-											<del>$65.00</del>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-6 col-xl-3">
-							<div class="product_layout_1 overflow-hidden position-relative">
-								<div class="product_layout_content bg-white position-relative">
-									<div class="product_image_wrap">
-										<a class="product_image d-flex justify-content-center align-items-center"
-											href="shop-list.html" target="_blank">
-											<img class="pic-1" src="{{asset("web-assets/images/product6.png")}}" alt="image_not_found">
-											<img class="pic-2" src="{{asset("web-assets/images/product3.png")}}" alt="image_not_found">
-										</a>
-										<ul class="product_badge_group ul_li_block">
-											<li><span
-													class="product_badge badge_meats position-absolute rounded-pill text-uppercase">Meats</span>
-											</li>
-											<li><span
-													class="product_badge badge_discount position-absolute rounded-pill">-27%</span>
-											</li>
-										</ul>
-										<ul class="product_action_btns ul_li_block d-flex">
-											<li><a class="tooltips" data-placement="top" title="Search Product" href="#!"><i
-														class="fas fa-search"></i></a></li>
-											<li><a class="tooltips" data-placement="top" title="Add To Cart"
-													href="#product_quick_view" data-bs-toggle="modal"><i
-														class="fas fa-shopping-bag"></i></a></li>
-										</ul>
-									</div>
-									<div class="rating_wrap d-flex">
-										<ul class="rating_star ul_li">
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li><i class="far fa-star"></i></li>
-										</ul>
-										<span class="shop_review_text">( 4.0 )</span>
-									</div>
-									<div class="product_content">
-										<h3 class="product_title">
-											<a href="shop-list.html" target="_blank">Fresh Cabbage</a>
-										</h3>
-										<div class="product_price">
-											<span class="sale_price pe-1">$50.00</span>
-											<del>$65.00</del>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-6 col-xl-3">
-							<div class="product_layout_1 overflow-hidden position-relative">
-								<div class="product_layout_content bg-white position-relative">
-									<div class="product_image_wrap">
-										<a class="product_image d-flex justify-content-center align-items-center"
-											href="shop-list.html" target="_blank">
-											<img class="pic-1" src="{{asset("web-assets/images/product7.png")}}" alt="image_not_found">
-											<img class="pic-2" src="{{asset("web-assets/images/product9.png")}}" alt="image_not_found">
-										</a>
-										<ul class="product_badge_group ul_li_block">
-											<li><span
-													class="product_badge badge_meats position-absolute rounded-pill text-uppercase">Meats</span>
-											</li>
-											<li><span
-													class="product_badge badge_discount position-absolute rounded-pill">-27%</span>
-											</li>
-										</ul>
-										<ul class="product_action_btns ul_li_block d-flex">
-											<li><a class="tooltips" data-placement="top" title="Search Product" href="#!"><i
-														class="fas fa-search"></i></a></li>
-											<li><a class="tooltips" data-placement="top" title="Add To Cart"
-													href="#product_quick_view" data-bs-toggle="modal"><i
-														class="fas fa-shopping-bag"></i></a></li>
-										</ul>
-									</div>
-									<div class="rating_wrap d-flex">
-										<ul class="rating_star ul_li">
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li><i class="far fa-star"></i></li>
-										</ul>
-										<span class="shop_review_text">( 4.0 )</span>
-									</div>
-									<div class="product_content">
-										<h3 class="product_title">
-											<a href="shop-list.html" target="_blank">Fresh Cabbage</a>
-										</h3>
-										<div class="product_price">
-											<span class="sale_price pe-1">$50.00</span>
-											<del>$65.00</del>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-6 col-xl-3">
-							<div class="product_layout_1 overflow-hidden position-relative">
-								<div class="product_layout_content bg-white position-relative">
-									<div class="product_image_wrap">
-										<a class="product_image d-flex justify-content-center align-items-center"
-											href="shop-list.html" target="_blank">
-											<img class="pic-1" src="{{asset("web-assets/images/product8.png")}}" alt="image_not_found">
-											<img class="pic-2" src="{{asset("web-assets/images/product6.png")}}" alt="image_not_found">
-										</a>
-										<ul class="product_badge_group ul_li_block">
-											<li><span
-													class="product_badge badge_meats position-absolute rounded-pill text-uppercase">Meats</span>
-											</li>
-											<li><span
-													class="product_badge badge_discount position-absolute rounded-pill">-27%</span>
-											</li>
-										</ul>
-										<ul class="product_action_btns ul_li_block d-flex">
-											<li><a class="tooltips" data-placement="top" title="Search Product" href="#!"><i
-														class="fas fa-search"></i></a></li>
-											<li><a class="tooltips" data-placement="top" title="Add To Cart"
-													href="#product_quick_view" data-bs-toggle="modal"><i
-														class="fas fa-shopping-bag"></i></a></li>
-										</ul>
-									</div>
-									<div class="rating_wrap d-flex">
-										<ul class="rating_star ul_li">
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li><i class="far fa-star"></i></li>
-										</ul>
-										<span class="shop_review_text">( 4.0 )</span>
-									</div>
-									<div class="product_content">
-										<h3 class="product_title">
-											<a href="shop-list.html" target="_blank">Fresh Cabbage</a>
-										</h3>
-										<div class="product_price">
-											<span class="sale_price pe-1">$50.00</span>
-											<del>$65.00</del>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-6 col-xl-3">
-							<div class="product_layout_1 overflow-hidden position-relative">
-								<div class="product_layout_content bg-white position-relative">
-									<div class="product_image_wrap">
-										<a class="product_image d-flex justify-content-center align-items-center"
-											href="shop-list.html" target="_blank">
-											<img class="pic-1" src="{{asset("web-assets/images/product7.png")}}" alt="image_not_found">
-											<img class="pic-2" src="{{asset("web-assets/images/product10.png")}}" alt="image_not_found">
-										</a>
-										<ul class="product_badge_group ul_li_block">
-											<li><span
-													class="product_badge badge_meats position-absolute rounded-pill text-uppercase">Meats</span>
-											</li>
-											<li><span
-													class="product_badge badge_discount position-absolute rounded-pill">-27%</span>
-											</li>
-										</ul>
-										<ul class="product_action_btns ul_li_block d-flex">
-											<li><a class="tooltips" data-placement="top" title="Search Product" href="#!"><i
-														class="fas fa-search"></i></a></li>
-											<li><a class="tooltips" data-placement="top" title="Add To Cart"
-													href="#product_quick_view" data-bs-toggle="modal"><i
-														class="fas fa-shopping-bag"></i></a></li>
-										</ul>
-									</div>
-									<div class="rating_wrap d-flex">
-										<ul class="rating_star ul_li">
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li><i class="far fa-star"></i></li>
-										</ul>
-										<span class="shop_review_text">( 4.0 )</span>
-									</div>
-									<div class="product_content">
-										<h3 class="product_title">
-											<a href="shop-list.html" target="_blank">Fresh Cabbage</a>
-										</h3>
-										<div class="product_price">
-											<span class="sale_price pe-1">$50.00</span>
-											<del>$65.00</del>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-6 col-xl-3">
-							<div class="product_layout_1 overflow-hidden position-relative">
-								<div class="product_layout_content bg-white position-relative">
-									<div class="product_image_wrap">
-										<a class="product_image d-flex justify-content-center align-items-center"
-											href="shop-list.html" target="_blank">
-											<img class="pic-1" src="{{asset("web-assets/images/product9.png")}}" alt="image_not_found">
-											<img class="pic-2" src="{{asset("web-assets/images/product5.png")}}" alt="image_not_found">
-										</a>
-										<ul class="product_badge_group ul_li_block">
-											<li><span
-													class="product_badge badge_meats position-absolute rounded-pill text-uppercase">Meats</span>
-											</li>
-											<li><span
-													class="product_badge badge_discount position-absolute rounded-pill">-27%</span>
-											</li>
-										</ul>
-										<ul class="product_action_btns ul_li_block d-flex">
-											<li><a class="tooltips" data-placement="top" title="Search Product" href="#!"><i
-														class="fas fa-search"></i></a></li>
-											<li><a class="tooltips" data-placement="top" title="Add To Cart"
-													href="#product_quick_view" data-bs-toggle="modal"><i
-														class="fas fa-shopping-bag"></i></a></li>
-										</ul>
-									</div>
-									<div class="rating_wrap d-flex">
-										<ul class="rating_star ul_li">
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li><i class="far fa-star"></i></li>
-										</ul>
-										<span class="shop_review_text">( 4.0 )</span>
-									</div>
-									<div class="product_content">
-										<h3 class="product_title">
-											<a href="shop-list.html" target="_blank">Fresh Cabbage</a>
-										</h3>
-										<div class="product_price">
-											<span class="sale_price pe-1">$50.00</span>
-											<del>$65.00</del>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-6 col-xl-3">
-							<div class="product_layout_1 overflow-hidden position-relative">
-								<div class="product_layout_content bg-white position-relative">
-									<div class="product_image_wrap">
-										<a class="product_image d-flex justify-content-center align-items-center"
-											href="shop-list.html" target="_blank">
-											<img class="pic-1" src="{{asset("web-assets/images/product11.png")}}" alt="image_not_found">
-											<img class="pic-2" src="{{asset("web-assets/images/product8.png")}}" alt="image_not_found">
-										</a>
-										<ul class="product_badge_group ul_li_block">
-											<li><span
-													class="product_badge badge_meats position-absolute rounded-pill text-uppercase">Meats</span>
-											</li>
-											<li><span
-													class="product_badge badge_discount position-absolute rounded-pill">-27%</span>
-											</li>
-										</ul>
-										<ul class="product_action_btns ul_li_block d-flex">
-											<li><a class="tooltips" data-placement="top" title="Search Product" href="#!"><i
-														class="fas fa-search"></i></a></li>
-											<li><a class="tooltips" data-placement="top" title="Add To Cart"
-													href="#product_quick_view" data-bs-toggle="modal"><i
-														class="fas fa-shopping-bag"></i></a></li>
-										</ul>
-									</div>
-									<div class="rating_wrap d-flex">
-										<ul class="rating_star ul_li">
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li><i class="far fa-star"></i></li>
-										</ul>
-										<span class="shop_review_text">( 4.0 )</span>
-									</div>
-									<div class="product_content">
-										<h3 class="product_title">
-											<a href="shop-list.html" target="_blank">Fresh Cabbage</a>
-										</h3>
-										<div class="product_price">
-											<span class="sale_price pe-1">$50.00</span>
-											<del>$65.00</del>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-6 col-xl-3">
-							<div class="product_layout_1 overflow-hidden position-relative">
-								<div class="product_layout_content bg-white position-relative">
-									<div class="product_image_wrap">
-										<a class="product_image d-flex justify-content-center align-items-center"
-											href="shop-list.html" target="_blank">
-											<img class="pic-1" src="{{asset("web-assets/images/product6.png")}}" alt="image_not_found">
-											<img class="pic-2" src="{{asset("web-assets/images/product10.png")}}" alt="image_not_found">
-										</a>
-										<ul class="product_badge_group ul_li_block">
-											<li><span
-													class="product_badge badge_meats position-absolute rounded-pill text-uppercase">Meats</span>
-											</li>
-											<li><span
-													class="product_badge badge_discount position-absolute rounded-pill">-27%</span>
-											</li>
-										</ul>
-										<ul class="product_action_btns ul_li_block d-flex">
-											<li><a class="tooltips" data-placement="top" title="Search Product" href="#!"><i
-														class="fas fa-search"></i></a></li>
-											<li><a class="tooltips" data-placement="top" title="Add To Cart"
-													href="#product_quick_view" data-bs-toggle="modal"><i
-														class="fas fa-shopping-bag"></i></a></li>
-										</ul>
-									</div>
-									<div class="rating_wrap d-flex">
-										<ul class="rating_star ul_li">
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li><i class="far fa-star"></i></li>
-										</ul>
-										<span class="shop_review_text">( 4.0 )</span>
-									</div>
-									<div class="product_content">
-										<h3 class="product_title">
-											<a href="shop-list.html" target="_blank">Fresh Cabbage</a>
-										</h3>
-										<div class="product_price">
-											<span class="sale_price pe-1">$50.00</span>
-											<del>$65.00</del>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="tab-pane fade" id="pills-meat" role="tabpanel" aria-labelledby="pills-meat-tab">
-					<div class="row g-4">
-						<div class="col-sm-6 col-md-6 col-xl-3">
-							<div class="product_layout_1 overflow-hidden position-relative">
-								<div class="product_layout_content bg-white position-relative">
-									<div class="product_image_wrap">
-										<a class="product_image d-flex justify-content-center align-items-center"
-											href="shop-list.html" target="_blank">
-											<img class="pic-1" src="{{asset("web-assets/images/product5.png")}}" alt="image_not_found">
-											<img class="pic-2" src="{{asset("web-assets/images/product8.png")}}" alt="image_not_found">
-										</a>
-										<ul class="product_badge_group ul_li_block">
-											<li><span
-													class="product_badge badge_meats position-absolute rounded-pill text-uppercase">Meats</span>
-											</li>
-											<li><span
-													class="product_badge badge_discount position-absolute rounded-pill">-27%</span>
-											</li>
-										</ul>
-										<ul class="product_action_btns ul_li_block d-flex">
-											<li><a class="tooltips" data-placement="top" title="Search Product" href="#!"><i
-														class="fas fa-search"></i></a></li>
-											<li><a class="tooltips" data-placement="top" title="Add To Cart"
-													href="#product_quick_view" data-bs-toggle="modal"><i
-														class="fas fa-shopping-bag"></i></a></li>
-										</ul>
-									</div>
-									<div class="rating_wrap d-flex">
-										<ul class="rating_star ul_li">
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li><i class="far fa-star"></i></li>
-										</ul>
-										<span class="shop_review_text">( 4.0 )</span>
-									</div>
-									<div class="product_content">
-										<h3 class="product_title">
-											<a href="shop-list.html" target="_blank">Fresh Cabbage</a>
-										</h3>
-										<div class="product_price">
-											<span class="sale_price pe-1">$50.00</span>
-											<del>$65.00</del>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-6 col-xl-3">
-							<div class="product_layout_1 overflow-hidden position-relative">
-								<div class="product_layout_content bg-white position-relative">
-									<div class="product_image_wrap">
-										<a class="product_image d-flex justify-content-center align-items-center"
-											href="shop-list.html" target="_blank">
-											<img class="pic-1" src="{{asset("web-assets/images/product6.png")}}" alt="image_not_found">
-											<img class="pic-2" src="{{asset("web-assets/images/product3.png")}}" alt="image_not_found">
-										</a>
-										<ul class="product_badge_group ul_li_block">
-											<li><span
-													class="product_badge badge_meats position-absolute rounded-pill text-uppercase">Meats</span>
-											</li>
-											<li><span
-													class="product_badge badge_discount position-absolute rounded-pill">-27%</span>
-											</li>
-										</ul>
-										<ul class="product_action_btns ul_li_block d-flex">
-											<li><a class="tooltips" data-placement="top" title="Search Product" href="#!"><i
-														class="fas fa-search"></i></a></li>
-											<li><a class="tooltips" data-placement="top" title="Add To Cart"
-													href="#product_quick_view" data-bs-toggle="modal"><i
-														class="fas fa-shopping-bag"></i></a></li>
-										</ul>
-									</div>
-									<div class="rating_wrap d-flex">
-										<ul class="rating_star ul_li">
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li><i class="far fa-star"></i></li>
-										</ul>
-										<span class="shop_review_text">( 4.0 )</span>
-									</div>
-									<div class="product_content">
-										<h3 class="product_title">
-											<a href="shop-list.html" target="_blank">Fresh Cabbage</a>
-										</h3>
-										<div class="product_price">
-											<span class="sale_price pe-1">$50.00</span>
-											<del>$65.00</del>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-6 col-xl-3">
-							<div class="product_layout_1 overflow-hidden position-relative">
-								<div class="product_layout_content bg-white position-relative">
-									<div class="product_image_wrap">
-										<a class="product_image d-flex justify-content-center align-items-center"
-											href="shop-list.html" target="_blank">
-											<img class="pic-1" src="{{asset("web-assets/images/product7.png")}}" alt="image_not_found">
-											<img class="pic-2" src="{{asset("web-assets/images/product9.png")}}" alt="image_not_found">
-										</a>
-										<ul class="product_badge_group ul_li_block">
-											<li><span
-													class="product_badge badge_meats position-absolute rounded-pill text-uppercase">Meats</span>
-											</li>
-											<li><span
-													class="product_badge badge_discount position-absolute rounded-pill">-27%</span>
-											</li>
-										</ul>
-										<ul class="product_action_btns ul_li_block d-flex">
-											<li><a class="tooltips" data-placement="top" title="Search Product" href="#!"><i
-														class="fas fa-search"></i></a></li>
-											<li><a class="tooltips" data-placement="top" title="Add To Cart"
-													href="#product_quick_view" data-bs-toggle="modal"><i
-														class="fas fa-shopping-bag"></i></a></li>
-										</ul>
-									</div>
-									<div class="rating_wrap d-flex">
-										<ul class="rating_star ul_li">
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li><i class="far fa-star"></i></li>
-										</ul>
-										<span class="shop_review_text">( 4.0 )</span>
-									</div>
-									<div class="product_content">
-										<h3 class="product_title">
-											<a href="shop-list.html" target="_blank">Fresh Cabbage</a>
-										</h3>
-										<div class="product_price">
-											<span class="sale_price pe-1">$50.00</span>
-											<del>$65.00</del>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-6 col-xl-3">
-							<div class="product_layout_1 overflow-hidden position-relative">
-								<div class="product_layout_content bg-white position-relative">
-									<div class="product_image_wrap">
-										<a class="product_image d-flex justify-content-center align-items-center"
-											href="shop-list.html" target="_blank">
-											<img class="pic-1" src="{{asset("web-assets/images/product8.png")}}" alt="image_not_found">
-											<img class="pic-2" src="{{asset("web-assets/images/product6.png")}}" alt="image_not_found">
-										</a>
-										<ul class="product_badge_group ul_li_block">
-											<li><span
-													class="product_badge badge_meats position-absolute rounded-pill text-uppercase">Meats</span>
-											</li>
-											<li><span
-													class="product_badge badge_discount position-absolute rounded-pill">-27%</span>
-											</li>
-										</ul>
-										<ul class="product_action_btns ul_li_block d-flex">
-											<li><a class="tooltips" data-placement="top" title="Search Product" href="#!"><i
-														class="fas fa-search"></i></a></li>
-											<li><a class="tooltips" data-placement="top" title="Add To Cart"
-													href="#product_quick_view" data-bs-toggle="modal"><i
-														class="fas fa-shopping-bag"></i></a></li>
-										</ul>
-									</div>
-									<div class="rating_wrap d-flex">
-										<ul class="rating_star ul_li">
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li><i class="far fa-star"></i></li>
-										</ul>
-										<span class="shop_review_text">( 4.0 )</span>
-									</div>
-									<div class="product_content">
-										<h3 class="product_title">
-											<a href="shop-list.html" target="_blank">Fresh Cabbage</a>
-										</h3>
-										<div class="product_price">
-											<span class="sale_price pe-1">$50.00</span>
-											<del>$65.00</del>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-6 col-xl-3">
-							<div class="product_layout_1 overflow-hidden position-relative">
-								<div class="product_layout_content bg-white position-relative">
-									<div class="product_image_wrap">
-										<a class="product_image d-flex justify-content-center align-items-center"
-											href="shop-list.html" target="_blank">
-											<img class="pic-1" src="{{asset("web-assets/images/product7.png")}}" alt="image_not_found">
-											<img class="pic-2" src="{{asset("web-assets/images/product10.png")}}" alt="image_not_found">
-										</a>
-										<ul class="product_badge_group ul_li_block">
-											<li><span
-													class="product_badge badge_meats position-absolute rounded-pill text-uppercase">Meats</span>
-											</li>
-											<li><span
-													class="product_badge badge_discount position-absolute rounded-pill">-27%</span>
-											</li>
-										</ul>
-										<ul class="product_action_btns ul_li_block d-flex">
-											<li><a class="tooltips" data-placement="top" title="Search Product" href="#!"><i
-														class="fas fa-search"></i></a></li>
-											<li><a class="tooltips" data-placement="top" title="Add To Cart"
-													href="#product_quick_view" data-bs-toggle="modal"><i
-														class="fas fa-shopping-bag"></i></a></li>
-										</ul>
-									</div>
-									<div class="rating_wrap d-flex">
-										<ul class="rating_star ul_li">
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li><i class="far fa-star"></i></li>
-										</ul>
-										<span class="shop_review_text">( 4.0 )</span>
-									</div>
-									<div class="product_content">
-										<h3 class="product_title">
-											<a href="shop-list.html" target="_blank">Fresh Cabbage</a>
-										</h3>
-										<div class="product_price">
-											<span class="sale_price pe-1">$50.00</span>
-											<del>$65.00</del>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-6 col-xl-3">
-							<div class="product_layout_1 overflow-hidden position-relative">
-								<div class="product_layout_content bg-white position-relative">
-									<div class="product_image_wrap">
-										<a class="product_image d-flex justify-content-center align-items-center"
-											href="shop-list.html" target="_blank">
-											<img class="pic-1" src="{{asset("web-assets/images/product9.png")}}" alt="image_not_found">
-											<img class="pic-2" src="{{asset("web-assets/images/product5.png")}}" alt="image_not_found">
-										</a>
-										<ul class="product_badge_group ul_li_block">
-											<li><span
-													class="product_badge badge_meats position-absolute rounded-pill text-uppercase">Meats</span>
-											</li>
-											<li><span
-													class="product_badge badge_discount position-absolute rounded-pill">-27%</span>
-											</li>
-										</ul>
-										<ul class="product_action_btns ul_li_block d-flex">
-											<li><a class="tooltips" data-placement="top" title="Search Product" href="#!"><i
-														class="fas fa-search"></i></a></li>
-											<li><a class="tooltips" data-placement="top" title="Add To Cart"
-													href="#product_quick_view" data-bs-toggle="modal"><i
-														class="fas fa-shopping-bag"></i></a></li>
-										</ul>
-									</div>
-									<div class="rating_wrap d-flex">
-										<ul class="rating_star ul_li">
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li><i class="far fa-star"></i></li>
-										</ul>
-										<span class="shop_review_text">( 4.0 )</span>
-									</div>
-									<div class="product_content">
-										<h3 class="product_title">
-											<a href="shop-list.html" target="_blank">Fresh Cabbage</a>
-										</h3>
-										<div class="product_price">
-											<span class="sale_price pe-1">$50.00</span>
-											<del>$65.00</del>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-6 col-xl-3">
-							<div class="product_layout_1 overflow-hidden position-relative">
-								<div class="product_layout_content bg-white position-relative">
-									<div class="product_image_wrap">
-										<a class="product_image d-flex justify-content-center align-items-center"
-											href="shop-list.html" target="_blank">
-											<img class="pic-1" src="{{asset("web-assets/images/product11.png")}}" alt="image_not_found">
-											<img class="pic-2" src="{{asset("web-assets/images/product8.png")}}" alt="image_not_found">
-										</a>
-										<ul class="product_badge_group ul_li_block">
-											<li><span
-													class="product_badge badge_meats position-absolute rounded-pill text-uppercase">Meats</span>
-											</li>
-											<li><span
-													class="product_badge badge_discount position-absolute rounded-pill">-27%</span>
-											</li>
-										</ul>
-										<ul class="product_action_btns ul_li_block d-flex">
-											<li><a class="tooltips" data-placement="top" title="Search Product" href="#!"><i
-														class="fas fa-search"></i></a></li>
-											<li><a class="tooltips" data-placement="top" title="Add To Cart"
-													href="#product_quick_view" data-bs-toggle="modal"><i
-														class="fas fa-shopping-bag"></i></a></li>
-										</ul>
-									</div>
-									<div class="rating_wrap d-flex">
-										<ul class="rating_star ul_li">
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li><i class="far fa-star"></i></li>
-										</ul>
-										<span class="shop_review_text">( 4.0 )</span>
-									</div>
-									<div class="product_content">
-										<h3 class="product_title">
-											<a href="shop-list.html" target="_blank">Fresh Cabbage</a>
-										</h3>
-										<div class="product_price">
-											<span class="sale_price pe-1">$50.00</span>
-											<del>$65.00</del>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-6 col-xl-3">
-							<div class="product_layout_1 overflow-hidden position-relative">
-								<div class="product_layout_content bg-white position-relative">
-									<div class="product_image_wrap">
-										<a class="product_image d-flex justify-content-center align-items-center"
-											href="shop-list.html" target="_blank">
-											<img class="pic-1" src="{{asset("web-assets/images/product6.png")}}" alt="image_not_found">
-											<img class="pic-2" src="{{asset("web-assets/images/product10.png")}}" alt="image_not_found">
-										</a>
-										<ul class="product_badge_group ul_li_block">
-											<li><span
-													class="product_badge badge_meats position-absolute rounded-pill text-uppercase">Meats</span>
-											</li>
-											<li><span
-													class="product_badge badge_discount position-absolute rounded-pill">-27%</span>
-											</li>
-										</ul>
-										<ul class="product_action_btns ul_li_block d-flex">
-											<li><a class="tooltips" data-placement="top" title="Search Product" href="#!"><i
-														class="fas fa-search"></i></a></li>
-											<li><a class="tooltips" data-placement="top" title="Add To Cart"
-													href="#product_quick_view" data-bs-toggle="modal"><i
-														class="fas fa-shopping-bag"></i></a></li>
-										</ul>
-									</div>
-									<div class="rating_wrap d-flex">
-										<ul class="rating_star ul_li">
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li class="active"><i class="fas fa-star"></i></li>
-											<li><i class="far fa-star"></i></li>
-										</ul>
-										<span class="shop_review_text">( 4.0 )</span>
-									</div>
-									<div class="product_content">
-										<h3 class="product_title">
-											<a href="shop-list.html" target="_blank">Fresh Cabbage</a>
-										</h3>
-										<div class="product_price">
-											<span class="sale_price pe-1">$50.00</span>
-											<del>$65.00</del>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- product section start -->
+                                        <ul class="product_badge_group ul_li_block">
+                                            @if($product->category)
+                                                <li><span
+                                                        class="product_badge badge_meats position-absolute rounded-pill text-uppercase">
+                                                        {{ $product->name }}
+                                                    </span></li>
+                                            @endif
+
+                                            {{-- Percentage Change Badge --}}
+                                            @php
+                                                $percentage = $product->percentage_change;
+                                            @endphp
+
+                                            @if($percentage !== null && $percentage != 0)
+                                                <li>
+                                                    <span class="product_badge badge_discount position-absolute rounded-pill"
+                                                        style="
+                                                            padding:4px 8px; 
+                                                            font-size:12px; 
+                                                            color:#fff; 
+                                                            background-color: {{ $percentage > 0 ? '#ff4d4d' : '#28a745' }};
+                                                        ">
+                                                        @if($percentage > 0)
+                                                            ↑ {{ number_format($percentage, 1) }}%
+                                                        @else
+                                                            ↓ {{ number_format(abs($percentage), 1) }}%
+                                                        @endif
+                                                    </span>
+                                                </li>
+                                            @endif
+                                        </ul>
+
+                                        <ul class="product_action_btns ul_li_block d-flex">
+                                            <li><a class="tooltips" data-placement="top" title="Search Product" href="#!">
+                                                    <i class="fas fa-search"></i></a>
+                                            </li>
+                                            <li><a class="tooltips" data-placement="top" title="Add To Cart"
+                                                    href="#product_quick_view" data-bs-toggle="modal">
+                                                    <i class="fas fa-shopping-bag"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="rating_wrap d-flex">
+                                        <ul class="rating_star ul_li">
+                                            @for($i = 1; $i <= 5; $i++)
+                                                <li class="{{ $i <= 4 ? 'active' : '' }}">
+                                                    <i class="{{ $i <= 4 ? 'fas' : 'far' }} fa-star"></i>
+                                                </li>
+                                            @endfor
+                                        </ul>
+                                        <span class="shop_review_text">( 4.0 )</span>
+                                    </div>
+
+                                    <div class="product_content">
+                                        <h3 class="product_title">
+                                            <a href="#"></a>
+                                        </h3>
+
+                                        <div class="product_price">
+                                            @if($product->pricing)
+                                                @if($product->pricing->final_price)
+                                                    <span class="sale_price pe-1">
+                                                        ₹{{ number_format($product->pricing->final_price, 2) }}
+                                                    </span>
+                                                    <del>₹{{ number_format($product->previous_day_price, 2) }}</del>
+                                                @else
+                                                    <span class="sale_price pe-1">
+                                                        ₹{{ number_format($product->pricing->price, 2) }}
+                                                    </span>
+                                                @endif
+                                            @else
+                                                <span class="sale_price pe-1">Price not available</span>
+                                            @endif
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+
+                    @if($freshProducts->count() == 0)
+                        <div class="col-12 text-center">
+                            <div class="no-products">
+                                <i class="fas fa-box-open fa-3x text-muted mb-3"></i>
+                                <h4>No Products Available</h4>
+                                <p class="text-muted">Check back later for our fresh products</p>
+                            </div>
+                        </div>
+                    @endif
+                </div>
+            </div>
+
+
+            <!-- ============================
+                 CATEGORY TABS (UPDATED)
+            ============================ -->
+            @foreach($categories->take(4) as $category)
+                <div class="tab-pane fade" id="pills-{{ $category->slug }}" role="tabpanel"
+                    aria-labelledby="pills-{{ $category->slug }}-tab">
+
+                    <div class="row g-4">
+                        @php
+                            $categoryProducts = $freshProducts->where('category_id', $category->id)->take(8);
+                        @endphp
+
+                        @foreach($categoryProducts as $product)
+                            <div class="col-sm-6 col-md-6 col-xl-3">
+                                <div class="product_layout_1 overflow-hidden position-relative">
+                                    <div class="product_layout_content bg-white position-relative">
+
+                                        <div class="product_image_wrap">
+                                            <a class="product_image d-flex justify-content-center align-items-center" href="#"
+                                               >
+
+                                                @if($product->image)
+                                                    <img class="pic-1" src="{{ asset('storage/' . $product->image) }}"
+                                                        alt="{{ $product->name }}">
+                                                    <img class="pic-2" src="{{ asset('storage/' . $product->image) }}"
+                                                        alt="{{ $product->name }}">
+                                                @else
+                                                    <img class="pic-1" src="{{ asset('web-assets/images/product1.png') }}"
+                                                        alt="image_not_found">
+                                                    <img class="pic-2" src="{{ asset('web-assets/images/product2.png') }}"
+                                                        alt="image_not_found">
+                                                @endif
+                                            </a>
+
+                                            <ul class="product_badge_group ul_li_block">
+                                                <li>
+                                                    <span
+                                                        class="product_badge badge_meats position-absolute rounded-pill text-uppercase">
+                                                        {{ $category->name }}
+                                                    </span>
+                                                </li>
+
+                                                {{-- SAME PRICE CHANGE LOGIC AS ALL PRODUCTS --}}
+                                                @php
+                                                    $percentage = $product->percentage_change;
+                                                @endphp
+
+                                                @if($percentage !== null && $percentage != 0)
+                                                    <li>
+                                                        <span class="product_badge badge_discount position-absolute rounded-pill"
+                                                            style="
+                                                                padding:4px 8px;
+                                                                font-size:12px;
+                                                                color:#fff;
+                                                                background-color: {{ $percentage > 0 ? '#ff4d4d' : '#28a745' }};
+                                                            ">
+                                                            @if($percentage > 0)
+                                                                ↑ {{ number_format($percentage, 1) }}%
+                                                            @else
+                                                                ↓ {{ number_format(abs($percentage), 1) }}%
+                                                            @endif
+                                                        </span>
+                                                    </li>
+                                                @endif
+
+                                            </ul>
+
+                                            <ul class="product_action_btns ul_li_block d-flex">
+                                                <li><a class="tooltips" data-placement="top" title="Search Product" href="#!">
+                                                        <i class="fas fa-search"></i></a>
+                                                </li>
+                                                <li><a class="tooltips" data-placement="top" title="Add To Cart"
+                                                        href="#product_quick_view" data-bs-toggle="modal">
+                                                        <i class="fas fa-shopping-bag"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="rating_wrap d-flex">
+                                            <ul class="rating_star ul_li">
+                                                @for($i = 1; $i <= 5; $i++)
+                                                    <li class="{{ $i <= 4 ? 'active' : '' }}">
+                                                        <i class="{{ $i <= 4 ? 'fas' : 'far' }} fa-star"></i>
+                                                    </li>
+                                                @endfor
+                                            </ul>
+                                            <span class="shop_review_text">( 4.0 )</span>
+                                        </div>
+
+                                        <div class="product_content">
+                                            <h3 class="product_title">
+                                                <a href="">{{ $product->name }}</a>
+                                            </h3>
+
+                                            <div class="product_price">
+                                                @if($product->pricing)
+                                                    @if($product->pricing->discount_price)
+                                                        <span class="sale_price pe-1">
+                                                            ₹{{ number_format($product->pricing->final_price, 2) }}
+                                                        </span>
+                                                        <del>₹{{ number_format($product->previous_day_price, 2) }}</del>
+                                                    @else
+                                                        <span class="sale_price pe-1">
+                                                            ₹{{ number_format($product->pricing->price, 2) }}
+                                                        </span>
+                                                    @endif
+                                                @else
+                                                    <span class="sale_price pe-1">Price not available</span>
+                                                @endif
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
+
+                        @if($categoryProducts->count() == 0)
+                            <div class="col-12 text-center">
+                                <div class="no-products">
+                                    <i class="fas fa-folder-open fa-3x text-muted mb-3"></i>
+                                    <h4>No Products in {{ $category->name }}</h4>
+                                    <p class="text-muted">No products available in this category yet</p>
+                                </div>
+                            </div>
+                        @endif
+
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </div>
+</section>
+
+	<!-- product section end -->
 
 	<!-- deal section start -->
 	<section class="deal_section sec_space_xs_70" data-aos="fade-up" data-aos-duration="2000">
@@ -2453,14 +795,15 @@
 			<div class="row justify-content-center align-items-center">
 				<div class="col-md-6 col-lg-4">
 					<div class="deal_item_content_wrap">
-						<div class="deal_item_content position-relative" style="background-image: url({{asset("web-assets/images/deals1.png")}});"
-							data-aos="flip-right" data-aos-duration="1000">
+						<div class="deal_item_content position-relative"
+							style="background-image: url({{asset("web-assets/images/deals1.png")}});" data-aos="flip-right"
+							data-aos-duration="1000">
 							<div class="deal_item_txt position-absolute">
 								<div class="deal_title" data-aos="flip-left" data-aos-duration="1000">
 									<h3>Get Every Vegetable You Need</h3>
 								</div>
 								<div class="deal_btn">
-									<a href="shop-list.html" target="_blank"><button type="button" class="btn">SHOP NOW
+									<a href="shop-list.html"><button type="button" class="btn">SHOP NOW
 											<span><i class="fas fa-long-arrow-alt-right"></i></span></button></a>
 								</div>
 							</div>
@@ -2469,8 +812,9 @@
 				</div>
 				<div class="col-md-6 col-lg-4">
 					<div class="deal_item_content_wrap">
-						<div class="deal_item_content position-relative" style="background-image: url({{asset("web-assets/images/deals2.png")}});"
-							data-aos="flip-right" data-aos-duration="1500">
+						<div class="deal_item_content position-relative"
+							style="background-image: url({{asset("web-assets/images/deals2.png")}});" data-aos="flip-right"
+							data-aos-duration="1500">
 							<div class="deal_item_txt position-absolute">
 								<div class="deal_sub_title">
 									<h5>FRESH FROM OUR FARM</h5>
@@ -2479,7 +823,7 @@
 									<h3>Get Every 30% Vegetable You Need</h3>
 								</div>
 								<div class="deal_btn">
-									<a href="shop-list.html" target="_blank"><button type="button" class="btn">SHOP NOW
+									<a href="shop-list.html" ><button type="button" class="btn">SHOP NOW
 											<span><i class="fas fa-long-arrow-alt-right"></i></span></button></a>
 								</div>
 							</div>
@@ -2488,8 +832,9 @@
 				</div>
 				<div class="col-md-6 col-lg-4">
 					<div class="deal_item_content_wrap">
-						<div class="deal_item_content position-relative" style="background-image: url({{asset("web-assets/images/deals3.png")}});"
-							data-aos="flip-right" data-aos-duration="2000">
+						<div class="deal_item_content position-relative"
+							style="background-image: url({{asset("web-assets/images/deals3.png")}});" data-aos="flip-right"
+							data-aos-duration="2000">
 							<div class="deal_item_txt position-absolute">
 								<div class="deal_title" data-aos="flip-left" data-aos-duration="2000">
 									<h3>First Deal Vegetable You Need</h3>
@@ -2507,1031 +852,1031 @@
 	</section>
 	<!-- deal section end -->
 
-	<!-- produce category section start -->
 	<!-- <section class="produce_category_section" data-aos="fade-up" data-aos-duration="2000">
-								<div class="container">
-								   <div class="prdc_ctg_wrap mx-2">
-									  <div class="row">
-										 <div class="col-xl-4 px-md-0">
-											<div class="prdc_ctg_content_wrap">
-											   <div class="prdc_ctg_content">
-												  <div class="prdc_ctg_sub_title d-flex align-items-center pb-2">
-													 <i class="far fa-circle"></i>
-													 <i class="far fa-circle"></i>
-													 <i class="far fa-circle"></i>
+										<div class="container">
+										   <div class="prdc_ctg_wrap mx-2">
+											  <div class="row">
+												 <div class="col-xl-4 px-md-0">
+													<div class="prdc_ctg_content_wrap">
+													   <div class="prdc_ctg_content">
+														  <div class="prdc_ctg_sub_title d-flex align-items-center pb-2">
+															 <i class="far fa-circle"></i>
+															 <i class="far fa-circle"></i>
+															 <i class="far fa-circle"></i>
 
-												  </div>
-												  <div class="prdc_ctg_title">
-													 <h2>Fresh produce Categories</h2>
-												  </div>
-												  <div class="prdc_ctg_desc py-2">
-													 <p>Apparently we had reached a great height in the atmosphere, for the sky was a</p>
-												  </div>
-											   </div>
-											   <div class="prdc_ctg_item_content">
-												  <ul class="product_tabnav_2 d-flex mt-3 nav nav-pills" id="pills-tab" role="tablist">
-													 <li class="nav-item mt-2" role="presentation">
-														<button class="nav-link rounded-pill active d-flex justify-content-between align-items-center rounded-pill" id="pills-vegetable-tab" data-bs-toggle="pill" data-bs-target="#pills-vegetable" type="button" role="tab" aria-controls="pills-vegetable" aria-selected="true">
-														   <div class="prdc_ctg_mixed d-flex justify-content-center align-items-center">
-															  <div class="prdc_ctg_icon d-flex justify-content-center align-items-center me-2">
-																 <img src="images/ctg_icon1.png" alt="image_not_found">
-															  </div>
-															  <div class="prdc_ctg_icon_title">
-																 <h5>Vegetables</h5>
-															  </div>
-														   </div>
-														   <div class="prdc_ctg_icon_num">
-															  <span>30</span>
-														   </div>
-														</button>
-													 </li>
-													 <li class="nav-item mt-2" role="presentation">
-														<button class="nav-link rounded-pill d-flex justify-content-between align-items-center rounded-pill" id="pills-fresh-tab" data-bs-toggle="pill" data-bs-target="#pills-fresh" type="button" role="tab" aria-controls="pills-fresh" aria-selected="true">
-														   <div class="prdc_ctg_mixed d-flex justify-content-center align-items-center">
-															  <div class="prdc_ctg_icon d-flex justify-content-center align-items-center me-2">
-																 <img src="images/ctg_icon2.png" alt="image_not_found">
-															  </div>
-															  <div class="prdc_ctg_icon_title">
-																 <h5>Fresh Fruits</h5>
-															  </div>
-														   </div>
-														   <div class="prdc_ctg_icon_num">
-															  <span>30</span>
-														   </div>
-														</button>
-													 </li>
-													 <li class="nav-item mt-2" role="presentation">
-														<button class="nav-link rounded-pill d-flex justify-content-between align-items-center rounded-pill" id="pills-beverages-tab" data-bs-toggle="pill" data-bs-target="#pills-beverages" type="button" role="tab" aria-controls="pills-beverages" aria-selected="true">
-														   <div class="prdc_ctg_mixed d-flex justify-content-center align-items-center">
-															  <div class="prdc_ctg_icon d-flex justify-content-center align-items-center me-2">
-																 <img src="images/ctg_icon3.png" alt="image_not_found">
-															  </div>
-															  <div class="prdc_ctg_icon_title">
-																 <h5>Beverages</h5>
-															  </div>
-														   </div>
-														   <div class="prdc_ctg_icon_num">
-															  <span>30</span>
-														   </div>
-														</button>
-													 </li>
-													 <li class="nav-item mt-2" role="presentation">
-														<button class="nav-link rounded-pill d-flex justify-content-between align-items-center rounded-pill" id="pills-babies-tab" data-bs-toggle="pill" data-bs-target="#pills-babies" type="button" role="tab" aria-controls="pills-babies" aria-selected="true">
-														   <div class="prdc_ctg_mixed d-flex justify-content-center align-items-center">
-															  <div class="prdc_ctg_icon d-flex justify-content-center align-items-center me-2">
-																 <img src="images/ctg_icon4.png" alt="image_not_found">
-															  </div>
-															  <div class="prdc_ctg_icon_title">
-																 <h5>Babies & Kids</h5>
-															  </div>
-														   </div>
-														   <div class="prdc_ctg_icon_num">
-															  <span>30</span>
-														   </div>
-														</button>
-													 </li>
-													 <li class="nav-item mt-2" role="presentation">
-														<button class="nav-link rounded-pill d-flex justify-content-between align-items-center rounded-pill" id="pills-frozen-tab" data-bs-toggle="pill" data-bs-target="#pills-frozen" type="button" role="tab" aria-controls="pills-frozen" aria-selected="true">
-														   <div class="prdc_ctg_mixed d-flex justify-content-center align-items-center">
-															  <div class="prdc_ctg_icon d-flex justify-content-center align-items-center me-2">
-																 <img src="images/ctg_icon5.png" alt="image_not_found">
-															  </div>
-															  <div class="prdc_ctg_icon_title">
-																 <h5>Frozen Foods</h5>
-															  </div>
-														   </div>
-														   <div class="prdc_ctg_icon_num">
-															  <span>30</span>
-														   </div>
-														</button>
-													 </li>
-												  </ul>
-											   </div>
-											</div>
-										 </div>
-										 <div class="col-xl-8 px-0">
-											<div class="tab-content" id="pills-tabContent">
-											   <div class="tab-pane fade show active" id="pills-vegetable" role="tabpanel" aria-labelledby="pills-vegetable-tab">
-												  <div class="prdc_ctg_product_wrap">
-													 <div class="prdc_ctg_inner_product bg-white">
-														<div class="row">
-														   <div class="col-6 col-lg-6">
-															  <div class="prdc_ctg_product_content d-flex justify-content-center align-items-center">
-																 <div class="prdc_ctg_product_img d-flex justify-content-center align-items-center me-3">
-																	<img src="images/cat6.png" alt="cat6">
-																 </div>
-																 <div class="prdc_ctg_product_text">
-																	<div class="prdc_ctg_product_badge mb-2">
-																	   <span class="text-uppercase rounded-pill">Meats</span>
-																	</div>
-																	<div class="prdc_ctg_product_rating my-1 rating_wrap d-flex">
-																	   <ul class="rating_star ul_li">
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li><i class="far fa-star"></i></li>
-																	   </ul>
-																	   <span class="shop_review_text">( 4.0 )</span>
-																	</div>
-																	<div class="prdc_ctg_product_title my-2">
-																	   <a href="shop-list.html" target="_blank"><h5>Fresh Cabbage</h5></a>
-																	</div>
-																	<div class="prdc_ctg_product_price mt-1 product_price">
-																	   <span class="sale_price pe-1">$50.00</span>
-																	   <del>$65.00</del>
-																	</div>
-																 </div>
-															  </div>
-														   </div>
-														   <div class="col-6 col-lg-6">
-															  <div class="prdc_ctg_product_content d-flex justify-content-center align-items-center">
-																 <div class="prdc_ctg_product_img d-flex justify-content-center align-items-center me-3">
-																	<img src="images/cat7.png" alt="cat7">
-																 </div>
-																 <div class="prdc_ctg_product_text">
-																	<div class="prdc_ctg_product_badge mb-2">
-																	   <span class="text-uppercase rounded-pill">Meats</span>
-																	</div>
-																	<div class="prdc_ctg_product_rating my-1 rating_wrap d-flex">
-																	   <ul class="rating_star ul_li">
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li><i class="far fa-star"></i></li>
-																	   </ul>
-																	   <span class="shop_review_text">( 4.0 )</span>
-																	</div>
-																	<div class="prdc_ctg_product_title my-2">
-																	   <a href="shop-list.html" target="_blank"><h5>Fresh Cabbage</h5></a>
-																	</div>
-																	<div class="prdc_ctg_product_price mt-1 product_price">
-																	   <span class="sale_price pe-1">$50.00</span>
-																	   <del>$65.00</del>
-																	</div>
-																 </div>
-															  </div>
-														   </div>
-														   <div class="col-6 col-lg-6">
-															  <div class="prdc_ctg_product_content d-flex justify-content-center align-items-center">
-																 <div class="prdc_ctg_product_img d-flex justify-content-center align-items-center me-3">
-																	<img src="images/cat8.png" alt="cat8">
-																 </div>
-																 <div class="prdc_ctg_product_text">
-																	<div class="prdc_ctg_product_badge mb-2">
-																	   <span class="text-uppercase rounded-pill">Meats</span>
-																	</div>
-																	<div class="prdc_ctg_product_rating my-1 rating_wrap d-flex">
-																	   <ul class="rating_star ul_li">
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li><i class="far fa-star"></i></li>
-																	   </ul>
-																	   <span class="shop_review_text">( 4.0 )</span>
-																	</div>
-																	<div class="prdc_ctg_product_title my-2">
-																	   <a href="shop-list.html" target="_blank"><h5>Fresh Cabbage</h5></a>
-																	</div>
-																	<div class="prdc_ctg_product_price mt-1 product_price">
-																	   <span class="sale_price pe-1">$50.00</span>
-																	   <del>$65.00</del>
-																	</div>
-																 </div>
-															  </div>
-														   </div>
-														   <div class="col-6 col-lg-6">
-															  <div class="prdc_ctg_product_content d-flex justify-content-center align-items-center">
-																 <div class="prdc_ctg_product_img d-flex justify-content-center align-items-center me-3">
-																	<img src="images/cat9.png" alt="cat9">
-																 </div>
-																 <div class="prdc_ctg_product_text">
-																	<div class="prdc_ctg_product_badge mb-2">
-																	   <span class="text-uppercase rounded-pill">Meats</span>
-																	</div>
-																	<div class="prdc_ctg_product_rating my-1 rating_wrap d-flex">
-																	   <ul class="rating_star ul_li">
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li><i class="far fa-star"></i></li>
-																	   </ul>
-																	   <span class="shop_review_text">( 4.0 )</span>
-																	</div>
-																	<div class="prdc_ctg_product_title my-2">
-																	   <a href="shop-list.html" target="_blank"><h5>Fresh Cabbage</h5></a>
-																	</div>
-																	<div class="prdc_ctg_product_price mt-1 product_price">
-																	   <span class="sale_price pe-1">$50.00</span>
-																	   <del>$65.00</del>
-																	</div>
-																 </div>
-															  </div>
-														   </div>
-														   <div class="col-6 col-lg-6">
-															  <div class="prdc_ctg_product_content d-flex justify-content-center align-items-center">
-																 <div class="prdc_ctg_product_img d-flex justify-content-center align-items-center me-3">
-																	<img src="images/cat10.png" alt="cat10">
-																 </div>
-																 <div class="prdc_ctg_product_text">
-																	<div class="prdc_ctg_product_badge mb-2">
-																	   <span class="text-uppercase rounded-pill">Meats</span>
-																	</div>
-																	<div class="prdc_ctg_product_rating my-1 rating_wrap d-flex">
-																	   <ul class="rating_star ul_li">
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li><i class="far fa-star"></i></li>
-																	   </ul>
-																	   <span class="shop_review_text">( 4.0 )</span>
-																	</div>
-																	<div class="prdc_ctg_product_title my-2">
-																	   <a href="shop-list.html" target="_blank"><h5>Fresh Cabbage</h5></a>
-																	</div>
-																	<div class="prdc_ctg_product_price mt-1 product_price">
-																	   <span class="sale_price pe-1">$50.00</span>
-																	   <del>$65.00</del>
-																	</div>
-																 </div>
-															  </div>
-														   </div>
-														   <div class="col-6 col-lg-6">
-															  <div class="prdc_ctg_product_content d-flex justify-content-center align-items-center">
-																 <div class="prdc_ctg_product_img d-flex justify-content-center align-items-center me-3">
-																	<img src="images/cat11.png" alt="cat11">
-																 </div>
-																 <div class="prdc_ctg_product_text">
-																	<div class="prdc_ctg_product_badge mb-2">
-																	   <span class="text-uppercase rounded-pill">Meats</span>
-																	</div>
-																	<div class="prdc_ctg_product_rating my-1 rating_wrap d-flex">
-																	   <ul class="rating_star ul_li">
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li><i class="far fa-star"></i></li>
-																	   </ul>
-																	   <span class="shop_review_text">( 4.0 )</span>
-																	</div>
-																	<div class="prdc_ctg_product_title my-2">
-																	   <a href="shop-list.html" target="_blank"><h5>Fresh Cabbage</h5></a>
-																	</div>
-																	<div class="prdc_ctg_product_price mt-1 product_price">
-																	   <span class="sale_price pe-1">$50.00</span>
-																	   <del>$65.00</del>
-																	</div>
-																 </div>
-															  </div>
-														   </div>
-														</div>
-													 </div>
-												  </div>
-											   </div>
-											   <div class="tab-pane fade" id="pills-fresh" role="tabpanel" aria-labelledby="pills-fresh-tab">
-												  <div class="prdc_ctg_product_wrap">
-													 <div class="prdc_ctg_inner_product bg-white">
-														<div class="row">
-														   <div class="col-md-6">
-															  <div class="prdc_ctg_product_content d-flex justify-content-center align-items-center">
-																 <div class="prdc_ctg_product_img d-flex justify-content-center align-items-center me-3">
-																	<img src="images/cat6.png" alt="cat6">
-																 </div>
-																 <div class="prdc_ctg_product_text">
-																	<div class="prdc_ctg_product_badge mb-2">
-																	   <span class="text-uppercase rounded-pill">Meats</span>
-																	</div>
-																	<div class="prdc_ctg_product_rating my-1 rating_wrap d-flex">
-																	   <ul class="rating_star ul_li">
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li><i class="far fa-star"></i></li>
-																	   </ul>
-																	   <span class="shop_review_text">( 4.0 )</span>
-																	</div>
-																	<div class="prdc_ctg_product_title my-2">
-																	   <a href="shop-list.html" target="_blank"><h5>Fresh Cabbage</h5></a>
-																	</div>
-																	<div class="prdc_ctg_product_price mt-1 product_price">
-																	   <span class="sale_price pe-1">$50.00</span>
-																	   <del>$65.00</del>
-																	</div>
-																 </div>
-															  </div>
-														   </div>
-														   <div class="col-md-6">
-															  <div class="prdc_ctg_product_content d-flex justify-content-center align-items-center">
-																 <div class="prdc_ctg_product_img d-flex justify-content-center align-items-center me-3">
-																	<img src="images/cat7.png" alt="cat7">
-																 </div>
-																 <div class="prdc_ctg_product_text">
-																	<div class="prdc_ctg_product_badge mb-2">
-																	   <span class="text-uppercase rounded-pill">Meats</span>
-																	</div>
-																	<div class="prdc_ctg_product_rating my-1 rating_wrap d-flex">
-																	   <ul class="rating_star ul_li">
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li><i class="far fa-star"></i></li>
-																	   </ul>
-																	   <span class="shop_review_text">( 4.0 )</span>
-																	</div>
-																	<div class="prdc_ctg_product_title my-2">
-																	   <a href="shop-list.html" target="_blank"><h5>Fresh Cabbage</h5></a>
-																	</div>
-																	<div class="prdc_ctg_product_price mt-1 product_price">
-																	   <span class="sale_price pe-1">$50.00</span>
-																	   <del>$65.00</del>
-																	</div>
-																 </div>
-															  </div>
-														   </div>
-														   <div class="col-md-6">
-															  <div class="prdc_ctg_product_content d-flex justify-content-center align-items-center">
-																 <div class="prdc_ctg_product_img d-flex justify-content-center align-items-center me-3">
-																	<img src="images/cat8.png" alt="cat8">
-																 </div>
-																 <div class="prdc_ctg_product_text">
-																	<div class="prdc_ctg_product_badge mb-2">
-																	   <span class="text-uppercase rounded-pill">Meats</span>
-																	</div>
-																	<div class="prdc_ctg_product_rating my-1 rating_wrap d-flex">
-																	   <ul class="rating_star ul_li">
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li><i class="far fa-star"></i></li>
-																	   </ul>
-																	   <span class="shop_review_text">( 4.0 )</span>
-																	</div>
-																	<div class="prdc_ctg_product_title my-2">
-																	   <a href="shop-list.html" target="_blank"><h5>Fresh Cabbage</h5></a>
-																	</div>
-																	<div class="prdc_ctg_product_price mt-1 product_price">
-																	   <span class="sale_price pe-1">$50.00</span>
-																	   <del>$65.00</del>
-																	</div>
-																 </div>
-															  </div>
-														   </div>
-														   <div class="col-md-6">
-															  <div class="prdc_ctg_product_content d-flex justify-content-center align-items-center">
-																 <div class="prdc_ctg_product_img d-flex justify-content-center align-items-center me-3">
-																	<img src="images/cat9.png" alt="cat9">
-																 </div>
-																 <div class="prdc_ctg_product_text">
-																	<div class="prdc_ctg_product_badge mb-2">
-																	   <span class="text-uppercase rounded-pill">Meats</span>
-																	</div>
-																	<div class="prdc_ctg_product_rating my-1 rating_wrap d-flex">
-																	   <ul class="rating_star ul_li">
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li><i class="far fa-star"></i></li>
-																	   </ul>
-																	   <span class="shop_review_text">( 4.0 )</span>
-																	</div>
-																	<div class="prdc_ctg_product_title my-2">
-																	   <a href="shop-list.html" target="_blank"><h5>Fresh Cabbage</h5></a>
-																	</div>
-																	<div class="prdc_ctg_product_price mt-1 product_price">
-																	   <span class="sale_price pe-1">$50.00</span>
-																	   <del>$65.00</del>
-																	</div>
-																 </div>
-															  </div>
-														   </div>
-														   <div class="col-md-6">
-															  <div class="prdc_ctg_product_content d-flex justify-content-center align-items-center">
-																 <div class="prdc_ctg_product_img d-flex justify-content-center align-items-center me-3">
-																	<img src="images/cat10.png" alt="cat10">
-																 </div>
-																 <div class="prdc_ctg_product_text">
-																	<div class="prdc_ctg_product_badge mb-2">
-																	   <span class="text-uppercase rounded-pill">Meats</span>
-																	</div>
-																	<div class="prdc_ctg_product_rating my-1 rating_wrap d-flex">
-																	   <ul class="rating_star ul_li">
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li><i class="far fa-star"></i></li>
-																	   </ul>
-																	   <span class="shop_review_text">( 4.0 )</span>
-																	</div>
-																	<div class="prdc_ctg_product_title my-2">
-																	   <a href="shop-list.html" target="_blank"><h5>Fresh Cabbage</h5></a>
-																	</div>
-																	<div class="prdc_ctg_product_price mt-1 product_price">
-																	   <span class="sale_price pe-1">$50.00</span>
-																	   <del>$65.00</del>
-																	</div>
-																 </div>
-															  </div>
-														   </div>
-														   <div class="col-md-6">
-															  <div class="prdc_ctg_product_content d-flex justify-content-center align-items-center">
-																 <div class="prdc_ctg_product_img d-flex justify-content-center align-items-center me-3">
-																	<img src="images/cat11.png" alt="cat11">
-																 </div>
-																 <div class="prdc_ctg_product_text">
-																	<div class="prdc_ctg_product_badge mb-2">
-																	   <span class="text-uppercase rounded-pill">Meats</span>
-																	</div>
-																	<div class="prdc_ctg_product_rating my-1 rating_wrap d-flex">
-																	   <ul class="rating_star ul_li">
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li><i class="far fa-star"></i></li>
-																	   </ul>
-																	   <span class="shop_review_text">( 4.0 )</span>
-																	</div>
-																	<div class="prdc_ctg_product_title my-2">
-																	   <a href="shop-list.html" target="_blank"><h5>Fresh Cabbage</h5></a>
-																	</div>
-																	<div class="prdc_ctg_product_price mt-1 product_price">
-																	   <span class="sale_price pe-1">$50.00</span>
-																	   <del>$65.00</del>
-																	</div>
-																 </div>
-															  </div>
-														   </div>
-														</div>
-													 </div>
-												  </div>
-											   </div>
-											   <div class="tab-pane fade" id="pills-beverages" role="tabpanel" aria-labelledby="pills-beverages-tab">
-												  <div class="prdc_ctg_product_wrap">
-													 <div class="prdc_ctg_inner_product bg-white">
-														<div class="row">
-														   <div class="col-md-6">
-															  <div class="prdc_ctg_product_content d-flex justify-content-center align-items-center">
-																 <div class="prdc_ctg_product_img d-flex justify-content-center align-items-center me-3">
-																	<img src="images/cat6.png" alt="cat6">
-																 </div>
-																 <div class="prdc_ctg_product_text">
-																	<div class="prdc_ctg_product_badge mb-2">
-																	   <span class="text-uppercase rounded-pill">Meats</span>
-																	</div>
-																	<div class="prdc_ctg_product_rating my-1 rating_wrap d-flex">
-																	   <ul class="rating_star ul_li">
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li><i class="far fa-star"></i></li>
-																	   </ul>
-																	   <span class="shop_review_text">( 4.0 )</span>
-																	</div>
-																	<div class="prdc_ctg_product_title my-2">
-																	   <a href="shop-list.html" target="_blank"><h5>Fresh Cabbage</h5></a>
-																	</div>
-																	<div class="prdc_ctg_product_price mt-1 product_price">
-																	   <span class="sale_price pe-1">$50.00</span>
-																	   <del>$65.00</del>
-																	</div>
-																 </div>
-															  </div>
-														   </div>
-														   <div class="col-md-6">
-															  <div class="prdc_ctg_product_content d-flex justify-content-center align-items-center">
-																 <div class="prdc_ctg_product_img d-flex justify-content-center align-items-center me-3">
-																	<img src="images/cat7.png" alt="cat7">
-																 </div>
-																 <div class="prdc_ctg_product_text">
-																	<div class="prdc_ctg_product_badge mb-2">
-																	   <span class="text-uppercase rounded-pill">Meats</span>
-																	</div>
-																	<div class="prdc_ctg_product_rating my-1 rating_wrap d-flex">
-																	   <ul class="rating_star ul_li">
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li><i class="far fa-star"></i></li>
-																	   </ul>
-																	   <span class="shop_review_text">( 4.0 )</span>
-																	</div>
-																	<div class="prdc_ctg_product_title my-2">
-																	   <a href="shop-list.html" target="_blank"><h5>Fresh Cabbage</h5></a>
-																	</div>
-																	<div class="prdc_ctg_product_price mt-1 product_price">
-																	   <span class="sale_price pe-1">$50.00</span>
-																	   <del>$65.00</del>
-																	</div>
-																 </div>
-															  </div>
-														   </div>
-														   <div class="col-md-6">
-															  <div class="prdc_ctg_product_content d-flex justify-content-center align-items-center">
-																 <div class="prdc_ctg_product_img d-flex justify-content-center align-items-center me-3">
-																	<img src="images/cat8.png" alt="cat8">
-																 </div>
-																 <div class="prdc_ctg_product_text">
-																	<div class="prdc_ctg_product_badge mb-2">
-																	   <span class="text-uppercase rounded-pill">Meats</span>
-																	</div>
-																	<div class="prdc_ctg_product_rating my-1 rating_wrap d-flex">
-																	   <ul class="rating_star ul_li">
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li><i class="far fa-star"></i></li>
-																	   </ul>
-																	   <span class="shop_review_text">( 4.0 )</span>
-																	</div>
-																	<div class="prdc_ctg_product_title my-2">
-																	   <a href="shop-list.html" target="_blank"><h5>Fresh Cabbage</h5></a>
-																	</div>
-																	<div class="prdc_ctg_product_price mt-1 product_price">
-																	   <span class="sale_price pe-1">$50.00</span>
-																	   <del>$65.00</del>
-																	</div>
-																 </div>
-															  </div>
-														   </div>
-														   <div class="col-md-6">
-															  <div class="prdc_ctg_product_content d-flex justify-content-center align-items-center">
-																 <div class="prdc_ctg_product_img d-flex justify-content-center align-items-center me-3">
-																	<img src="images/cat9.png" alt="cat9">
-																 </div>
-																 <div class="prdc_ctg_product_text">
-																	<div class="prdc_ctg_product_badge mb-2">
-																	   <span class="text-uppercase rounded-pill">Meats</span>
-																	</div>
-																	<div class="prdc_ctg_product_rating my-1 rating_wrap d-flex">
-																	   <ul class="rating_star ul_li">
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li><i class="far fa-star"></i></li>
-																	   </ul>
-																	   <span class="shop_review_text">( 4.0 )</span>
-																	</div>
-																	<div class="prdc_ctg_product_title my-2">
-																	   <a href="shop-list.html" target="_blank"><h5>Fresh Cabbage</h5></a>
-																	</div>
-																	<div class="prdc_ctg_product_price mt-1 product_price">
-																	   <span class="sale_price pe-1">$50.00</span>
-																	   <del>$65.00</del>
-																	</div>
-																 </div>
-															  </div>
-														   </div>
-														   <div class="col-md-6">
-															  <div class="prdc_ctg_product_content d-flex justify-content-center align-items-center">
-																 <div class="prdc_ctg_product_img d-flex justify-content-center align-items-center me-3">
-																	<img src="images/cat10.png" alt="cat10">
-																 </div>
-																 <div class="prdc_ctg_product_text">
-																	<div class="prdc_ctg_product_badge mb-2">
-																	   <span class="text-uppercase rounded-pill">Meats</span>
-																	</div>
-																	<div class="prdc_ctg_product_rating my-1 rating_wrap d-flex">
-																	   <ul class="rating_star ul_li">
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li><i class="far fa-star"></i></li>
-																	   </ul>
-																	   <span class="shop_review_text">( 4.0 )</span>
-																	</div>
-																	<div class="prdc_ctg_product_title my-2">
-																	   <a href="shop-list.html" target="_blank"><h5>Fresh Cabbage</h5></a>
-																	</div>
-																	<div class="prdc_ctg_product_price mt-1 product_price">
-																	   <span class="sale_price pe-1">$50.00</span>
-																	   <del>$65.00</del>
-																	</div>
-																 </div>
-															  </div>
-														   </div>
-														   <div class="col-md-6">
-															  <div class="prdc_ctg_product_content d-flex justify-content-center align-items-center">
-																 <div class="prdc_ctg_product_img d-flex justify-content-center align-items-center me-3">
-																	<img src="images/cat11.png" alt="cat11">
-																 </div>
-																 <div class="prdc_ctg_product_text">
-																	<div class="prdc_ctg_product_badge mb-2">
-																	   <span class="text-uppercase rounded-pill">Meats</span>
-																	</div>
-																	<div class="prdc_ctg_product_rating my-1 rating_wrap d-flex">
-																	   <ul class="rating_star ul_li">
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li><i class="far fa-star"></i></li>
-																	   </ul>
-																	   <span class="shop_review_text">( 4.0 )</span>
-																	</div>
-																	<div class="prdc_ctg_product_title my-2">
-																	   <a href="shop-list.html" target="_blank"><h5>Fresh Cabbage</h5></a>
-																	</div>
-																	<div class="prdc_ctg_product_price mt-1 product_price">
-																	   <span class="sale_price pe-1">$50.00</span>
-																	   <del>$65.00</del>
-																	</div>
-																 </div>
-															  </div>
-														   </div>
-														</div>
-													 </div>
-												  </div>
-											   </div>
-											   <div class="tab-pane fade" id="pills-babies" role="tabpanel" aria-labelledby="pills-babies-tab">
-												  <div class="prdc_ctg_product_wrap">
-													 <div class="prdc_ctg_inner_product bg-white">
-														<div class="row">
-														   <div class="col-md-6">
-															  <div class="prdc_ctg_product_content d-flex justify-content-center align-items-center">
-																 <div class="prdc_ctg_product_img d-flex justify-content-center align-items-center me-3">
-																	<img src="images/cat6.png" alt="cat6">
-																 </div>
-																 <div class="prdc_ctg_product_text">
-																	<div class="prdc_ctg_product_badge mb-2">
-																	   <span class="text-uppercase rounded-pill">Meats</span>
-																	</div>
-																	<div class="prdc_ctg_product_rating my-1 rating_wrap d-flex">
-																	   <ul class="rating_star ul_li">
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li><i class="far fa-star"></i></li>
-																	   </ul>
-																	   <span class="shop_review_text">( 4.0 )</span>
-																	</div>
-																	<div class="prdc_ctg_product_title my-2">
-																	   <a href="shop-list.html" target="_blank"><h5>Fresh Cabbage</h5></a>
-																	</div>
-																	<div class="prdc_ctg_product_price mt-1 product_price">
-																	   <span class="sale_price pe-1">$50.00</span>
-																	   <del>$65.00</del>
-																	</div>
-																 </div>
-															  </div>
-														   </div>
-														   <div class="col-md-6">
-															  <div class="prdc_ctg_product_content d-flex justify-content-center align-items-center">
-																 <div class="prdc_ctg_product_img d-flex justify-content-center align-items-center me-3">
-																	<img src="images/cat7.png" alt="cat7">
-																 </div>
-																 <div class="prdc_ctg_product_text">
-																	<div class="prdc_ctg_product_badge mb-2">
-																	   <span class="text-uppercase rounded-pill">Meats</span>
-																	</div>
-																	<div class="prdc_ctg_product_rating my-1 rating_wrap d-flex">
-																	   <ul class="rating_star ul_li">
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li><i class="far fa-star"></i></li>
-																	   </ul>
-																	   <span class="shop_review_text">( 4.0 )</span>
-																	</div>
-																	<div class="prdc_ctg_product_title my-2">
-																	   <a href="shop-list.html" target="_blank"><h5>Fresh Cabbage</h5></a>
-																	</div>
-																	<div class="prdc_ctg_product_price mt-1 product_price">
-																	   <span class="sale_price pe-1">$50.00</span>
-																	   <del>$65.00</del>
-																	</div>
-																 </div>
-															  </div>
-														   </div>
-														   <div class="col-md-6">
-															  <div class="prdc_ctg_product_content d-flex justify-content-center align-items-center">
-																 <div class="prdc_ctg_product_img d-flex justify-content-center align-items-center me-3">
-																	<img src="images/cat8.png" alt="cat8">
-																 </div>
-																 <div class="prdc_ctg_product_text">
-																	<div class="prdc_ctg_product_badge mb-2">
-																	   <span class="text-uppercase rounded-pill">Meats</span>
-																	</div>
-																	<div class="prdc_ctg_product_rating my-1 rating_wrap d-flex">
-																	   <ul class="rating_star ul_li">
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li><i class="far fa-star"></i></li>
-																	   </ul>
-																	   <span class="shop_review_text">( 4.0 )</span>
-																	</div>
-																	<div class="prdc_ctg_product_title my-2">
-																	   <a href="shop-list.html" target="_blank"><h5>Fresh Cabbage</h5></a>
-																	</div>
-																	<div class="prdc_ctg_product_price mt-1 product_price">
-																	   <span class="sale_price pe-1">$50.00</span>
-																	   <del>$65.00</del>
-																	</div>
-																 </div>
-															  </div>
-														   </div>
-														   <div class="col-md-6">
-															  <div class="prdc_ctg_product_content d-flex justify-content-center align-items-center">
-																 <div class="prdc_ctg_product_img d-flex justify-content-center align-items-center me-3">
-																	<img src="images/cat9.png" alt="cat9">
-																 </div>
-																 <div class="prdc_ctg_product_text">
-																	<div class="prdc_ctg_product_badge mb-2">
-																	   <span class="text-uppercase rounded-pill">Meats</span>
-																	</div>
-																	<div class="prdc_ctg_product_rating my-1 rating_wrap d-flex">
-																	   <ul class="rating_star ul_li">
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li><i class="far fa-star"></i></li>
-																	   </ul>
-																	   <span class="shop_review_text">( 4.0 )</span>
-																	</div>
-																	<div class="prdc_ctg_product_title my-2">
-																	   <a href="shop-list.html" target="_blank"><h5>Fresh Cabbage</h5></a>
-																	</div>
-																	<div class="prdc_ctg_product_price mt-1 product_price">
-																	   <span class="sale_price pe-1">$50.00</span>
-																	   <del>$65.00</del>
-																	</div>
-																 </div>
-															  </div>
-														   </div>
-														   <div class="col-md-6">
-															  <div class="prdc_ctg_product_content d-flex justify-content-center align-items-center">
-																 <div class="prdc_ctg_product_img d-flex justify-content-center align-items-center me-3">
-																	<img src="images/cat10.png" alt="cat10">
-																 </div>
-																 <div class="prdc_ctg_product_text">
-																	<div class="prdc_ctg_product_badge mb-2">
-																	   <span class="text-uppercase rounded-pill">Meats</span>
-																	</div>
-																	<div class="prdc_ctg_product_rating my-1 rating_wrap d-flex">
-																	   <ul class="rating_star ul_li">
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li><i class="far fa-star"></i></li>
-																	   </ul>
-																	   <span class="shop_review_text">( 4.0 )</span>
-																	</div>
-																	<div class="prdc_ctg_product_title my-2">
-																	   <a href="shop-list.html" target="_blank"><h5>Fresh Cabbage</h5></a>
-																	</div>
-																	<div class="prdc_ctg_product_price mt-1 product_price">
-																	   <span class="sale_price pe-1">$50.00</span>
-																	   <del>$65.00</del>
-																	</div>
-																 </div>
-															  </div>
-														   </div>
-														   <div class="col-md-6">
-															  <div class="prdc_ctg_product_content d-flex justify-content-center align-items-center">
-																 <div class="prdc_ctg_product_img d-flex justify-content-center align-items-center me-3">
-																	<img src="images/cat11.png" alt="cat11">
-																 </div>
-																 <div class="prdc_ctg_product_text">
-																	<div class="prdc_ctg_product_badge mb-2">
-																	   <span class="text-uppercase rounded-pill">Meats</span>
-																	</div>
-																	<div class="prdc_ctg_product_rating my-1 rating_wrap d-flex">
-																	   <ul class="rating_star ul_li">
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li><i class="far fa-star"></i></li>
-																	   </ul>
-																	   <span class="shop_review_text">( 4.0 )</span>
-																	</div>
-																	<div class="prdc_ctg_product_title my-2">
-																	   <a href="shop-list.html" target="_blank"><h5>Fresh Cabbage</h5></a>
-																	</div>
-																	<div class="prdc_ctg_product_price mt-1 product_price">
-																	   <span class="sale_price pe-1">$50.00</span>
-																	   <del>$65.00</del>
-																	</div>
-																 </div>
-															  </div>
-														   </div>
-														</div>
-													 </div>
-												  </div>
-											   </div>
-											   <div class="tab-pane fade" id="pills-frozen" role="tabpanel" aria-labelledby="pills-frozen-tab">
-												  <div class="prdc_ctg_product_wrap">
-													 <div class="prdc_ctg_inner_product bg-white">
-														<div class="row">
-														   <div class="col-md-6">
-															  <div class="prdc_ctg_product_content d-flex justify-content-center align-items-center">
-																 <div class="prdc_ctg_product_img d-flex justify-content-center align-items-center me-3">
-																	<img src="images/cat6.png" alt="cat6">
-																 </div>
-																 <div class="prdc_ctg_product_text">
-																	<div class="prdc_ctg_product_badge mb-2">
-																	   <span class="text-uppercase rounded-pill">Meats</span>
-																	</div>
-																	<div class="prdc_ctg_product_rating my-1 rating_wrap d-flex">
-																	   <ul class="rating_star ul_li">
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li><i class="far fa-star"></i></li>
-																	   </ul>
-																	   <span class="shop_review_text">( 4.0 )</span>
-																	</div>
-																	<div class="prdc_ctg_product_title my-2">
-																	   <a href="shop-list.html" target="_blank"><h5>Fresh Cabbage</h5></a>
-																	</div>
-																	<div class="prdc_ctg_product_price mt-1 product_price">
-																	   <span class="sale_price pe-1">$50.00</span>
-																	   <del>$65.00</del>
-																	</div>
-																 </div>
-															  </div>
-														   </div>
-														   <div class="col-md-6">
-															  <div class="prdc_ctg_product_content d-flex justify-content-center align-items-center">
-																 <div class="prdc_ctg_product_img d-flex justify-content-center align-items-center me-3">
-																	<img src="images/cat7.png" alt="cat7">
-																 </div>
-																 <div class="prdc_ctg_product_text">
-																	<div class="prdc_ctg_product_badge mb-2">
-																	   <span class="text-uppercase rounded-pill">Meats</span>
-																	</div>
-																	<div class="prdc_ctg_product_rating my-1 rating_wrap d-flex">
-																	   <ul class="rating_star ul_li">
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li><i class="far fa-star"></i></li>
-																	   </ul>
-																	   <span class="shop_review_text">( 4.0 )</span>
-																	</div>
-																	<div class="prdc_ctg_product_title my-2">
-																	   <a href="shop-list.html" target="_blank"><h5>Fresh Cabbage</h5></a>
-																	</div>
-																	<div class="prdc_ctg_product_price mt-1 product_price">
-																	   <span class="sale_price pe-1">$50.00</span>
-																	   <del>$65.00</del>
-																	</div>
-																 </div>
-															  </div>
-														   </div>
-														   <div class="col-md-6">
-															  <div class="prdc_ctg_product_content d-flex justify-content-center align-items-center">
-																 <div class="prdc_ctg_product_img d-flex justify-content-center align-items-center me-3">
-																	<img src="images/cat8.png" alt="cat8">
-																 </div>
-																 <div class="prdc_ctg_product_text">
-																	<div class="prdc_ctg_product_badge mb-2">
-																	   <span class="text-uppercase rounded-pill">Meats</span>
-																	</div>
-																	<div class="prdc_ctg_product_rating my-1 rating_wrap d-flex">
-																	   <ul class="rating_star ul_li">
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li><i class="far fa-star"></i></li>
-																	   </ul>
-																	   <span class="shop_review_text">( 4.0 )</span>
-																	</div>
-																	<div class="prdc_ctg_product_title my-2">
-																	   <a href="shop-list.html" target="_blank"><h5>Fresh Cabbage</h5></a>
-																	</div>
-																	<div class="prdc_ctg_product_price mt-1 product_price">
-																	   <span class="sale_price pe-1">$50.00</span>
-																	   <del>$65.00</del>
-																	</div>
-																 </div>
-															  </div>
-														   </div>
-														   <div class="col-md-6">
-															  <div class="prdc_ctg_product_content d-flex justify-content-center align-items-center">
-																 <div class="prdc_ctg_product_img d-flex justify-content-center align-items-center me-3">
-																	<img src="images/cat9.png" alt="cat9">
-																 </div>
-																 <div class="prdc_ctg_product_text">
-																	<div class="prdc_ctg_product_badge mb-2">
-																	   <span class="text-uppercase rounded-pill">Meats</span>
-																	</div>
-																	<div class="prdc_ctg_product_rating my-1 rating_wrap d-flex">
-																	   <ul class="rating_star ul_li">
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li><i class="far fa-star"></i></li>
-																	   </ul>
-																	   <span class="shop_review_text">( 4.0 )</span>
-																	</div>
-																	<div class="prdc_ctg_product_title my-2">
-																	   <a href="shop-list.html" target="_blank"><h5>Fresh Cabbage</h5></a>
-																	</div>
-																	<div class="prdc_ctg_product_price mt-1 product_price">
-																	   <span class="sale_price pe-1">$50.00</span>
-																	   <del>$65.00</del>
-																	</div>
-																 </div>
-															  </div>
-														   </div>
-														   <div class="col-md-6">
-															  <div class="prdc_ctg_product_content d-flex justify-content-center align-items-center">
-																 <div class="prdc_ctg_product_img d-flex justify-content-center align-items-center me-3">
-																	<img src="images/cat10.png" alt="cat10">
-																 </div>
-																 <div class="prdc_ctg_product_text">
-																	<div class="prdc_ctg_product_badge mb-2">
-																	   <span class="text-uppercase rounded-pill">Meats</span>
-																	</div>
-																	<div class="prdc_ctg_product_rating my-1 rating_wrap d-flex">
-																	   <ul class="rating_star ul_li">
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li><i class="far fa-star"></i></li>
-																	   </ul>
-																	   <span class="shop_review_text">( 4.0 )</span>
-																	</div>
-																	<div class="prdc_ctg_product_title my-2">
-																	   <a href="shop-list.html" target="_blank"><h5>Fresh Cabbage</h5></a>
-																	</div>
-																	<div class="prdc_ctg_product_price mt-1 product_price">
-																	   <span class="sale_price pe-1">$50.00</span>
-																	   <del>$65.00</del>
-																	</div>
-																 </div>
-															  </div>
-														   </div>
-														   <div class="col-md-6">
-															  <div class="prdc_ctg_product_content d-flex justify-content-center align-items-center">
-																 <div class="prdc_ctg_product_img d-flex justify-content-center align-items-center me-3">
-																	<img src="images/cat11.png" alt="cat11">
-																 </div>
-																 <div class="prdc_ctg_product_text">
-																	<div class="prdc_ctg_product_badge mb-2">
-																	   <span class="text-uppercase rounded-pill">Meats</span>
-																	</div>
-																	<div class="prdc_ctg_product_rating my-1 rating_wrap d-flex">
-																	   <ul class="rating_star ul_li">
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li class="active"><i class="fas fa-star"></i></li>
-																		  <li><i class="far fa-star"></i></li>
-																	   </ul>
-																	   <span class="shop_review_text">( 4.0 )</span>
-																	</div>
-																	<div class="prdc_ctg_product_title my-2">
-																	   <a href="shop-list.html" target="_blank"><h5>Fresh Cabbage</h5></a>
-																	</div>
-																	<div class="prdc_ctg_product_price mt-1 product_price">
-																	   <span class="sale_price pe-1">$50.00</span>
-																	   <del>$65.00</del>
-																	</div>
-																 </div>
-															  </div>
-														   </div>
-														</div>
-													 </div>
-												  </div>
-											   </div>
-											</div>
-										 </div>
-									  </div>
-								   </div>
-								</div>
-							 </section> -->
+														  </div>
+														  <div class="prdc_ctg_title">
+															 <h2>Fresh produce Categories</h2>
+														  </div>
+														  <div class="prdc_ctg_desc py-2">
+															 <p>Apparently we had reached a great height in the atmosphere, for the sky was a</p>
+														  </div>
+													   </div>
+													   <div class="prdc_ctg_item_content">
+														  <ul class="product_tabnav_2 d-flex mt-3 nav nav-pills" id="pills-tab" role="tablist">
+															 <li class="nav-item mt-2" role="presentation">
+																<button class="nav-link rounded-pill active d-flex justify-content-between align-items-center rounded-pill" id="pills-vegetable-tab" data-bs-toggle="pill" data-bs-target="#pills-vegetable" type="button" role="tab" aria-controls="pills-vegetable" aria-selected="true">
+																   <div class="prdc_ctg_mixed d-flex justify-content-center align-items-center">
+																	  <div class="prdc_ctg_icon d-flex justify-content-center align-items-center me-2">
+																		 <img src="images/ctg_icon1.png" alt="image_not_found">
+																	  </div>
+																	  <div class="prdc_ctg_icon_title">
+																		 <h5>Vegetables</h5>
+																	  </div>
+																   </div>
+																   <div class="prdc_ctg_icon_num">
+																	  <span>30</span>
+																   </div>
+																</button>
+															 </li>
+															 <li class="nav-item mt-2" role="presentation">
+																<button class="nav-link rounded-pill d-flex justify-content-between align-items-center rounded-pill" id="pills-fresh-tab" data-bs-toggle="pill" data-bs-target="#pills-fresh" type="button" role="tab" aria-controls="pills-fresh" aria-selected="true">
+																   <div class="prdc_ctg_mixed d-flex justify-content-center align-items-center">
+																	  <div class="prdc_ctg_icon d-flex justify-content-center align-items-center me-2">
+																		 <img src="images/ctg_icon2.png" alt="image_not_found">
+																	  </div>
+																	  <div class="prdc_ctg_icon_title">
+																		 <h5>Fresh Fruits</h5>
+																	  </div>
+																   </div>
+																   <div class="prdc_ctg_icon_num">
+																	  <span>30</span>
+																   </div>
+																</button>
+															 </li>
+															 <li class="nav-item mt-2" role="presentation">
+																<button class="nav-link rounded-pill d-flex justify-content-between align-items-center rounded-pill" id="pills-beverages-tab" data-bs-toggle="pill" data-bs-target="#pills-beverages" type="button" role="tab" aria-controls="pills-beverages" aria-selected="true">
+																   <div class="prdc_ctg_mixed d-flex justify-content-center align-items-center">
+																	  <div class="prdc_ctg_icon d-flex justify-content-center align-items-center me-2">
+																		 <img src="images/ctg_icon3.png" alt="image_not_found">
+																	  </div>
+																	  <div class="prdc_ctg_icon_title">
+																		 <h5>Beverages</h5>
+																	  </div>
+																   </div>
+																   <div class="prdc_ctg_icon_num">
+																	  <span>30</span>
+																   </div>
+																</button>
+															 </li>
+															 <li class="nav-item mt-2" role="presentation">
+																<button class="nav-link rounded-pill d-flex justify-content-between align-items-center rounded-pill" id="pills-babies-tab" data-bs-toggle="pill" data-bs-target="#pills-babies" type="button" role="tab" aria-controls="pills-babies" aria-selected="true">
+																   <div class="prdc_ctg_mixed d-flex justify-content-center align-items-center">
+																	  <div class="prdc_ctg_icon d-flex justify-content-center align-items-center me-2">
+																		 <img src="images/ctg_icon4.png" alt="image_not_found">
+																	  </div>
+																	  <div class="prdc_ctg_icon_title">
+																		 <h5>Babies & Kids</h5>
+																	  </div>
+																   </div>
+																   <div class="prdc_ctg_icon_num">
+																	  <span>30</span>
+																   </div>
+																</button>
+															 </li>
+															 <li class="nav-item mt-2" role="presentation">
+																<button class="nav-link rounded-pill d-flex justify-content-between align-items-center rounded-pill" id="pills-frozen-tab" data-bs-toggle="pill" data-bs-target="#pills-frozen" type="button" role="tab" aria-controls="pills-frozen" aria-selected="true">
+																   <div class="prdc_ctg_mixed d-flex justify-content-center align-items-center">
+																	  <div class="prdc_ctg_icon d-flex justify-content-center align-items-center me-2">
+																		 <img src="images/ctg_icon5.png" alt="image_not_found">
+																	  </div>
+																	  <div class="prdc_ctg_icon_title">
+																		 <h5>Frozen Foods</h5>
+																	  </div>
+																   </div>
+																   <div class="prdc_ctg_icon_num">
+																	  <span>30</span>
+																   </div>
+																</button>
+															 </li>
+														  </ul>
+													   </div>
+													</div>
+												 </div>
+												 <div class="col-xl-8 px-0">
+													<div class="tab-content" id="pills-tabContent">
+													   <div class="tab-pane fade show active" id="pills-vegetable" role="tabpanel" aria-labelledby="pills-vegetable-tab">
+														  <div class="prdc_ctg_product_wrap">
+															 <div class="prdc_ctg_inner_product bg-white">
+																<div class="row">
+																   <div class="col-6 col-lg-6">
+																	  <div class="prdc_ctg_product_content d-flex justify-content-center align-items-center">
+																		 <div class="prdc_ctg_product_img d-flex justify-content-center align-items-center me-3">
+																			<img src="images/cat6.png" alt="cat6">
+																		 </div>
+																		 <div class="prdc_ctg_product_text">
+																			<div class="prdc_ctg_product_badge mb-2">
+																			   <span class="text-uppercase rounded-pill">Meats</span>
+																			</div>
+																			<div class="prdc_ctg_product_rating my-1 rating_wrap d-flex">
+																			   <ul class="rating_star ul_li">
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li><i class="far fa-star"></i></li>
+																			   </ul>
+																			   <span class="shop_review_text">( 4.0 )</span>
+																			</div>
+																			<div class="prdc_ctg_product_title my-2">
+																			   <a href="shop-list.html" target="_blank"><h5>Fresh Cabbage</h5></a>
+																			</div>
+																			<div class="prdc_ctg_product_price mt-1 product_price">
+																			   <span class="sale_price pe-1">$50.00</span>
+																			   <del>$65.00</del>
+																			</div>
+																		 </div>
+																	  </div>
+																   </div>
+																   <div class="col-6 col-lg-6">
+																	  <div class="prdc_ctg_product_content d-flex justify-content-center align-items-center">
+																		 <div class="prdc_ctg_product_img d-flex justify-content-center align-items-center me-3">
+																			<img src="images/cat7.png" alt="cat7">
+																		 </div>
+																		 <div class="prdc_ctg_product_text">
+																			<div class="prdc_ctg_product_badge mb-2">
+																			   <span class="text-uppercase rounded-pill">Meats</span>
+																			</div>
+																			<div class="prdc_ctg_product_rating my-1 rating_wrap d-flex">
+																			   <ul class="rating_star ul_li">
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li><i class="far fa-star"></i></li>
+																			   </ul>
+																			   <span class="shop_review_text">( 4.0 )</span>
+																			</div>
+																			<div class="prdc_ctg_product_title my-2">
+																			   <a href="shop-list.html" target="_blank"><h5>Fresh Cabbage</h5></a>
+																			</div>
+																			<div class="prdc_ctg_product_price mt-1 product_price">
+																			   <span class="sale_price pe-1">$50.00</span>
+																			   <del>$65.00</del>
+																			</div>
+																		 </div>
+																	  </div>
+																   </div>
+																   <div class="col-6 col-lg-6">
+																	  <div class="prdc_ctg_product_content d-flex justify-content-center align-items-center">
+																		 <div class="prdc_ctg_product_img d-flex justify-content-center align-items-center me-3">
+																			<img src="images/cat8.png" alt="cat8">
+																		 </div>
+																		 <div class="prdc_ctg_product_text">
+																			<div class="prdc_ctg_product_badge mb-2">
+																			   <span class="text-uppercase rounded-pill">Meats</span>
+																			</div>
+																			<div class="prdc_ctg_product_rating my-1 rating_wrap d-flex">
+																			   <ul class="rating_star ul_li">
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li><i class="far fa-star"></i></li>
+																			   </ul>
+																			   <span class="shop_review_text">( 4.0 )</span>
+																			</div>
+																			<div class="prdc_ctg_product_title my-2">
+																			   <a href="shop-list.html" target="_blank"><h5>Fresh Cabbage</h5></a>
+																			</div>
+																			<div class="prdc_ctg_product_price mt-1 product_price">
+																			   <span class="sale_price pe-1">$50.00</span>
+																			   <del>$65.00</del>
+																			</div>
+																		 </div>
+																	  </div>
+																   </div>
+																   <div class="col-6 col-lg-6">
+																	  <div class="prdc_ctg_product_content d-flex justify-content-center align-items-center">
+																		 <div class="prdc_ctg_product_img d-flex justify-content-center align-items-center me-3">
+																			<img src="images/cat9.png" alt="cat9">
+																		 </div>
+																		 <div class="prdc_ctg_product_text">
+																			<div class="prdc_ctg_product_badge mb-2">
+																			   <span class="text-uppercase rounded-pill">Meats</span>
+																			</div>
+																			<div class="prdc_ctg_product_rating my-1 rating_wrap d-flex">
+																			   <ul class="rating_star ul_li">
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li><i class="far fa-star"></i></li>
+																			   </ul>
+																			   <span class="shop_review_text">( 4.0 )</span>
+																			</div>
+																			<div class="prdc_ctg_product_title my-2">
+																			   <a href="shop-list.html" target="_blank"><h5>Fresh Cabbage</h5></a>
+																			</div>
+																			<div class="prdc_ctg_product_price mt-1 product_price">
+																			   <span class="sale_price pe-1">$50.00</span>
+																			   <del>$65.00</del>
+																			</div>
+																		 </div>
+																	  </div>
+																   </div>
+																   <div class="col-6 col-lg-6">
+																	  <div class="prdc_ctg_product_content d-flex justify-content-center align-items-center">
+																		 <div class="prdc_ctg_product_img d-flex justify-content-center align-items-center me-3">
+																			<img src="images/cat10.png" alt="cat10">
+																		 </div>
+																		 <div class="prdc_ctg_product_text">
+																			<div class="prdc_ctg_product_badge mb-2">
+																			   <span class="text-uppercase rounded-pill">Meats</span>
+																			</div>
+																			<div class="prdc_ctg_product_rating my-1 rating_wrap d-flex">
+																			   <ul class="rating_star ul_li">
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li><i class="far fa-star"></i></li>
+																			   </ul>
+																			   <span class="shop_review_text">( 4.0 )</span>
+																			</div>
+																			<div class="prdc_ctg_product_title my-2">
+																			   <a href="shop-list.html" target="_blank"><h5>Fresh Cabbage</h5></a>
+																			</div>
+																			<div class="prdc_ctg_product_price mt-1 product_price">
+																			   <span class="sale_price pe-1">$50.00</span>
+																			   <del>$65.00</del>
+																			</div>
+																		 </div>
+																	  </div>
+																   </div>
+																   <div class="col-6 col-lg-6">
+																	  <div class="prdc_ctg_product_content d-flex justify-content-center align-items-center">
+																		 <div class="prdc_ctg_product_img d-flex justify-content-center align-items-center me-3">
+																			<img src="images/cat11.png" alt="cat11">
+																		 </div>
+																		 <div class="prdc_ctg_product_text">
+																			<div class="prdc_ctg_product_badge mb-2">
+																			   <span class="text-uppercase rounded-pill">Meats</span>
+																			</div>
+																			<div class="prdc_ctg_product_rating my-1 rating_wrap d-flex">
+																			   <ul class="rating_star ul_li">
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li><i class="far fa-star"></i></li>
+																			   </ul>
+																			   <span class="shop_review_text">( 4.0 )</span>
+																			</div>
+																			<div class="prdc_ctg_product_title my-2">
+																			   <a href="shop-list.html" target="_blank"><h5>Fresh Cabbage</h5></a>
+																			</div>
+																			<div class="prdc_ctg_product_price mt-1 product_price">
+																			   <span class="sale_price pe-1">$50.00</span>
+																			   <del>$65.00</del>
+																			</div>
+																		 </div>
+																	  </div>
+																   </div>
+																</div>
+															 </div>
+														  </div>
+													   </div>
+													   <div class="tab-pane fade" id="pills-fresh" role="tabpanel" aria-labelledby="pills-fresh-tab">
+														  <div class="prdc_ctg_product_wrap">
+															 <div class="prdc_ctg_inner_product bg-white">
+																<div class="row">
+																   <div class="col-md-6">
+																	  <div class="prdc_ctg_product_content d-flex justify-content-center align-items-center">
+																		 <div class="prdc_ctg_product_img d-flex justify-content-center align-items-center me-3">
+																			<img src="images/cat6.png" alt="cat6">
+																		 </div>
+																		 <div class="prdc_ctg_product_text">
+																			<div class="prdc_ctg_product_badge mb-2">
+																			   <span class="text-uppercase rounded-pill">Meats</span>
+																			</div>
+																			<div class="prdc_ctg_product_rating my-1 rating_wrap d-flex">
+																			   <ul class="rating_star ul_li">
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li><i class="far fa-star"></i></li>
+																			   </ul>
+																			   <span class="shop_review_text">( 4.0 )</span>
+																			</div>
+																			<div class="prdc_ctg_product_title my-2">
+																			   <a href="shop-list.html" target="_blank"><h5>Fresh Cabbage</h5></a>
+																			</div>
+																			<div class="prdc_ctg_product_price mt-1 product_price">
+																			   <span class="sale_price pe-1">$50.00</span>
+																			   <del>$65.00</del>
+																			</div>
+																		 </div>
+																	  </div>
+																   </div>
+																   <div class="col-md-6">
+																	  <div class="prdc_ctg_product_content d-flex justify-content-center align-items-center">
+																		 <div class="prdc_ctg_product_img d-flex justify-content-center align-items-center me-3">
+																			<img src="images/cat7.png" alt="cat7">
+																		 </div>
+																		 <div class="prdc_ctg_product_text">
+																			<div class="prdc_ctg_product_badge mb-2">
+																			   <span class="text-uppercase rounded-pill">Meats</span>
+																			</div>
+																			<div class="prdc_ctg_product_rating my-1 rating_wrap d-flex">
+																			   <ul class="rating_star ul_li">
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li><i class="far fa-star"></i></li>
+																			   </ul>
+																			   <span class="shop_review_text">( 4.0 )</span>
+																			</div>
+																			<div class="prdc_ctg_product_title my-2">
+																			   <a href="shop-list.html" target="_blank"><h5>Fresh Cabbage</h5></a>
+																			</div>
+																			<div class="prdc_ctg_product_price mt-1 product_price">
+																			   <span class="sale_price pe-1">$50.00</span>
+																			   <del>$65.00</del>
+																			</div>
+																		 </div>
+																	  </div>
+																   </div>
+																   <div class="col-md-6">
+																	  <div class="prdc_ctg_product_content d-flex justify-content-center align-items-center">
+																		 <div class="prdc_ctg_product_img d-flex justify-content-center align-items-center me-3">
+																			<img src="images/cat8.png" alt="cat8">
+																		 </div>
+																		 <div class="prdc_ctg_product_text">
+																			<div class="prdc_ctg_product_badge mb-2">
+																			   <span class="text-uppercase rounded-pill">Meats</span>
+																			</div>
+																			<div class="prdc_ctg_product_rating my-1 rating_wrap d-flex">
+																			   <ul class="rating_star ul_li">
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li><i class="far fa-star"></i></li>
+																			   </ul>
+																			   <span class="shop_review_text">( 4.0 )</span>
+																			</div>
+																			<div class="prdc_ctg_product_title my-2">
+																			   <a href="shop-list.html" target="_blank"><h5>Fresh Cabbage</h5></a>
+																			</div>
+																			<div class="prdc_ctg_product_price mt-1 product_price">
+																			   <span class="sale_price pe-1">$50.00</span>
+																			   <del>$65.00</del>
+																			</div>
+																		 </div>
+																	  </div>
+																   </div>
+																   <div class="col-md-6">
+																	  <div class="prdc_ctg_product_content d-flex justify-content-center align-items-center">
+																		 <div class="prdc_ctg_product_img d-flex justify-content-center align-items-center me-3">
+																			<img src="images/cat9.png" alt="cat9">
+																		 </div>
+																		 <div class="prdc_ctg_product_text">
+																			<div class="prdc_ctg_product_badge mb-2">
+																			   <span class="text-uppercase rounded-pill">Meats</span>
+																			</div>
+																			<div class="prdc_ctg_product_rating my-1 rating_wrap d-flex">
+																			   <ul class="rating_star ul_li">
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li><i class="far fa-star"></i></li>
+																			   </ul>
+																			   <span class="shop_review_text">( 4.0 )</span>
+																			</div>
+																			<div class="prdc_ctg_product_title my-2">
+																			   <a href="shop-list.html" target="_blank"><h5>Fresh Cabbage</h5></a>
+																			</div>
+																			<div class="prdc_ctg_product_price mt-1 product_price">
+																			   <span class="sale_price pe-1">$50.00</span>
+																			   <del>$65.00</del>
+																			</div>
+																		 </div>
+																	  </div>
+																   </div>
+																   <div class="col-md-6">
+																	  <div class="prdc_ctg_product_content d-flex justify-content-center align-items-center">
+																		 <div class="prdc_ctg_product_img d-flex justify-content-center align-items-center me-3">
+																			<img src="images/cat10.png" alt="cat10">
+																		 </div>
+																		 <div class="prdc_ctg_product_text">
+																			<div class="prdc_ctg_product_badge mb-2">
+																			   <span class="text-uppercase rounded-pill">Meats</span>
+																			</div>
+																			<div class="prdc_ctg_product_rating my-1 rating_wrap d-flex">
+																			   <ul class="rating_star ul_li">
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li><i class="far fa-star"></i></li>
+																			   </ul>
+																			   <span class="shop_review_text">( 4.0 )</span>
+																			</div>
+																			<div class="prdc_ctg_product_title my-2">
+																			   <a href="shop-list.html" target="_blank"><h5>Fresh Cabbage</h5></a>
+																			</div>
+																			<div class="prdc_ctg_product_price mt-1 product_price">
+																			   <span class="sale_price pe-1">$50.00</span>
+																			   <del>$65.00</del>
+																			</div>
+																		 </div>
+																	  </div>
+																   </div>
+																   <div class="col-md-6">
+																	  <div class="prdc_ctg_product_content d-flex justify-content-center align-items-center">
+																		 <div class="prdc_ctg_product_img d-flex justify-content-center align-items-center me-3">
+																			<img src="images/cat11.png" alt="cat11">
+																		 </div>
+																		 <div class="prdc_ctg_product_text">
+																			<div class="prdc_ctg_product_badge mb-2">
+																			   <span class="text-uppercase rounded-pill">Meats</span>
+																			</div>
+																			<div class="prdc_ctg_product_rating my-1 rating_wrap d-flex">
+																			   <ul class="rating_star ul_li">
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li><i class="far fa-star"></i></li>
+																			   </ul>
+																			   <span class="shop_review_text">( 4.0 )</span>
+																			</div>
+																			<div class="prdc_ctg_product_title my-2">
+																			   <a href="shop-list.html" target="_blank"><h5>Fresh Cabbage</h5></a>
+																			</div>
+																			<div class="prdc_ctg_product_price mt-1 product_price">
+																			   <span class="sale_price pe-1">$50.00</span>
+																			   <del>$65.00</del>
+																			</div>
+																		 </div>
+																	  </div>
+																   </div>
+																</div>
+															 </div>
+														  </div>
+													   </div>
+													   <div class="tab-pane fade" id="pills-beverages" role="tabpanel" aria-labelledby="pills-beverages-tab">
+														  <div class="prdc_ctg_product_wrap">
+															 <div class="prdc_ctg_inner_product bg-white">
+																<div class="row">
+																   <div class="col-md-6">
+																	  <div class="prdc_ctg_product_content d-flex justify-content-center align-items-center">
+																		 <div class="prdc_ctg_product_img d-flex justify-content-center align-items-center me-3">
+																			<img src="images/cat6.png" alt="cat6">
+																		 </div>
+																		 <div class="prdc_ctg_product_text">
+																			<div class="prdc_ctg_product_badge mb-2">
+																			   <span class="text-uppercase rounded-pill">Meats</span>
+																			</div>
+																			<div class="prdc_ctg_product_rating my-1 rating_wrap d-flex">
+																			   <ul class="rating_star ul_li">
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li><i class="far fa-star"></i></li>
+																			   </ul>
+																			   <span class="shop_review_text">( 4.0 )</span>
+																			</div>
+																			<div class="prdc_ctg_product_title my-2">
+																			   <a href="shop-list.html" target="_blank"><h5>Fresh Cabbage</h5></a>
+																			</div>
+																			<div class="prdc_ctg_product_price mt-1 product_price">
+																			   <span class="sale_price pe-1">$50.00</span>
+																			   <del>$65.00</del>
+																			</div>
+																		 </div>
+																	  </div>
+																   </div>
+																   <div class="col-md-6">
+																	  <div class="prdc_ctg_product_content d-flex justify-content-center align-items-center">
+																		 <div class="prdc_ctg_product_img d-flex justify-content-center align-items-center me-3">
+																			<img src="images/cat7.png" alt="cat7">
+																		 </div>
+																		 <div class="prdc_ctg_product_text">
+																			<div class="prdc_ctg_product_badge mb-2">
+																			   <span class="text-uppercase rounded-pill">Meats</span>
+																			</div>
+																			<div class="prdc_ctg_product_rating my-1 rating_wrap d-flex">
+																			   <ul class="rating_star ul_li">
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li><i class="far fa-star"></i></li>
+																			   </ul>
+																			   <span class="shop_review_text">( 4.0 )</span>
+																			</div>
+																			<div class="prdc_ctg_product_title my-2">
+																			   <a href="shop-list.html" target="_blank"><h5>Fresh Cabbage</h5></a>
+																			</div>
+																			<div class="prdc_ctg_product_price mt-1 product_price">
+																			   <span class="sale_price pe-1">$50.00</span>
+																			   <del>$65.00</del>
+																			</div>
+																		 </div>
+																	  </div>
+																   </div>
+																   <div class="col-md-6">
+																	  <div class="prdc_ctg_product_content d-flex justify-content-center align-items-center">
+																		 <div class="prdc_ctg_product_img d-flex justify-content-center align-items-center me-3">
+																			<img src="images/cat8.png" alt="cat8">
+																		 </div>
+																		 <div class="prdc_ctg_product_text">
+																			<div class="prdc_ctg_product_badge mb-2">
+																			   <span class="text-uppercase rounded-pill">Meats</span>
+																			</div>
+																			<div class="prdc_ctg_product_rating my-1 rating_wrap d-flex">
+																			   <ul class="rating_star ul_li">
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li><i class="far fa-star"></i></li>
+																			   </ul>
+																			   <span class="shop_review_text">( 4.0 )</span>
+																			</div>
+																			<div class="prdc_ctg_product_title my-2">
+																			   <a href="shop-list.html" target="_blank"><h5>Fresh Cabbage</h5></a>
+																			</div>
+																			<div class="prdc_ctg_product_price mt-1 product_price">
+																			   <span class="sale_price pe-1">$50.00</span>
+																			   <del>$65.00</del>
+																			</div>
+																		 </div>
+																	  </div>
+																   </div>
+																   <div class="col-md-6">
+																	  <div class="prdc_ctg_product_content d-flex justify-content-center align-items-center">
+																		 <div class="prdc_ctg_product_img d-flex justify-content-center align-items-center me-3">
+																			<img src="images/cat9.png" alt="cat9">
+																		 </div>
+																		 <div class="prdc_ctg_product_text">
+																			<div class="prdc_ctg_product_badge mb-2">
+																			   <span class="text-uppercase rounded-pill">Meats</span>
+																			</div>
+																			<div class="prdc_ctg_product_rating my-1 rating_wrap d-flex">
+																			   <ul class="rating_star ul_li">
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li><i class="far fa-star"></i></li>
+																			   </ul>
+																			   <span class="shop_review_text">( 4.0 )</span>
+																			</div>
+																			<div class="prdc_ctg_product_title my-2">
+																			   <a href="shop-list.html" target="_blank"><h5>Fresh Cabbage</h5></a>
+																			</div>
+																			<div class="prdc_ctg_product_price mt-1 product_price">
+																			   <span class="sale_price pe-1">$50.00</span>
+																			   <del>$65.00</del>
+																			</div>
+																		 </div>
+																	  </div>
+																   </div>
+																   <div class="col-md-6">
+																	  <div class="prdc_ctg_product_content d-flex justify-content-center align-items-center">
+																		 <div class="prdc_ctg_product_img d-flex justify-content-center align-items-center me-3">
+																			<img src="images/cat10.png" alt="cat10">
+																		 </div>
+																		 <div class="prdc_ctg_product_text">
+																			<div class="prdc_ctg_product_badge mb-2">
+																			   <span class="text-uppercase rounded-pill">Meats</span>
+																			</div>
+																			<div class="prdc_ctg_product_rating my-1 rating_wrap d-flex">
+																			   <ul class="rating_star ul_li">
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li><i class="far fa-star"></i></li>
+																			   </ul>
+																			   <span class="shop_review_text">( 4.0 )</span>
+																			</div>
+																			<div class="prdc_ctg_product_title my-2">
+																			   <a href="shop-list.html" target="_blank"><h5>Fresh Cabbage</h5></a>
+																			</div>
+																			<div class="prdc_ctg_product_price mt-1 product_price">
+																			   <span class="sale_price pe-1">$50.00</span>
+																			   <del>$65.00</del>
+																			</div>
+																		 </div>
+																	  </div>
+																   </div>
+																   <div class="col-md-6">
+																	  <div class="prdc_ctg_product_content d-flex justify-content-center align-items-center">
+																		 <div class="prdc_ctg_product_img d-flex justify-content-center align-items-center me-3">
+																			<img src="images/cat11.png" alt="cat11">
+																		 </div>
+																		 <div class="prdc_ctg_product_text">
+																			<div class="prdc_ctg_product_badge mb-2">
+																			   <span class="text-uppercase rounded-pill">Meats</span>
+																			</div>
+																			<div class="prdc_ctg_product_rating my-1 rating_wrap d-flex">
+																			   <ul class="rating_star ul_li">
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li><i class="far fa-star"></i></li>
+																			   </ul>
+																			   <span class="shop_review_text">( 4.0 )</span>
+																			</div>
+																			<div class="prdc_ctg_product_title my-2">
+																			   <a href="shop-list.html" target="_blank"><h5>Fresh Cabbage</h5></a>
+																			</div>
+																			<div class="prdc_ctg_product_price mt-1 product_price">
+																			   <span class="sale_price pe-1">$50.00</span>
+																			   <del>$65.00</del>
+																			</div>
+																		 </div>
+																	  </div>
+																   </div>
+																</div>
+															 </div>
+														  </div>
+													   </div>
+													   <div class="tab-pane fade" id="pills-babies" role="tabpanel" aria-labelledby="pills-babies-tab">
+														  <div class="prdc_ctg_product_wrap">
+															 <div class="prdc_ctg_inner_product bg-white">
+																<div class="row">
+																   <div class="col-md-6">
+																	  <div class="prdc_ctg_product_content d-flex justify-content-center align-items-center">
+																		 <div class="prdc_ctg_product_img d-flex justify-content-center align-items-center me-3">
+																			<img src="images/cat6.png" alt="cat6">
+																		 </div>
+																		 <div class="prdc_ctg_product_text">
+																			<div class="prdc_ctg_product_badge mb-2">
+																			   <span class="text-uppercase rounded-pill">Meats</span>
+																			</div>
+																			<div class="prdc_ctg_product_rating my-1 rating_wrap d-flex">
+																			   <ul class="rating_star ul_li">
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li><i class="far fa-star"></i></li>
+																			   </ul>
+																			   <span class="shop_review_text">( 4.0 )</span>
+																			</div>
+																			<div class="prdc_ctg_product_title my-2">
+																			   <a href="shop-list.html" target="_blank"><h5>Fresh Cabbage</h5></a>
+																			</div>
+																			<div class="prdc_ctg_product_price mt-1 product_price">
+																			   <span class="sale_price pe-1">$50.00</span>
+																			   <del>$65.00</del>
+																			</div>
+																		 </div>
+																	  </div>
+																   </div>
+																   <div class="col-md-6">
+																	  <div class="prdc_ctg_product_content d-flex justify-content-center align-items-center">
+																		 <div class="prdc_ctg_product_img d-flex justify-content-center align-items-center me-3">
+																			<img src="images/cat7.png" alt="cat7">
+																		 </div>
+																		 <div class="prdc_ctg_product_text">
+																			<div class="prdc_ctg_product_badge mb-2">
+																			   <span class="text-uppercase rounded-pill">Meats</span>
+																			</div>
+																			<div class="prdc_ctg_product_rating my-1 rating_wrap d-flex">
+																			   <ul class="rating_star ul_li">
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li><i class="far fa-star"></i></li>
+																			   </ul>
+																			   <span class="shop_review_text">( 4.0 )</span>
+																			</div>
+																			<div class="prdc_ctg_product_title my-2">
+																			   <a href="shop-list.html" target="_blank"><h5>Fresh Cabbage</h5></a>
+																			</div>
+																			<div class="prdc_ctg_product_price mt-1 product_price">
+																			   <span class="sale_price pe-1">$50.00</span>
+																			   <del>$65.00</del>
+																			</div>
+																		 </div>
+																	  </div>
+																   </div>
+																   <div class="col-md-6">
+																	  <div class="prdc_ctg_product_content d-flex justify-content-center align-items-center">
+																		 <div class="prdc_ctg_product_img d-flex justify-content-center align-items-center me-3">
+																			<img src="images/cat8.png" alt="cat8">
+																		 </div>
+																		 <div class="prdc_ctg_product_text">
+																			<div class="prdc_ctg_product_badge mb-2">
+																			   <span class="text-uppercase rounded-pill">Meats</span>
+																			</div>
+																			<div class="prdc_ctg_product_rating my-1 rating_wrap d-flex">
+																			   <ul class="rating_star ul_li">
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li><i class="far fa-star"></i></li>
+																			   </ul>
+																			   <span class="shop_review_text">( 4.0 )</span>
+																			</div>
+																			<div class="prdc_ctg_product_title my-2">
+																			   <a href="shop-list.html" target="_blank"><h5>Fresh Cabbage</h5></a>
+																			</div>
+																			<div class="prdc_ctg_product_price mt-1 product_price">
+																			   <span class="sale_price pe-1">$50.00</span>
+																			   <del>$65.00</del>
+																			</div>
+																		 </div>
+																	  </div>
+																   </div>
+																   <div class="col-md-6">
+																	  <div class="prdc_ctg_product_content d-flex justify-content-center align-items-center">
+																		 <div class="prdc_ctg_product_img d-flex justify-content-center align-items-center me-3">
+																			<img src="images/cat9.png" alt="cat9">
+																		 </div>
+																		 <div class="prdc_ctg_product_text">
+																			<div class="prdc_ctg_product_badge mb-2">
+																			   <span class="text-uppercase rounded-pill">Meats</span>
+																			</div>
+																			<div class="prdc_ctg_product_rating my-1 rating_wrap d-flex">
+																			   <ul class="rating_star ul_li">
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li><i class="far fa-star"></i></li>
+																			   </ul>
+																			   <span class="shop_review_text">( 4.0 )</span>
+																			</div>
+																			<div class="prdc_ctg_product_title my-2">
+																			   <a href="shop-list.html" target="_blank"><h5>Fresh Cabbage</h5></a>
+																			</div>
+																			<div class="prdc_ctg_product_price mt-1 product_price">
+																			   <span class="sale_price pe-1">$50.00</span>
+																			   <del>$65.00</del>
+																			</div>
+																		 </div>
+																	  </div>
+																   </div>
+																   <div class="col-md-6">
+																	  <div class="prdc_ctg_product_content d-flex justify-content-center align-items-center">
+																		 <div class="prdc_ctg_product_img d-flex justify-content-center align-items-center me-3">
+																			<img src="images/cat10.png" alt="cat10">
+																		 </div>
+																		 <div class="prdc_ctg_product_text">
+																			<div class="prdc_ctg_product_badge mb-2">
+																			   <span class="text-uppercase rounded-pill">Meats</span>
+																			</div>
+																			<div class="prdc_ctg_product_rating my-1 rating_wrap d-flex">
+																			   <ul class="rating_star ul_li">
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li><i class="far fa-star"></i></li>
+																			   </ul>
+																			   <span class="shop_review_text">( 4.0 )</span>
+																			</div>
+																			<div class="prdc_ctg_product_title my-2">
+																			   <a href="shop-list.html" target="_blank"><h5>Fresh Cabbage</h5></a>
+																			</div>
+																			<div class="prdc_ctg_product_price mt-1 product_price">
+																			   <span class="sale_price pe-1">$50.00</span>
+																			   <del>$65.00</del>
+																			</div>
+																		 </div>
+																	  </div>
+																   </div>
+																   <div class="col-md-6">
+																	  <div class="prdc_ctg_product_content d-flex justify-content-center align-items-center">
+																		 <div class="prdc_ctg_product_img d-flex justify-content-center align-items-center me-3">
+																			<img src="images/cat11.png" alt="cat11">
+																		 </div>
+																		 <div class="prdc_ctg_product_text">
+																			<div class="prdc_ctg_product_badge mb-2">
+																			   <span class="text-uppercase rounded-pill">Meats</span>
+																			</div>
+																			<div class="prdc_ctg_product_rating my-1 rating_wrap d-flex">
+																			   <ul class="rating_star ul_li">
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li><i class="far fa-star"></i></li>
+																			   </ul>
+																			   <span class="shop_review_text">( 4.0 )</span>
+																			</div>
+																			<div class="prdc_ctg_product_title my-2">
+																			   <a href="shop-list.html" target="_blank"><h5>Fresh Cabbage</h5></a>
+																			</div>
+																			<div class="prdc_ctg_product_price mt-1 product_price">
+																			   <span class="sale_price pe-1">$50.00</span>
+																			   <del>$65.00</del>
+																			</div>
+																		 </div>
+																	  </div>
+																   </div>
+																</div>
+															 </div>
+														  </div>
+													   </div>
+													   <div class="tab-pane fade" id="pills-frozen" role="tabpanel" aria-labelledby="pills-frozen-tab">
+														  <div class="prdc_ctg_product_wrap">
+															 <div class="prdc_ctg_inner_product bg-white">
+																<div class="row">
+																   <div class="col-md-6">
+																	  <div class="prdc_ctg_product_content d-flex justify-content-center align-items-center">
+																		 <div class="prdc_ctg_product_img d-flex justify-content-center align-items-center me-3">
+																			<img src="images/cat6.png" alt="cat6">
+																		 </div>
+																		 <div class="prdc_ctg_product_text">
+																			<div class="prdc_ctg_product_badge mb-2">
+																			   <span class="text-uppercase rounded-pill">Meats</span>
+																			</div>
+																			<div class="prdc_ctg_product_rating my-1 rating_wrap d-flex">
+																			   <ul class="rating_star ul_li">
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li><i class="far fa-star"></i></li>
+																			   </ul>
+																			   <span class="shop_review_text">( 4.0 )</span>
+																			</div>
+																			<div class="prdc_ctg_product_title my-2">
+																			   <a href="shop-list.html" target="_blank"><h5>Fresh Cabbage</h5></a>
+																			</div>
+																			<div class="prdc_ctg_product_price mt-1 product_price">
+																			   <span class="sale_price pe-1">$50.00</span>
+																			   <del>$65.00</del>
+																			</div>
+																		 </div>
+																	  </div>
+																   </div>
+																   <div class="col-md-6">
+																	  <div class="prdc_ctg_product_content d-flex justify-content-center align-items-center">
+																		 <div class="prdc_ctg_product_img d-flex justify-content-center align-items-center me-3">
+																			<img src="images/cat7.png" alt="cat7">
+																		 </div>
+																		 <div class="prdc_ctg_product_text">
+																			<div class="prdc_ctg_product_badge mb-2">
+																			   <span class="text-uppercase rounded-pill">Meats</span>
+																			</div>
+																			<div class="prdc_ctg_product_rating my-1 rating_wrap d-flex">
+																			   <ul class="rating_star ul_li">
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li><i class="far fa-star"></i></li>
+																			   </ul>
+																			   <span class="shop_review_text">( 4.0 )</span>
+																			</div>
+																			<div class="prdc_ctg_product_title my-2">
+																			   <a href="shop-list.html" target="_blank"><h5>Fresh Cabbage</h5></a>
+																			</div>
+																			<div class="prdc_ctg_product_price mt-1 product_price">
+																			   <span class="sale_price pe-1">$50.00</span>
+																			   <del>$65.00</del>
+																			</div>
+																		 </div>
+																	  </div>
+																   </div>
+																   <div class="col-md-6">
+																	  <div class="prdc_ctg_product_content d-flex justify-content-center align-items-center">
+																		 <div class="prdc_ctg_product_img d-flex justify-content-center align-items-center me-3">
+																			<img src="images/cat8.png" alt="cat8">
+																		 </div>
+																		 <div class="prdc_ctg_product_text">
+																			<div class="prdc_ctg_product_badge mb-2">
+																			   <span class="text-uppercase rounded-pill">Meats</span>
+																			</div>
+																			<div class="prdc_ctg_product_rating my-1 rating_wrap d-flex">
+																			   <ul class="rating_star ul_li">
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li><i class="far fa-star"></i></li>
+																			   </ul>
+																			   <span class="shop_review_text">( 4.0 )</span>
+																			</div>
+																			<div class="prdc_ctg_product_title my-2">
+																			   <a href="shop-list.html" target="_blank"><h5>Fresh Cabbage</h5></a>
+																			</div>
+																			<div class="prdc_ctg_product_price mt-1 product_price">
+																			   <span class="sale_price pe-1">$50.00</span>
+																			   <del>$65.00</del>
+																			</div>
+																		 </div>
+																	  </div>
+																   </div>
+																   <div class="col-md-6">
+																	  <div class="prdc_ctg_product_content d-flex justify-content-center align-items-center">
+																		 <div class="prdc_ctg_product_img d-flex justify-content-center align-items-center me-3">
+																			<img src="images/cat9.png" alt="cat9">
+																		 </div>
+																		 <div class="prdc_ctg_product_text">
+																			<div class="prdc_ctg_product_badge mb-2">
+																			   <span class="text-uppercase rounded-pill">Meats</span>
+																			</div>
+																			<div class="prdc_ctg_product_rating my-1 rating_wrap d-flex">
+																			   <ul class="rating_star ul_li">
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li><i class="far fa-star"></i></li>
+																			   </ul>
+																			   <span class="shop_review_text">( 4.0 )</span>
+																			</div>
+																			<div class="prdc_ctg_product_title my-2">
+																			   <a href="shop-list.html" target="_blank"><h5>Fresh Cabbage</h5></a>
+																			</div>
+																			<div class="prdc_ctg_product_price mt-1 product_price">
+																			   <span class="sale_price pe-1">$50.00</span>
+																			   <del>$65.00</del>
+																			</div>
+																		 </div>
+																	  </div>
+																   </div>
+																   <div class="col-md-6">
+																	  <div class="prdc_ctg_product_content d-flex justify-content-center align-items-center">
+																		 <div class="prdc_ctg_product_img d-flex justify-content-center align-items-center me-3">
+																			<img src="images/cat10.png" alt="cat10">
+																		 </div>
+																		 <div class="prdc_ctg_product_text">
+																			<div class="prdc_ctg_product_badge mb-2">
+																			   <span class="text-uppercase rounded-pill">Meats</span>
+																			</div>
+																			<div class="prdc_ctg_product_rating my-1 rating_wrap d-flex">
+																			   <ul class="rating_star ul_li">
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li><i class="far fa-star"></i></li>
+																			   </ul>
+																			   <span class="shop_review_text">( 4.0 )</span>
+																			</div>
+																			<div class="prdc_ctg_product_title my-2">
+																			   <a href="shop-list.html" target="_blank"><h5>Fresh Cabbage</h5></a>
+																			</div>
+																			<div class="prdc_ctg_product_price mt-1 product_price">
+																			   <span class="sale_price pe-1">$50.00</span>
+																			   <del>$65.00</del>
+																			</div>
+																		 </div>
+																	  </div>
+																   </div>
+																   <div class="col-md-6">
+																	  <div class="prdc_ctg_product_content d-flex justify-content-center align-items-center">
+																		 <div class="prdc_ctg_product_img d-flex justify-content-center align-items-center me-3">
+																			<img src="images/cat11.png" alt="cat11">
+																		 </div>
+																		 <div class="prdc_ctg_product_text">
+																			<div class="prdc_ctg_product_badge mb-2">
+																			   <span class="text-uppercase rounded-pill">Meats</span>
+																			</div>
+																			<div class="prdc_ctg_product_rating my-1 rating_wrap d-flex">
+																			   <ul class="rating_star ul_li">
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li class="active"><i class="fas fa-star"></i></li>
+																				  <li><i class="far fa-star"></i></li>
+																			   </ul>
+																			   <span class="shop_review_text">( 4.0 )</span>
+																			</div>
+																			<div class="prdc_ctg_product_title my-2">
+																			   <a href="shop-list.html" target="_blank"><h5>Fresh Cabbage</h5></a>
+																			</div>
+																			<div class="prdc_ctg_product_price mt-1 product_price">
+																			   <span class="sale_price pe-1">$50.00</span>
+																			   <del>$65.00</del>
+																			</div>
+																		 </div>
+																	  </div>
+																   </div>
+																</div>
+															 </div>
+														  </div>
+													   </div>
+													</div>
+												 </div>
+											  </div>
+										   </div>
+										</div>
+									 </section> -->
 	<!-- produce category section end -->
 
 	<!-- quality section start -->
 	<section class="quality_section position-relative" data-aos="fade-up" data-aos-duration="2000">
-		<div class="quality_section_wrap sec_ptb_100" style="background-image: url({{asset("web-assets/images/qlty1.png")}})">
+		<div class="quality_section_wrap sec_ptb_100"
+			style="background-image: url({{asset("web-assets/images/qlty1.png")}})">
 			<div class="container">
 				<div class="quality_top_content text-center">
 					<div class="quality_sub_title d-flex justify-content-center align-items-center pb-2">
@@ -3660,880 +2005,880 @@
 
 	<!-- product section start -->
 	<!-- <section class="product_section sec_space_xxs_50" data-aos="fade-up" data-aos-duration="2000">
-								<div class="container">
-								   <div class="row">
-									  <div class="col-lg-6">
-										 <div class="product_sec_content">
-											<div class="product_sec_sub_title d-flex align-items-center pb-2">
-											   <i class="far fa-circle"></i>
-											   <i class="far fa-circle"></i>
-											   <i class="far fa-circle"></i>
+										<div class="container">
+										   <div class="row">
+											  <div class="col-lg-6">
+												 <div class="product_sec_content">
+													<div class="product_sec_sub_title d-flex align-items-center pb-2">
+													   <i class="far fa-circle"></i>
+													   <i class="far fa-circle"></i>
+													   <i class="far fa-circle"></i>
 
-											</div>
-											<h2 class="product_sec_title pb-3">Popular Fresh Discount</h2>
-										 </div>
-									  </div>
-									  <div class="col-lg-6 ul_li_right">
-										 <ul class="countdown_timer ul_li" data-countdown="2023/3/24"></ul>
-									  </div>
-								   </div>
+													</div>
+													<h2 class="product_sec_title pb-3">Popular Fresh Discount</h2>
+												 </div>
+											  </div>
+											  <div class="col-lg-6 ul_li_right">
+												 <ul class="countdown_timer ul_li" data-countdown="2023/3/24"></ul>
+											  </div>
+										   </div>
 
-								   <div class="row g-4">
-									  <div class="col-sm-6 col-md-6 col-xl-3">
-										 <div class="product_layout_1 overflow-hidden position-relative">
-											<div class="product_layout_content bg-white position-relative">
-											   <div class="product_image_wrap">
-												  <a class="product_image d-flex justify-content-center align-items-center" href="shop-list.html" target="_blank">
-													 <img class="pic-1" src="images/product8.png" alt="image_not_found">
-													 <img class="pic-2" src="images/product6.png" alt="image_not_found">
-												  </a>
-												  <ul class="product_badge_group ul_li_block">
-													 <li><span class="product_badge badge_meats position-absolute rounded-pill text-uppercase">Meats</span>
-													 </li>
-													 <li><span class="product_badge badge_discount position-absolute rounded-pill">-27%</span>
-													 </li>
-												  </ul>
-												  <ul class="product_action_btns ul_li_block d-flex">
-													 <li><a class="tooltips" data-placement="top" title="Search Product" href="#!"><i class="fas fa-search"></i></a></li>
-													 <li><a class="tooltips" data-placement="top" title="Add To Cart" href="#product_quick_view" data-bs-toggle="modal"><i class="fas fa-shopping-bag"></i></a></li>
-												  </ul>
-											   </div>
-											   <div class="rating_wrap d-flex">
-												  <ul class="rating_star ul_li">
-													 <li class="active"><i class="fas fa-star"></i></li>
-													 <li class="active"><i class="fas fa-star"></i></li>
-													 <li class="active"><i class="fas fa-star"></i></li>
-													 <li class="active"><i class="fas fa-star"></i></li>
-													 <li><i class="far fa-star"></i></li>
-												  </ul>
-												  <span class="shop_review_text">( 4.0 )</span>
-											   </div>
-											   <div class="product_content">
-												  <h3 class="product_title">
-													 <a href="shop-list.html" target="_blank">Fresh Cabbage</a>
-												  </h3>
-												  <div class="product_price">
-													 <span class="sale_price pe-1">$50.00</span>
-													 <del>$65.00</del>
-												  </div>
-											   </div>
-											</div>
-										 </div>
-									  </div>
-									  <div class="col-sm-6 col-md-6 col-xl-3">
-										 <div class="product_layout_1 overflow-hidden position-relative">
-											<div class="product_layout_content bg-white position-relative">
-											   <div class="product_image_wrap">
-												  <a class="product_image d-flex justify-content-center align-items-center" href="shop_-listhtml">
-													 <img class="pic-1" src="images/product10.png" alt="image_not_found">
-													 <img class="pic-2" src="images/product7.png" alt="image_not_found">
-												  </a>
-												  <ul class="product_badge_group ul_li_block">
-													 <li><span class="product_badge badge_meats position-absolute rounded-pill text-uppercase">Meats</span>
-													 </li>
-													 <li><span class="product_badge badge_discount position-absolute rounded-pill">-27%</span>
-													 </li>
-												  </ul>
-												  <ul class="product_action_btns ul_li_block d-flex">
-													 <li><a class="tooltips" data-placement="top" title="Search Product" href="#!"><i class="fas fa-search"></i></a></li>
-													 <li><a class="tooltips" data-placement="top" title="Add To Cart" href="#product_quick_view" data-bs-toggle="modal"><i class="fas fa-shopping-bag"></i></a></li>
-												  </ul>
-											   </div>
-											   <div class="rating_wrap d-flex">
-												  <ul class="rating_star ul_li">
-													 <li class="active"><i class="fas fa-star"></i></li>
-													 <li class="active"><i class="fas fa-star"></i></li>
-													 <li class="active"><i class="fas fa-star"></i></li>
-													 <li class="active"><i class="fas fa-star"></i></li>
-													 <li><i class="far fa-star"></i></li>
-												  </ul>
-												  <span class="shop_review_text">( 4.0 )</span>
-											   </div>
-											   <div class="product_content">
-												  <h3 class="product_title">
-													 <a href="shop-list.html" target="_blank">Fresh Cabbage</a>
-												  </h3>
-												  <div class="product_price">
-													 <span class="sale_price pe-1">$50.00</span>
-													 <del>$65.00</del>
-												  </div>
-											   </div>
-											</div>
-										 </div>
-									  </div>
-									  <div class="col-sm-6 col-md-6 col-xl-3">
-										 <div class="product_layout_1 overflow-hidden position-relative">
-											<div class="product_layout_content bg-white position-relative">
-											   <div class="product_image_wrap">
-												  <a class="product_image d-flex justify-content-center align-items-center" href="shop_-listhtml">
-													 <img class="pic-1" src="images/product11.png" alt="image_not_found">
-													 <img class="pic-2" src="images/product6.png" alt="image_not_found">
-												  </a>
-												  <ul class="product_badge_group ul_li_block">
-													 <li><span class="product_badge badge_meats position-absolute rounded-pill text-uppercase">Meats</span>
-													 </li>
-													 <li><span class="product_badge badge_discount position-absolute rounded-pill">-27%</span>
-													 </li>
-												  </ul>
-												  <ul class="product_action_btns ul_li_block d-flex">
-													 <li><a class="tooltips" data-placement="top" title="Search Product" href="#!"><i class="fas fa-search"></i></a></li>
-													 <li><a class="tooltips" data-placement="top" title="Add To Cart" href="#product_quick_view" data-bs-toggle="modal"><i class="fas fa-shopping-bag"></i></a></li>
-												  </ul>
-											   </div>
-											   <div class="rating_wrap d-flex">
-												  <ul class="rating_star ul_li">
-													 <li class="active"><i class="fas fa-star"></i></li>
-													 <li class="active"><i class="fas fa-star"></i></li>
-													 <li class="active"><i class="fas fa-star"></i></li>
-													 <li class="active"><i class="fas fa-star"></i></li>
-													 <li><i class="far fa-star"></i></li>
-												  </ul>
-												  <span class="shop_review_text">( 4.0 )</span>
-											   </div>
-											   <div class="product_content">
-												  <h3 class="product_title">
-													 <a href="shop-list.html" target="_blank">Fresh Cabbage</a>
-												  </h3>
-												  <div class="product_price">
-													 <span class="sale_price pe-1">$50.00</span>
-													 <del>$65.00</del>
-												  </div>
-											   </div>
-											</div>
-										 </div>
-									  </div>
-									  <div class="col-sm-6 col-md-6 col-xl-3">
-										 <div class="product_layout_1 overflow-hidden position-relative">
-											<div class="product_layout_content bg-white position-relative">
-											   <div class="product_image_wrap">
-												  <a class="product_image d-flex justify-content-center align-items-center" href="shop_-listhtml">
-													 <img class="pic-1" src="images/product12.png" alt="image_not_found">
-													 <img class="pic-2" src="images/product4.png" alt="image_not_found">
-												  </a>
-												  <ul class="product_badge_group ul_li_block">
-													 <li><span class="product_badge badge_meats position-absolute rounded-pill text-uppercase">Meats</span>
-													 </li>
-													 <li><span class="product_badge badge_discount position-absolute rounded-pill">-27%</span>
-													 </li>
-												  </ul>
-												  <ul class="product_action_btns ul_li_block d-flex">
-													 <li><a class="tooltips" data-placement="top" title="Search Product" href="#!"><i class="fas fa-search"></i></a></li>
-													 <li><a class="tooltips" data-placement="top" title="Add To Cart" href="#product_quick_view" data-bs-toggle="modal"><i class="fas fa-shopping-bag"></i></a></li>
-												  </ul>
-											   </div>
-											   <div class="rating_wrap d-flex">
-												  <ul class="rating_star ul_li">
-													 <li class="active"><i class="fas fa-star"></i></li>
-													 <li class="active"><i class="fas fa-star"></i></li>
-													 <li class="active"><i class="fas fa-star"></i></li>
-													 <li class="active"><i class="fas fa-star"></i></li>
-													 <li><i class="far fa-star"></i></li>
-												  </ul>
-												  <span class="shop_review_text">( 4.0 )</span>
-											   </div>
-											   <div class="product_content">
-												  <h3 class="product_title">
-													 <a href="shop-list.html" target="_blank">Fresh Cabbage</a>
-												  </h3>
-												  <div class="product_price">
-													 <span class="sale_price pe-1">$50.00</span>
-													 <del>$65.00</del>
-												  </div>
-											   </div>
-											</div>
-										 </div>
-									  </div>
-								   </div>
-								</div>
-							 </section> -->
+										   <div class="row g-4">
+											  <div class="col-sm-6 col-md-6 col-xl-3">
+												 <div class="product_layout_1 overflow-hidden position-relative">
+													<div class="product_layout_content bg-white position-relative">
+													   <div class="product_image_wrap">
+														  <a class="product_image d-flex justify-content-center align-items-center" href="shop-list.html" target="_blank">
+															 <img class="pic-1" src="images/product8.png" alt="image_not_found">
+															 <img class="pic-2" src="images/product6.png" alt="image_not_found">
+														  </a>
+														  <ul class="product_badge_group ul_li_block">
+															 <li><span class="product_badge badge_meats position-absolute rounded-pill text-uppercase">Meats</span>
+															 </li>
+															 <li><span class="product_badge badge_discount position-absolute rounded-pill">-27%</span>
+															 </li>
+														  </ul>
+														  <ul class="product_action_btns ul_li_block d-flex">
+															 <li><a class="tooltips" data-placement="top" title="Search Product" href="#!"><i class="fas fa-search"></i></a></li>
+															 <li><a class="tooltips" data-placement="top" title="Add To Cart" href="#product_quick_view" data-bs-toggle="modal"><i class="fas fa-shopping-bag"></i></a></li>
+														  </ul>
+													   </div>
+													   <div class="rating_wrap d-flex">
+														  <ul class="rating_star ul_li">
+															 <li class="active"><i class="fas fa-star"></i></li>
+															 <li class="active"><i class="fas fa-star"></i></li>
+															 <li class="active"><i class="fas fa-star"></i></li>
+															 <li class="active"><i class="fas fa-star"></i></li>
+															 <li><i class="far fa-star"></i></li>
+														  </ul>
+														  <span class="shop_review_text">( 4.0 )</span>
+													   </div>
+													   <div class="product_content">
+														  <h3 class="product_title">
+															 <a href="shop-list.html" target="_blank">Fresh Cabbage</a>
+														  </h3>
+														  <div class="product_price">
+															 <span class="sale_price pe-1">$50.00</span>
+															 <del>$65.00</del>
+														  </div>
+													   </div>
+													</div>
+												 </div>
+											  </div>
+											  <div class="col-sm-6 col-md-6 col-xl-3">
+												 <div class="product_layout_1 overflow-hidden position-relative">
+													<div class="product_layout_content bg-white position-relative">
+													   <div class="product_image_wrap">
+														  <a class="product_image d-flex justify-content-center align-items-center" href="shop_-listhtml">
+															 <img class="pic-1" src="images/product10.png" alt="image_not_found">
+															 <img class="pic-2" src="images/product7.png" alt="image_not_found">
+														  </a>
+														  <ul class="product_badge_group ul_li_block">
+															 <li><span class="product_badge badge_meats position-absolute rounded-pill text-uppercase">Meats</span>
+															 </li>
+															 <li><span class="product_badge badge_discount position-absolute rounded-pill">-27%</span>
+															 </li>
+														  </ul>
+														  <ul class="product_action_btns ul_li_block d-flex">
+															 <li><a class="tooltips" data-placement="top" title="Search Product" href="#!"><i class="fas fa-search"></i></a></li>
+															 <li><a class="tooltips" data-placement="top" title="Add To Cart" href="#product_quick_view" data-bs-toggle="modal"><i class="fas fa-shopping-bag"></i></a></li>
+														  </ul>
+													   </div>
+													   <div class="rating_wrap d-flex">
+														  <ul class="rating_star ul_li">
+															 <li class="active"><i class="fas fa-star"></i></li>
+															 <li class="active"><i class="fas fa-star"></i></li>
+															 <li class="active"><i class="fas fa-star"></i></li>
+															 <li class="active"><i class="fas fa-star"></i></li>
+															 <li><i class="far fa-star"></i></li>
+														  </ul>
+														  <span class="shop_review_text">( 4.0 )</span>
+													   </div>
+													   <div class="product_content">
+														  <h3 class="product_title">
+															 <a href="shop-list.html" target="_blank">Fresh Cabbage</a>
+														  </h3>
+														  <div class="product_price">
+															 <span class="sale_price pe-1">$50.00</span>
+															 <del>$65.00</del>
+														  </div>
+													   </div>
+													</div>
+												 </div>
+											  </div>
+											  <div class="col-sm-6 col-md-6 col-xl-3">
+												 <div class="product_layout_1 overflow-hidden position-relative">
+													<div class="product_layout_content bg-white position-relative">
+													   <div class="product_image_wrap">
+														  <a class="product_image d-flex justify-content-center align-items-center" href="shop_-listhtml">
+															 <img class="pic-1" src="images/product11.png" alt="image_not_found">
+															 <img class="pic-2" src="images/product6.png" alt="image_not_found">
+														  </a>
+														  <ul class="product_badge_group ul_li_block">
+															 <li><span class="product_badge badge_meats position-absolute rounded-pill text-uppercase">Meats</span>
+															 </li>
+															 <li><span class="product_badge badge_discount position-absolute rounded-pill">-27%</span>
+															 </li>
+														  </ul>
+														  <ul class="product_action_btns ul_li_block d-flex">
+															 <li><a class="tooltips" data-placement="top" title="Search Product" href="#!"><i class="fas fa-search"></i></a></li>
+															 <li><a class="tooltips" data-placement="top" title="Add To Cart" href="#product_quick_view" data-bs-toggle="modal"><i class="fas fa-shopping-bag"></i></a></li>
+														  </ul>
+													   </div>
+													   <div class="rating_wrap d-flex">
+														  <ul class="rating_star ul_li">
+															 <li class="active"><i class="fas fa-star"></i></li>
+															 <li class="active"><i class="fas fa-star"></i></li>
+															 <li class="active"><i class="fas fa-star"></i></li>
+															 <li class="active"><i class="fas fa-star"></i></li>
+															 <li><i class="far fa-star"></i></li>
+														  </ul>
+														  <span class="shop_review_text">( 4.0 )</span>
+													   </div>
+													   <div class="product_content">
+														  <h3 class="product_title">
+															 <a href="shop-list.html" target="_blank">Fresh Cabbage</a>
+														  </h3>
+														  <div class="product_price">
+															 <span class="sale_price pe-1">$50.00</span>
+															 <del>$65.00</del>
+														  </div>
+													   </div>
+													</div>
+												 </div>
+											  </div>
+											  <div class="col-sm-6 col-md-6 col-xl-3">
+												 <div class="product_layout_1 overflow-hidden position-relative">
+													<div class="product_layout_content bg-white position-relative">
+													   <div class="product_image_wrap">
+														  <a class="product_image d-flex justify-content-center align-items-center" href="shop_-listhtml">
+															 <img class="pic-1" src="images/product12.png" alt="image_not_found">
+															 <img class="pic-2" src="images/product4.png" alt="image_not_found">
+														  </a>
+														  <ul class="product_badge_group ul_li_block">
+															 <li><span class="product_badge badge_meats position-absolute rounded-pill text-uppercase">Meats</span>
+															 </li>
+															 <li><span class="product_badge badge_discount position-absolute rounded-pill">-27%</span>
+															 </li>
+														  </ul>
+														  <ul class="product_action_btns ul_li_block d-flex">
+															 <li><a class="tooltips" data-placement="top" title="Search Product" href="#!"><i class="fas fa-search"></i></a></li>
+															 <li><a class="tooltips" data-placement="top" title="Add To Cart" href="#product_quick_view" data-bs-toggle="modal"><i class="fas fa-shopping-bag"></i></a></li>
+														  </ul>
+													   </div>
+													   <div class="rating_wrap d-flex">
+														  <ul class="rating_star ul_li">
+															 <li class="active"><i class="fas fa-star"></i></li>
+															 <li class="active"><i class="fas fa-star"></i></li>
+															 <li class="active"><i class="fas fa-star"></i></li>
+															 <li class="active"><i class="fas fa-star"></i></li>
+															 <li><i class="far fa-star"></i></li>
+														  </ul>
+														  <span class="shop_review_text">( 4.0 )</span>
+													   </div>
+													   <div class="product_content">
+														  <h3 class="product_title">
+															 <a href="shop-list.html" target="_blank">Fresh Cabbage</a>
+														  </h3>
+														  <div class="product_price">
+															 <span class="sale_price pe-1">$50.00</span>
+															 <del>$65.00</del>
+														  </div>
+													   </div>
+													</div>
+												 </div>
+											  </div>
+										   </div>
+										</div>
+									 </section> -->
 	<!-- product section end -->
 
 	<!-- product category section start -->
 	<!-- <section class="product_ctg_section sec_space_xs_70">
-								<div class="container">
-								   <div class="col">
-									  <div class="product_ctg_content_wrap position-relative prl_60 sec_ptb_100" style="background-image: url(images/bg3.png)">
-										 <div class="product_ctg_content">
-											<div class="product_ctg_sub_title d-flex align-items-center pb-2">
-											   <i class="far fa-circle"></i>
-											   <i class="far fa-circle"></i>
-											   <i class="far fa-circle"></i>
-											   <span class="text-uppercase ps-2">30% of all order</span>
-											</div>
-											<div class="product_ctg_title py-1">
-											   <h2>Natural, Raw & <font>Fresh Protein Powders</font>
-											   </h2>
-											</div>
-											<div class="product_ctg_desc">
-											   <p> Apparently we had reached a great height in the atmosphere, for the sky was a dead black,
-												  and the stars had ceased to twinkle. </p>
-											</div>
-											<div class="product_ctg_items d-flex align-items-start">
-											   <div class="product_ctg_items_icon pe-3">
-												  <img src="images/product16.png" alt="product16">
-											   </div>
-											   <div class="product_ctg_items_text">
-												  <div class="product_ctg_items_title">
-													 <h5>Only Natural Ingredients</h5>
-												  </div>
-												  <div class="product_ctg_items_desc">
-													 <p>Morbi eget congue lectus. Donec eleifend ultricies urna et euismod. Sed consectetur
-													 </p>
-												  </div>
-											   </div>
-											</div>
-											<div class="product_ctg_items d-flex align-items-start">
-											   <div class="product_ctg_items_icon pe-3">
-												  <img src="images/product17.png" alt="product17">
-											   </div>
-											   <div class="product_ctg_items_text">
-												  <div class="product_ctg_items_title">
-													 <h5>Only Natural Ingredients</h5>
-												  </div>
-												  <div class="product_ctg_items_desc">
-													 <p>Morbi eget congue lectus. Donec eleifend ultricies urna et euismod. Sed consectetur
-													 </p>
-												  </div>
-											   </div>
-											</div>
-											<div class="product_ctg_btn load_more_1">
-											   <a href="#"><button type="button" class="btn custom_btn rounded-pill px-4 text-white">View
-													 More <i class="fas fa-long-arrow-alt-right"></i></button></a>
-											</div>
-										 </div>
-										 <div class="product_ctg_media_wrap">
-											<div class="product_ctg_media_thumb position-absolute">
-											   <img class="position-relative" src="images/product53.png" alt="image_not_found">
-											   <div class="product_ctg_media_cont position-absolute d-flex flex-column align-items-center justify-content-center">
-												  <a href="#!" data-bs-toggle="modal" data-bs-target="#exampleModal" class="product_ctg_media_icon"><i class="fas fa-play text-white"></i>
-												  </a>
-												  <a class="product_ctg_media_title text-white text-uppercase" href="#!">Demo Video 1:30</a>
-											   </div>
-											</div>
-										 </div>
-										 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-											<div class="modal-dialog modal-dialog-centered">
-											   <div class="modal-content">
-												  <div class="modal-header">
-													 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-												  </div>
-												  <div class="modal-body">
-													 <iframe width="450" height="300" src="https://www.youtube.com/embed/UqyD2PgOw9Q" frameborder="0" allowfullscreen="">
-													 </iframe>
-												  </div>
-											   </div>
-											</div>
-										 </div>
+										<div class="container">
+										   <div class="col">
+											  <div class="product_ctg_content_wrap position-relative prl_60 sec_ptb_100" style="background-image: url(images/bg3.png)">
+												 <div class="product_ctg_content">
+													<div class="product_ctg_sub_title d-flex align-items-center pb-2">
+													   <i class="far fa-circle"></i>
+													   <i class="far fa-circle"></i>
+													   <i class="far fa-circle"></i>
+													   <span class="text-uppercase ps-2">30% of all order</span>
+													</div>
+													<div class="product_ctg_title py-1">
+													   <h2>Natural, Raw & <font>Fresh Protein Powders</font>
+													   </h2>
+													</div>
+													<div class="product_ctg_desc">
+													   <p> Apparently we had reached a great height in the atmosphere, for the sky was a dead black,
+														  and the stars had ceased to twinkle. </p>
+													</div>
+													<div class="product_ctg_items d-flex align-items-start">
+													   <div class="product_ctg_items_icon pe-3">
+														  <img src="images/product16.png" alt="product16">
+													   </div>
+													   <div class="product_ctg_items_text">
+														  <div class="product_ctg_items_title">
+															 <h5>Only Natural Ingredients</h5>
+														  </div>
+														  <div class="product_ctg_items_desc">
+															 <p>Morbi eget congue lectus. Donec eleifend ultricies urna et euismod. Sed consectetur
+															 </p>
+														  </div>
+													   </div>
+													</div>
+													<div class="product_ctg_items d-flex align-items-start">
+													   <div class="product_ctg_items_icon pe-3">
+														  <img src="images/product17.png" alt="product17">
+													   </div>
+													   <div class="product_ctg_items_text">
+														  <div class="product_ctg_items_title">
+															 <h5>Only Natural Ingredients</h5>
+														  </div>
+														  <div class="product_ctg_items_desc">
+															 <p>Morbi eget congue lectus. Donec eleifend ultricies urna et euismod. Sed consectetur
+															 </p>
+														  </div>
+													   </div>
+													</div>
+													<div class="product_ctg_btn load_more_1">
+													   <a href="#"><button type="button" class="btn custom_btn rounded-pill px-4 text-white">View
+															 More <i class="fas fa-long-arrow-alt-right"></i></button></a>
+													</div>
+												 </div>
+												 <div class="product_ctg_media_wrap">
+													<div class="product_ctg_media_thumb position-absolute">
+													   <img class="position-relative" src="images/product53.png" alt="image_not_found">
+													   <div class="product_ctg_media_cont position-absolute d-flex flex-column align-items-center justify-content-center">
+														  <a href="#!" data-bs-toggle="modal" data-bs-target="#exampleModal" class="product_ctg_media_icon"><i class="fas fa-play text-white"></i>
+														  </a>
+														  <a class="product_ctg_media_title text-white text-uppercase" href="#!">Demo Video 1:30</a>
+													   </div>
+													</div>
+												 </div>
+												 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+													<div class="modal-dialog modal-dialog-centered">
+													   <div class="modal-content">
+														  <div class="modal-header">
+															 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+														  </div>
+														  <div class="modal-body">
+															 <iframe width="450" height="300" src="https://www.youtube.com/embed/UqyD2PgOw9Q" frameborder="0" allowfullscreen="">
+															 </iframe>
+														  </div>
+													   </div>
+													</div>
+												 </div>
 
-										 <img class="product_ctg_right_thumb position-absolute" src="images/product14.png" alt="image_not_found">
-										 <img class="product_ctg_left_thumb position-absolute" src="images/product13.png" alt="image_not_found">
-									  </div>
-								   </div>
-								</div>
+												 <img class="product_ctg_right_thumb position-absolute" src="images/product14.png" alt="image_not_found">
+												 <img class="product_ctg_left_thumb position-absolute" src="images/product13.png" alt="image_not_found">
+											  </div>
+										   </div>
+										</div>
 
-							 </section> -->
+									 </section> -->
 	<!-- product category section end -->
 
 	<!-- offer section start -->
 	<!-- <section class="offer_section sec_space_xxs_50">
-								<div class="container">
-								   <div class="offer_top_content text-center">
-									  <div class="offer_sub_title d-flex align-items-center justify-content-center pb-2">
-										 <i class="far fa-circle"></i>
-										 <i class="far fa-circle"></i>
-										 <i class="far fa-circle"></i>
-										 <span class="text-uppercase px-2">FRESH FROM OUR FARM</span>
-										 <i class="far fa-circle"></i>
-										 <i class="far fa-circle"></i>
-										 <i class="far fa-circle"></i>
-									  </div>
-									  <div class="offer_title pb-5">
-										 <h2>Best Deals of the Week!</h2>
-									  </div>
-								   </div>
+										<div class="container">
+										   <div class="offer_top_content text-center">
+											  <div class="offer_sub_title d-flex align-items-center justify-content-center pb-2">
+												 <i class="far fa-circle"></i>
+												 <i class="far fa-circle"></i>
+												 <i class="far fa-circle"></i>
+												 <span class="text-uppercase px-2">FRESH FROM OUR FARM</span>
+												 <i class="far fa-circle"></i>
+												 <i class="far fa-circle"></i>
+												 <i class="far fa-circle"></i>
+											  </div>
+											  <div class="offer_title pb-5">
+												 <h2>Best Deals of the Week!</h2>
+											  </div>
+										   </div>
 
-								   <div class="row g-4">
-									  <div class="col-md-6">
-										 <div class="offer_inner_content" data-aos="fade-right" data-aos-duration="1000">
-											<div class="offer_item_content bg-white d-flex align-items-center">
-											   <div class="offer_item_img pe-4">
-												  <img src="images/offer1.png" alt="offer1">
-											   </div>
-											   <div class="offer_item_text">
-												  <div class="offer_item_title">
-													 <a href="shop-list.html">
-														<h3>Vegan Egg Replacer</h3>
-													 </a>
-												  </div>
-												  <div class="offer_item_price">
-													 <span>$80.00</span>
-													 <del>$90.00</del>
-												  </div>
-												  <div class="offer_item_desc">
-													 <p>Apparently we had reached a great height in the atmosphere,</p>
-												  </div>
-												  <div class="offer_item_expr_btn mb-3">
-													 <button type="button" class="btn text-white rounded-pill text-uppercase d-flex justify-content-center align-items-center">
-														<i class="far fa-clock pe-1"></i>
-														<ul class="countdown_timer3 list-unstyled d-flex justify-content-center align-items-center mb-0" data-countdown="2024/3/24">
-														</ul>
-													 </button>
-												  </div>
-												  <div class="offer_item_qty_prog_cnt d-flex align-items-center">
-													 <div class="progress w-50 offer_item_qty_prog rounded-pill">
-														<div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-													 </div>
-													 <div class="offer_item_qty_num ps-2">
-														<span>Sold: <font>62/100</font></span>
-													 </div>
-												  </div>
-											   </div>
-											</div>
-										 </div>
-									  </div>
-									  <div class="col-md-6">
-										 <div class="offer_inner_content" data-aos="fade-left" data-aos-duration="1000">
-											<div class="offer_item_content bg-white d-flex align-items-center">
-											   <div class="offer_item_img pe-4">
-												  <img src="images/offer2.png" alt="offer2">
-											   </div>
-											   <div class="offer_item_text">
-												  <div class="offer_item_title">
-													 <a href="shop-list.html">
-														<h3>Vegan Egg Replacer</h3>
-													 </a>
-												  </div>
-												  <div class="offer_item_price">
-													 <span>$80.00</span>
-													 <del>$90.00</del>
-												  </div>
-												  <div class="offer_item_desc">
-													 <p>Apparently we had reached a great height in the atmosphere,</p>
-												  </div>
-												  <div class="offer_item_expr_btn mb-3">
-													 <button type="button" class="btn text-white rounded-pill text-uppercase d-flex justify-content-center align-items-center">
-														<i class="far fa-clock pe-1"></i>
-														<ul class="countdown_timer3 list-unstyled d-flex justify-content-center align-items-center mb-0" data-countdown="2024/3/24">
-														</ul>
-													 </button>
-												  </div>
-												  <div class="offer_item_qty_prog_cnt d-flex align-items-center">
-													 <div class="progress w-50 offer_item_qty_prog rounded-pill">
-														<div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-													 </div>
-													 <div class="offer_item_qty_num ps-2">
-														<span>Sold: <font>62/100</font></span>
-													 </div>
-												  </div>
-											   </div>
-											</div>
-										 </div>
-									  </div>
-									  <div class="col-md-6">
-										 <div class="offer_inner_content" data-aos="fade-right" data-aos-duration="2000">
-											<div class="offer_item_content bg-white d-flex align-items-center">
-											   <div class="offer_item_img pe-4">
-												  <img src="images/offer3.png" alt="offer3">
-											   </div>
-											   <div class="offer_item_text">
-												  <div class="offer_item_title">
-													 <a href="shop-list.html">
-														<h3>Blue Diamond Almonds</h3>
-													 </a>
-												  </div>
-												  <div class="offer_item_price">
-													 <span>$80.00</span>
-													 <del>$90.00</del>
-												  </div>
-												  <div class="offer_item_desc">
-													 <p>Apparently we had reached a great height in the atmosphere,</p>
-												  </div>
-												  <div class="offer_item_expr_btn mb-3">
-													 <button type="button" class="btn text-white rounded-pill text-uppercase d-flex justify-content-center align-items-center">
-														<i class="far fa-clock pe-1"></i>
-														<ul class="countdown_timer3 list-unstyled d-flex justify-content-center align-items-center mb-0" data-countdown="2024/3/24">
-														</ul>
-													 </button>
-												  </div>
-												  <div class="offer_item_qty_prog_cnt d-flex align-items-center">
-													 <div class="progress w-50 offer_item_qty_prog rounded-pill">
-														<div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-													 </div>
-													 <div class="offer_item_qty_num ps-2">
-														<span>Sold: <font>62/100</font></span>
-													 </div>
-												  </div>
-											   </div>
-											</div>
-										 </div>
-									  </div>
-									  <div class="col-md-6">
-										 <div class="offer_inner_content" data-aos="fade-left" data-aos-duration="2000">
-											<div class="offer_item_content bg-white d-flex align-items-center">
-											   <div class="offer_item_img pe-4">
-												  <img src="images/offer4.png" alt="offer4">
-											   </div>
-											   <div class="offer_item_text">
-												  <div class="offer_item_title">
-													 <a href="shop-list.html">
-														<h3>Vegan Egg Replacer</h3>
-													 </a>
-												  </div>
-												  <div class="offer_item_price">
-													 <span>$80.00</span>
-													 <del>$90.00</del>
-												  </div>
-												  <div class="offer_item_desc">
-													 <p>Apparently we had reached a great height in the atmosphere,</p>
-												  </div>
-												  <div class="offer_item_expr_btn mb-3">
-													 <button type="button" class="btn text-white rounded-pill text-uppercase d-flex justify-content-center align-items-center">
-														<i class="far fa-clock pe-1"></i>
-														<ul class="countdown_timer3 list-unstyled d-flex justify-content-center align-items-center mb-0" data-countdown="2024/3/24">
-														</ul>
-													 </button>
-												  </div>
-												  <div class="offer_item_qty_prog_cnt d-flex align-items-center">
-													 <div class="progress w-50 offer_item_qty_prog rounded-pill">
-														<div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-													 </div>
-													 <div class="offer_item_qty_num ps-2">
-														<span>Sold: <font>62/100</font></span>
-													 </div>
-												  </div>
-											   </div>
-											</div>
-										 </div>
-									  </div>
-									  <div class="offer_delivery_wrap sec_space_xs_70 mt-5">
-										 <div class="offer_delivery_content inner_p_all_70 d-flex align-items-center justify-content-between" style="background-image: url(images/offer5.png)">
-											<div class="offer_delivery_title">
-											   <span>100% <font>Secure Delivery</font> Without Contacting the Courier</span>
-											</div>
-											<div class="offer_delivery_btn">
-											   <a href="shop-list.html" target="_blank" class="custom_btn rounded-pill">
-												  <button type="button" class="btn text-white">Shop Now <span><i class="fas fa-long-arrow-alt-right"></i></span></button>
-											   </a>
-											</div>
-										 </div>
-									  </div>
-								   </div>
-								</div>
-							 </section> -->
+										   <div class="row g-4">
+											  <div class="col-md-6">
+												 <div class="offer_inner_content" data-aos="fade-right" data-aos-duration="1000">
+													<div class="offer_item_content bg-white d-flex align-items-center">
+													   <div class="offer_item_img pe-4">
+														  <img src="images/offer1.png" alt="offer1">
+													   </div>
+													   <div class="offer_item_text">
+														  <div class="offer_item_title">
+															 <a href="shop-list.html">
+																<h3>Vegan Egg Replacer</h3>
+															 </a>
+														  </div>
+														  <div class="offer_item_price">
+															 <span>$80.00</span>
+															 <del>$90.00</del>
+														  </div>
+														  <div class="offer_item_desc">
+															 <p>Apparently we had reached a great height in the atmosphere,</p>
+														  </div>
+														  <div class="offer_item_expr_btn mb-3">
+															 <button type="button" class="btn text-white rounded-pill text-uppercase d-flex justify-content-center align-items-center">
+																<i class="far fa-clock pe-1"></i>
+																<ul class="countdown_timer3 list-unstyled d-flex justify-content-center align-items-center mb-0" data-countdown="2024/3/24">
+																</ul>
+															 </button>
+														  </div>
+														  <div class="offer_item_qty_prog_cnt d-flex align-items-center">
+															 <div class="progress w-50 offer_item_qty_prog rounded-pill">
+																<div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+															 </div>
+															 <div class="offer_item_qty_num ps-2">
+																<span>Sold: <font>62/100</font></span>
+															 </div>
+														  </div>
+													   </div>
+													</div>
+												 </div>
+											  </div>
+											  <div class="col-md-6">
+												 <div class="offer_inner_content" data-aos="fade-left" data-aos-duration="1000">
+													<div class="offer_item_content bg-white d-flex align-items-center">
+													   <div class="offer_item_img pe-4">
+														  <img src="images/offer2.png" alt="offer2">
+													   </div>
+													   <div class="offer_item_text">
+														  <div class="offer_item_title">
+															 <a href="shop-list.html">
+																<h3>Vegan Egg Replacer</h3>
+															 </a>
+														  </div>
+														  <div class="offer_item_price">
+															 <span>$80.00</span>
+															 <del>$90.00</del>
+														  </div>
+														  <div class="offer_item_desc">
+															 <p>Apparently we had reached a great height in the atmosphere,</p>
+														  </div>
+														  <div class="offer_item_expr_btn mb-3">
+															 <button type="button" class="btn text-white rounded-pill text-uppercase d-flex justify-content-center align-items-center">
+																<i class="far fa-clock pe-1"></i>
+																<ul class="countdown_timer3 list-unstyled d-flex justify-content-center align-items-center mb-0" data-countdown="2024/3/24">
+																</ul>
+															 </button>
+														  </div>
+														  <div class="offer_item_qty_prog_cnt d-flex align-items-center">
+															 <div class="progress w-50 offer_item_qty_prog rounded-pill">
+																<div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+															 </div>
+															 <div class="offer_item_qty_num ps-2">
+																<span>Sold: <font>62/100</font></span>
+															 </div>
+														  </div>
+													   </div>
+													</div>
+												 </div>
+											  </div>
+											  <div class="col-md-6">
+												 <div class="offer_inner_content" data-aos="fade-right" data-aos-duration="2000">
+													<div class="offer_item_content bg-white d-flex align-items-center">
+													   <div class="offer_item_img pe-4">
+														  <img src="images/offer3.png" alt="offer3">
+													   </div>
+													   <div class="offer_item_text">
+														  <div class="offer_item_title">
+															 <a href="shop-list.html">
+																<h3>Blue Diamond Almonds</h3>
+															 </a>
+														  </div>
+														  <div class="offer_item_price">
+															 <span>$80.00</span>
+															 <del>$90.00</del>
+														  </div>
+														  <div class="offer_item_desc">
+															 <p>Apparently we had reached a great height in the atmosphere,</p>
+														  </div>
+														  <div class="offer_item_expr_btn mb-3">
+															 <button type="button" class="btn text-white rounded-pill text-uppercase d-flex justify-content-center align-items-center">
+																<i class="far fa-clock pe-1"></i>
+																<ul class="countdown_timer3 list-unstyled d-flex justify-content-center align-items-center mb-0" data-countdown="2024/3/24">
+																</ul>
+															 </button>
+														  </div>
+														  <div class="offer_item_qty_prog_cnt d-flex align-items-center">
+															 <div class="progress w-50 offer_item_qty_prog rounded-pill">
+																<div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+															 </div>
+															 <div class="offer_item_qty_num ps-2">
+																<span>Sold: <font>62/100</font></span>
+															 </div>
+														  </div>
+													   </div>
+													</div>
+												 </div>
+											  </div>
+											  <div class="col-md-6">
+												 <div class="offer_inner_content" data-aos="fade-left" data-aos-duration="2000">
+													<div class="offer_item_content bg-white d-flex align-items-center">
+													   <div class="offer_item_img pe-4">
+														  <img src="images/offer4.png" alt="offer4">
+													   </div>
+													   <div class="offer_item_text">
+														  <div class="offer_item_title">
+															 <a href="shop-list.html">
+																<h3>Vegan Egg Replacer</h3>
+															 </a>
+														  </div>
+														  <div class="offer_item_price">
+															 <span>$80.00</span>
+															 <del>$90.00</del>
+														  </div>
+														  <div class="offer_item_desc">
+															 <p>Apparently we had reached a great height in the atmosphere,</p>
+														  </div>
+														  <div class="offer_item_expr_btn mb-3">
+															 <button type="button" class="btn text-white rounded-pill text-uppercase d-flex justify-content-center align-items-center">
+																<i class="far fa-clock pe-1"></i>
+																<ul class="countdown_timer3 list-unstyled d-flex justify-content-center align-items-center mb-0" data-countdown="2024/3/24">
+																</ul>
+															 </button>
+														  </div>
+														  <div class="offer_item_qty_prog_cnt d-flex align-items-center">
+															 <div class="progress w-50 offer_item_qty_prog rounded-pill">
+																<div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+															 </div>
+															 <div class="offer_item_qty_num ps-2">
+																<span>Sold: <font>62/100</font></span>
+															 </div>
+														  </div>
+													   </div>
+													</div>
+												 </div>
+											  </div>
+											  <div class="offer_delivery_wrap sec_space_xs_70 mt-5">
+												 <div class="offer_delivery_content inner_p_all_70 d-flex align-items-center justify-content-between" style="background-image: url(images/offer5.png)">
+													<div class="offer_delivery_title">
+													   <span>100% <font>Secure Delivery</font> Without Contacting the Courier</span>
+													</div>
+													<div class="offer_delivery_btn">
+													   <a href="shop-list.html" target="_blank" class="custom_btn rounded-pill">
+														  <button type="button" class="btn text-white">Shop Now <span><i class="fas fa-long-arrow-alt-right"></i></span></button>
+													   </a>
+													</div>
+												 </div>
+											  </div>
+										   </div>
+										</div>
+									 </section> -->
 	<!-- offer section end -->
 
 	<!-- testimonial section start -->
 	<!-- <section class="testimonial_section sec_bottom_space_70 position-relative" data-aos="fade-up" data-aos-duration="2000">
-								<div class="testimonial_sec_content sec_space_xxs_50" style="background-image: url(images/testimonial1.png)">
-								   <div class="container">
-									  <div class="row">
-										 <div class="col">
-											<div class="slider_item_content slideshow3_slider" data-slick="{" dots":="" false}"="">
-											   <div class="slider_item">
-												  <div class="testimonial_layout_1 d-flex justify-content-center align-items-center">
-													 <div class="testimonial_author">
-														<img src="images/testimonial2.png" alt="image_not_found">
-													 </div>
-													 <div class="testimonial_text">
-														<div class="testimonial_comment_text">
-														   <h3>Check what our users are saying.</h3>
-														</div>
-														<div class="testimonial_comment py-3">
-														   <p>This is due to their excellent service, competitive pricing and customer
-															  support. It’s throughly refresing to get such a personal touch.</p>
-														</div>
-														<div class="testimonial_author_title">
-														   <a href="vendor.html"><h6>Jesscia Brown</h6></a>
-														</div>
-													 </div>
-												  </div>
-											   </div>
-											   <div class="slider_item">
-												  <div class="testimonial_layout_1 d-flex justify-content-center align-items-center">
-													 <div class="testimonial_author">
-														<img src="images/testimonial2.png" alt="image_not_found">
-													 </div>
-													 <div class="testimonial_text">
-														<div class="testimonial_comment_text">
-														   <h3>Check what our users are saying.</h3>
-														</div>
-														<div class="testimonial_comment py-3">
-														   <p>This is due to their excellent service, competitive pricing and customer
-															  support. It’s throughly refresing to get such a personal touch.</p>
-														</div>
-														<div class="testimonial_author_title">
-														   <a href="vendor.html"><h6>Jesscia Brown</h6></a>
-														</div>
-													 </div>
-												  </div>
-											   </div>
-											</div>
-										 </div>
-									  </div>
-								   </div>
-								</div>
-							 </section> -->
+										<div class="testimonial_sec_content sec_space_xxs_50" style="background-image: url(images/testimonial1.png)">
+										   <div class="container">
+											  <div class="row">
+												 <div class="col">
+													<div class="slider_item_content slideshow3_slider" data-slick="{" dots":="" false}"="">
+													   <div class="slider_item">
+														  <div class="testimonial_layout_1 d-flex justify-content-center align-items-center">
+															 <div class="testimonial_author">
+																<img src="images/testimonial2.png" alt="image_not_found">
+															 </div>
+															 <div class="testimonial_text">
+																<div class="testimonial_comment_text">
+																   <h3>Check what our users are saying.</h3>
+																</div>
+																<div class="testimonial_comment py-3">
+																   <p>This is due to their excellent service, competitive pricing and customer
+																	  support. It’s throughly refresing to get such a personal touch.</p>
+																</div>
+																<div class="testimonial_author_title">
+																   <a href="vendor.html"><h6>Jesscia Brown</h6></a>
+																</div>
+															 </div>
+														  </div>
+													   </div>
+													   <div class="slider_item">
+														  <div class="testimonial_layout_1 d-flex justify-content-center align-items-center">
+															 <div class="testimonial_author">
+																<img src="images/testimonial2.png" alt="image_not_found">
+															 </div>
+															 <div class="testimonial_text">
+																<div class="testimonial_comment_text">
+																   <h3>Check what our users are saying.</h3>
+																</div>
+																<div class="testimonial_comment py-3">
+																   <p>This is due to their excellent service, competitive pricing and customer
+																	  support. It’s throughly refresing to get such a personal touch.</p>
+																</div>
+																<div class="testimonial_author_title">
+																   <a href="vendor.html"><h6>Jesscia Brown</h6></a>
+																</div>
+															 </div>
+														  </div>
+													   </div>
+													</div>
+												 </div>
+											  </div>
+										   </div>
+										</div>
+									 </section> -->
 	<!-- testimonial section end -->
 
 	<!-- team section start -->
 	<!-- <section class="team_section sec_space_xxs_50 position-relative" data-aos="fade-up" data-aos-duration="2000">
-								<div class="team_section_content">
-								   <div class="team_top_content">
-									  <div class="offer_sub_title d-flex align-items-center justify-content-center pb-1">
-										 <i class="far fa-circle"></i>
-										 <i class="far fa-circle"></i>
-										 <i class="far fa-circle"></i>
-										 <span class="text-uppercase px-2">FRESH FROM OUR FARM</span>
-										 <i class="far fa-circle"></i>
-										 <i class="far fa-circle"></i>
-										 <i class="far fa-circle"></i>
-									  </div>
-									  <div class="team_top_title text-center pb-4">
-										 <h2>Good Fresh Products</h2>
-									  </div>
-								   </div>
-								   <div class="team_inner_content">
-									  <div class="container">
-										 <div class="card-group justify-content-center align-items-center">
-											<div class="team_content_wrap position-relative col-md-10 col-lg-8 col-xl-12 m-auto">
-											   <div class="row g-4">
-												  <div class="col-sm-6 col-md-6 col-xl-3">
-													 <div class="card team_content text-center" data-aos="fade-right" data-aos-duration="2000">
-														<img class="rounded-pill" src="images/team3.png" alt="team3">
-														<div class="card-body team_author_content">
-														   <h5 class="card-title team_author_title">Michel Hasel</h5>
-														   <div class="card-text team_author_post mb-2">Mr. Farmer</div>
-														   <div class="team_author_social_link d-flex justify-content-center justify-content-around align-items-center">
-															  <a class="social_twitt" href="#">
-																 <i class="fab fa-twitter"></i>
-															  </a>
-															  <a class="social_face" href="#">
-																 <i class="fab fa-facebook-square"></i>
-															  </a>
-															  <a class="social_linked" href="#">
-																 <i class="fab fa-linkedin"></i>
-															  </a>
-														   </div>
-														</div>
-													 </div>
-												  </div>
-												  <div class="col-sm-6 col-md-6 col-xl-3">
-													 <div class="card team_content text-center" data-aos="fade-right" data-aos-duration="1000">
-														<img class="rounded-pill" src="images/team4.png" alt="team3">
-														<div class="card-body team_author_content">
-														   <h5 class="card-title team_author_title">Michel Hasel</h5>
-														   <div class="card-text team_author_post mb-2">Mr. Farmer</div>
-														   <div class="team_author_social_link d-flex justify-content-center justify-content-around align-items-center">
-															  <a class="social_twitt" href="#">
-																 <i class="fab fa-twitter"></i>
-															  </a>
-															  <a class="social_face" href="#">
-																 <i class="fab fa-facebook-square"></i>
-															  </a>
-															  <a class="social_linked" href="#">
-																 <i class="fab fa-linkedin"></i>
-															  </a>
-														   </div>
-														</div>
-													 </div>
-												  </div>
-												  <div class="col-sm-6 col-md-6 col-xl-3">
-													 <div class="card team_content text-center" data-aos="fade-left" data-aos-duration="1000">
-														<img class="rounded-pill" src="images/team5.png" alt="team3">
-														<div class="card-body team_author_content">
-														   <h5 class="card-title team_author_title">Michel Hasel</h5>
-														   <div class="card-text team_author_post mb-2">Mr. Farmer</div>
-														   <div class="team_author_social_link d-flex justify-content-center justify-content-around align-items-center">
-															  <a class="social_twitt" href="#">
-																 <i class="fab fa-twitter"></i>
-															  </a>
-															  <a class="social_face" href="#">
-																 <i class="fab fa-facebook-square"></i>
-															  </a>
-															  <a class="social_linked" href="#">
-																 <i class="fab fa-linkedin"></i>
-															  </a>
-														   </div>
-														</div>
-													 </div>
-												  </div>
-												  <div class="col-sm-6 col-md-6 col-xl-3">
-													 <div class="card team_content text-center" data-aos="fade-left" data-aos-duration="2000">
-														<img class="rounded-pill" src="images/team6.png" alt="team3">
-														<div class="card-body team_author_content">
-														   <h5 class="card-title team_author_title">Michel Hasel</h5>
-														   <div class="card-text team_author_post mb-2">Mr. Farmer</div>
-														   <div class="team_author_social_link d-flex justify-content-center justify-content-around align-items-center">
-															  <a class="social_twitt" href="#">
-																 <i class="fab fa-twitter"></i>
-															  </a>
-															  <a class="social_face" href="#">
-																 <i class="fab fa-facebook-square"></i>
-															  </a>
-															  <a class="social_linked" href="#">
-																 <i class="fab fa-linkedin"></i>
-															  </a>
-														   </div>
-														</div>
-													 </div>
-												  </div>
-											   </div>
-											</div>
-										 </div>
-									  </div>
-								   </div>
-								</div>
-								<img class="team_left_thumb position-absolute" src="images/shape11.png" alt="image_not_found">
-								<img class="team_right_thumb position-absolute" src="images/shape12.png" alt="image_not_found">
-							 </section> -->
+										<div class="team_section_content">
+										   <div class="team_top_content">
+											  <div class="offer_sub_title d-flex align-items-center justify-content-center pb-1">
+												 <i class="far fa-circle"></i>
+												 <i class="far fa-circle"></i>
+												 <i class="far fa-circle"></i>
+												 <span class="text-uppercase px-2">FRESH FROM OUR FARM</span>
+												 <i class="far fa-circle"></i>
+												 <i class="far fa-circle"></i>
+												 <i class="far fa-circle"></i>
+											  </div>
+											  <div class="team_top_title text-center pb-4">
+												 <h2>Good Fresh Products</h2>
+											  </div>
+										   </div>
+										   <div class="team_inner_content">
+											  <div class="container">
+												 <div class="card-group justify-content-center align-items-center">
+													<div class="team_content_wrap position-relative col-md-10 col-lg-8 col-xl-12 m-auto">
+													   <div class="row g-4">
+														  <div class="col-sm-6 col-md-6 col-xl-3">
+															 <div class="card team_content text-center" data-aos="fade-right" data-aos-duration="2000">
+																<img class="rounded-pill" src="images/team3.png" alt="team3">
+																<div class="card-body team_author_content">
+																   <h5 class="card-title team_author_title">Michel Hasel</h5>
+																   <div class="card-text team_author_post mb-2">Mr. Farmer</div>
+																   <div class="team_author_social_link d-flex justify-content-center justify-content-around align-items-center">
+																	  <a class="social_twitt" href="#">
+																		 <i class="fab fa-twitter"></i>
+																	  </a>
+																	  <a class="social_face" href="#">
+																		 <i class="fab fa-facebook-square"></i>
+																	  </a>
+																	  <a class="social_linked" href="#">
+																		 <i class="fab fa-linkedin"></i>
+																	  </a>
+																   </div>
+																</div>
+															 </div>
+														  </div>
+														  <div class="col-sm-6 col-md-6 col-xl-3">
+															 <div class="card team_content text-center" data-aos="fade-right" data-aos-duration="1000">
+																<img class="rounded-pill" src="images/team4.png" alt="team3">
+																<div class="card-body team_author_content">
+																   <h5 class="card-title team_author_title">Michel Hasel</h5>
+																   <div class="card-text team_author_post mb-2">Mr. Farmer</div>
+																   <div class="team_author_social_link d-flex justify-content-center justify-content-around align-items-center">
+																	  <a class="social_twitt" href="#">
+																		 <i class="fab fa-twitter"></i>
+																	  </a>
+																	  <a class="social_face" href="#">
+																		 <i class="fab fa-facebook-square"></i>
+																	  </a>
+																	  <a class="social_linked" href="#">
+																		 <i class="fab fa-linkedin"></i>
+																	  </a>
+																   </div>
+																</div>
+															 </div>
+														  </div>
+														  <div class="col-sm-6 col-md-6 col-xl-3">
+															 <div class="card team_content text-center" data-aos="fade-left" data-aos-duration="1000">
+																<img class="rounded-pill" src="images/team5.png" alt="team3">
+																<div class="card-body team_author_content">
+																   <h5 class="card-title team_author_title">Michel Hasel</h5>
+																   <div class="card-text team_author_post mb-2">Mr. Farmer</div>
+																   <div class="team_author_social_link d-flex justify-content-center justify-content-around align-items-center">
+																	  <a class="social_twitt" href="#">
+																		 <i class="fab fa-twitter"></i>
+																	  </a>
+																	  <a class="social_face" href="#">
+																		 <i class="fab fa-facebook-square"></i>
+																	  </a>
+																	  <a class="social_linked" href="#">
+																		 <i class="fab fa-linkedin"></i>
+																	  </a>
+																   </div>
+																</div>
+															 </div>
+														  </div>
+														  <div class="col-sm-6 col-md-6 col-xl-3">
+															 <div class="card team_content text-center" data-aos="fade-left" data-aos-duration="2000">
+																<img class="rounded-pill" src="images/team6.png" alt="team3">
+																<div class="card-body team_author_content">
+																   <h5 class="card-title team_author_title">Michel Hasel</h5>
+																   <div class="card-text team_author_post mb-2">Mr. Farmer</div>
+																   <div class="team_author_social_link d-flex justify-content-center justify-content-around align-items-center">
+																	  <a class="social_twitt" href="#">
+																		 <i class="fab fa-twitter"></i>
+																	  </a>
+																	  <a class="social_face" href="#">
+																		 <i class="fab fa-facebook-square"></i>
+																	  </a>
+																	  <a class="social_linked" href="#">
+																		 <i class="fab fa-linkedin"></i>
+																	  </a>
+																   </div>
+																</div>
+															 </div>
+														  </div>
+													   </div>
+													</div>
+												 </div>
+											  </div>
+										   </div>
+										</div>
+										<img class="team_left_thumb position-absolute" src="images/shape11.png" alt="image_not_found">
+										<img class="team_right_thumb position-absolute" src="images/shape12.png" alt="image_not_found">
+									 </section> -->
 	<!-- team section start -->
 
 	<!-- gallery section start -->
 	<!-- <section class="gallery_section sec_space_xxs_50 position-relative" data-aos="fade-up" data-aos-duration="2000">
-								<div class="gallery_content_wrap inner_sec_sm" style="background-image: url(images/gallery1.png)">
-								   <div class="container">
-									  <div class="row align-items-center">
-										 <div class="col-lg-4">
-											<div class="gallery_lft_content">
-											   <div class="gallery_lft_sub_title d-flex align-items-center pb-2">
-												  <i class="far fa-circle"></i>
-												  <i class="far fa-circle"></i>
-												  <i class="far fa-circle"></i>
-												  <span class="text-uppercase ps-2">FRESH FROM OUR FARM</span>
-											   </div>
-											   <div class="gallery_lft_title py-2">
-												  <h2>Good Fresh Products</h2>
-											   </div>
-											   <div class="gallery_lft_desc py-2">
-												  <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead
-													 black, and the stars had ceased to twinkle. </p>
-											   </div>
-											   <div class="gallery_lft_btn">
-												  <a href="#"><button type="button" class="btn custom_btn rounded-pill px-4 text-white">View
-														More <i class="fas fa-long-arrow-alt-right"></i></button></a>
-											   </div>
-											</div>
-										 </div>
-										 <div class="col-md-6 col-lg-4">
-											<div class="gallery_mid_content overflow-hidden bg-white shadow-lg">
-											   <div class="gallery_mid_thumb">
-												  <img src="images/gallery4.png" alt="image_not_found">
-											   </div>
-											   <div class="gallery_mid_inner_content px-5 py-4">
-												  <a href="blog-details.html">
-													 <h2>All Natural Italian-Style Chicken Meatballs</h2>
-												  </a>
-												  <div class="gallery_mid_author_content py-2 d-flex justify-content-between">
-													 <div class="gallery_mid_author_title">
-														<span><i class="far fa-user pe-1"></i> Jessica Doen</span>
-													 </div>
-													 <div class="gallery_mid_author_time">
-														<span><i class="far fa-clock pe-1"></i> 6 hours ago</span>
-													 </div>
-												  </div>
-												  <div class="gallery_mid_desc">
-													 <p>Qui nunc nobis videntur parum clari, sollemnes in futurum putamus parum claram
-														legere.</p>
-												  </div>
-											   </div>
-											</div>
-										 </div>
-										 <div class="col-md-6 col-lg-4">
-											<div class="gallery_end_content px-4 py-5 overflow-auto bg-white">
-											   <div class="gallery_end_content_item mb-5 d-flex justify-content-center align-items-center">
-												  <div class="gallery_end_thumb me-3">
-													 <img src="images/gallery5.png" alt="image_not_found">
-												  </div>
-												  <div class="gallery_end_inner_content">
-													 <a href="#!">
-														<h4>All Natural Italian-Style Chicken Meatballs</h4>
-													 </a>
-													 <div class="gallery_end_author_content d-flex">
-														<div class="gallery_end_author_title pe-2">
-														   <span><i class="far fa-user pe-1"></i> Jessica Doen</span>
-														</div>
-														<div class="gallery_end_author_time">
-														   <span><i class="far fa-clock pe-1"></i> 6 hours ago</span>
-														</div>
-													 </div>
-												  </div>
-											   </div>
-											   <div class="gallery_end_content_item mb-5 d-flex justify-content-center align-items-center">
-												  <div class="gallery_end_thumb me-3">
-													 <img src="images/gallery6.png" alt="image_not_found">
-												  </div>
-												  <div class="gallery_end_inner_content">
-													 <a href="#!">
-														<h4>All Natural Italian-Style Chicken Meatballs</h4>
-													 </a>
-													 <div class="gallery_end_author_content d-flex">
-														<div class="gallery_end_author_title pe-2">
-														   <span><i class="far fa-user pe-1"></i> Jessica Doen</span>
-														</div>
-														<div class="gallery_end_author_time">
-														   <span><i class="far fa-clock pe-1"></i> 6 hours ago</span>
-														</div>
-													 </div>
-												  </div>
-											   </div>
-											   <div class="gallery_end_content_item mb-5 d-flex justify-content-center align-items-center">
-												  <div class="gallery_end_thumb me-3">
-													 <img src="images/gallery7.png" alt="image_not_found">
-												  </div>
-												  <div class="gallery_end_inner_content">
-													 <a href="#!">
-														<h4>All Natural Italian-Style Chicken Meatballs</h4>
-													 </a>
-													 <div class="gallery_end_author_content d-flex">
-														<div class="gallery_end_author_title pe-2">
-														   <span><i class="far fa-user pe-1"></i> Jessica Doen</span>
-														</div>
-														<div class="gallery_end_author_time">
-														   <span><i class="far fa-clock pe-1"></i> 6 hours ago</span>
-														</div>
-													 </div>
-												  </div>
-											   </div>
-											   <div class="gallery_end_content_item d-flex justify-content-center align-items-center">
-												  <div class="gallery_end_thumb me-3">
-													 <img src="images/gallery6.png" alt="image_not_found">
-												  </div>
-												  <div class="gallery_end_inner_content">
-													 <a href="#!">
-														<h4>All Natural Italian-Style Chicken Meatballs</h4>
-													 </a>
-													 <div class="gallery_end_author_content d-flex">
-														<div class="gallery_end_author_title pe-2">
-														   <span><i class="far fa-user pe-1"></i> Jessica Doen</span>
-														</div>
-														<div class="gallery_end_author_time">
-														   <span><i class="far fa-clock pe-1"></i> 6 hours ago</span>
-														</div>
-													 </div>
-												  </div>
-											   </div>
-											</div>
-										 </div>
-									  </div>
-								   </div>
-								</div>
-							 </section> -->
+										<div class="gallery_content_wrap inner_sec_sm" style="background-image: url(images/gallery1.png)">
+										   <div class="container">
+											  <div class="row align-items-center">
+												 <div class="col-lg-4">
+													<div class="gallery_lft_content">
+													   <div class="gallery_lft_sub_title d-flex align-items-center pb-2">
+														  <i class="far fa-circle"></i>
+														  <i class="far fa-circle"></i>
+														  <i class="far fa-circle"></i>
+														  <span class="text-uppercase ps-2">FRESH FROM OUR FARM</span>
+													   </div>
+													   <div class="gallery_lft_title py-2">
+														  <h2>Good Fresh Products</h2>
+													   </div>
+													   <div class="gallery_lft_desc py-2">
+														  <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead
+															 black, and the stars had ceased to twinkle. </p>
+													   </div>
+													   <div class="gallery_lft_btn">
+														  <a href="#"><button type="button" class="btn custom_btn rounded-pill px-4 text-white">View
+																More <i class="fas fa-long-arrow-alt-right"></i></button></a>
+													   </div>
+													</div>
+												 </div>
+												 <div class="col-md-6 col-lg-4">
+													<div class="gallery_mid_content overflow-hidden bg-white shadow-lg">
+													   <div class="gallery_mid_thumb">
+														  <img src="images/gallery4.png" alt="image_not_found">
+													   </div>
+													   <div class="gallery_mid_inner_content px-5 py-4">
+														  <a href="blog-details.html">
+															 <h2>All Natural Italian-Style Chicken Meatballs</h2>
+														  </a>
+														  <div class="gallery_mid_author_content py-2 d-flex justify-content-between">
+															 <div class="gallery_mid_author_title">
+																<span><i class="far fa-user pe-1"></i> Jessica Doen</span>
+															 </div>
+															 <div class="gallery_mid_author_time">
+																<span><i class="far fa-clock pe-1"></i> 6 hours ago</span>
+															 </div>
+														  </div>
+														  <div class="gallery_mid_desc">
+															 <p>Qui nunc nobis videntur parum clari, sollemnes in futurum putamus parum claram
+																legere.</p>
+														  </div>
+													   </div>
+													</div>
+												 </div>
+												 <div class="col-md-6 col-lg-4">
+													<div class="gallery_end_content px-4 py-5 overflow-auto bg-white">
+													   <div class="gallery_end_content_item mb-5 d-flex justify-content-center align-items-center">
+														  <div class="gallery_end_thumb me-3">
+															 <img src="images/gallery5.png" alt="image_not_found">
+														  </div>
+														  <div class="gallery_end_inner_content">
+															 <a href="#!">
+																<h4>All Natural Italian-Style Chicken Meatballs</h4>
+															 </a>
+															 <div class="gallery_end_author_content d-flex">
+																<div class="gallery_end_author_title pe-2">
+																   <span><i class="far fa-user pe-1"></i> Jessica Doen</span>
+																</div>
+																<div class="gallery_end_author_time">
+																   <span><i class="far fa-clock pe-1"></i> 6 hours ago</span>
+																</div>
+															 </div>
+														  </div>
+													   </div>
+													   <div class="gallery_end_content_item mb-5 d-flex justify-content-center align-items-center">
+														  <div class="gallery_end_thumb me-3">
+															 <img src="images/gallery6.png" alt="image_not_found">
+														  </div>
+														  <div class="gallery_end_inner_content">
+															 <a href="#!">
+																<h4>All Natural Italian-Style Chicken Meatballs</h4>
+															 </a>
+															 <div class="gallery_end_author_content d-flex">
+																<div class="gallery_end_author_title pe-2">
+																   <span><i class="far fa-user pe-1"></i> Jessica Doen</span>
+																</div>
+																<div class="gallery_end_author_time">
+																   <span><i class="far fa-clock pe-1"></i> 6 hours ago</span>
+																</div>
+															 </div>
+														  </div>
+													   </div>
+													   <div class="gallery_end_content_item mb-5 d-flex justify-content-center align-items-center">
+														  <div class="gallery_end_thumb me-3">
+															 <img src="images/gallery7.png" alt="image_not_found">
+														  </div>
+														  <div class="gallery_end_inner_content">
+															 <a href="#!">
+																<h4>All Natural Italian-Style Chicken Meatballs</h4>
+															 </a>
+															 <div class="gallery_end_author_content d-flex">
+																<div class="gallery_end_author_title pe-2">
+																   <span><i class="far fa-user pe-1"></i> Jessica Doen</span>
+																</div>
+																<div class="gallery_end_author_time">
+																   <span><i class="far fa-clock pe-1"></i> 6 hours ago</span>
+																</div>
+															 </div>
+														  </div>
+													   </div>
+													   <div class="gallery_end_content_item d-flex justify-content-center align-items-center">
+														  <div class="gallery_end_thumb me-3">
+															 <img src="images/gallery6.png" alt="image_not_found">
+														  </div>
+														  <div class="gallery_end_inner_content">
+															 <a href="#!">
+																<h4>All Natural Italian-Style Chicken Meatballs</h4>
+															 </a>
+															 <div class="gallery_end_author_content d-flex">
+																<div class="gallery_end_author_title pe-2">
+																   <span><i class="far fa-user pe-1"></i> Jessica Doen</span>
+																</div>
+																<div class="gallery_end_author_time">
+																   <span><i class="far fa-clock pe-1"></i> 6 hours ago</span>
+																</div>
+															 </div>
+														  </div>
+													   </div>
+													</div>
+												 </div>
+											  </div>
+										   </div>
+										</div>
+									 </section> -->
 	<!-- gallery section end -->
 
 	<!-- service section start -->
 	<!-- <section class="service_setion sec_space_xxs_50" data-aos="fade-up" data-aos-duration="2000">
-								<div class="service_content_wrap">
-								   <div class="container">
-									  <div class="row">
-										 <div class="col-6 col-md-4 col-xl-3">
-											<div class="service_inner_content d-flex justify-content-center align-items-center" data-aos="fade-up" data-aos-duration="500">
-											   <div class="service_content_icon rounded-pill me-2">
-												  <i class="fas fa-shipping-fast"></i>
-											   </div>
-											   <div class="service_content_text">
-												  <div class="service_content_title">
-													 <h6 class="text-uppercase">Free Shipping</h6>
-												  </div>
-												  <div class="service_content_sub_title">
-													 <span>Free on order over $300</span>
-												  </div>
-											   </div>
-											</div>
-										 </div>
-										 <div class="col-6 col-md-4 col-xl-3">
-											<div class="service_inner_content d-flex justify-content-center align-items-center" data-aos="fade-up" data-aos-duration="1000">
-											   <div class="service_content_icon rounded-pill me-2">
-												  <i class="fas fa-user-shield"></i>
-											   </div>
-											   <div class="service_content_text">
-												  <div class="service_content_title">
-													 <h6 class="text-uppercase">Security Payment</h6>
-												  </div>
-												  <div class="service_content_sub_title">
-													 <span>100% security payment</span>
-												  </div>
-											   </div>
-											</div>
-										 </div>
-										 <div class="col-6 col-md-4 col-xl-3">
-											<div class="service_inner_content d-flex justify-content-center align-items-center" data-aos="fade-up" data-aos-duration="1500">
-											   <div class="service_content_icon rounded-pill me-2">
-												  <i class="fas fa-exchange-alt"></i>
-											   </div>
-											   <div class="service_content_text">
-												  <div class="service_content_title">
-													 <h6 class="text-uppercase">30 Day Return</h6>
-												  </div>
-												  <div class="service_content_sub_title">
-													 <span>30 day money guarantee</span>
-												  </div>
-											   </div>
-											</div>
-										 </div>
-										 <div class="col-6 col-md-4 col-xl-3">
-											<div class="service_inner_content d-flex justify-content-center align-items-center" data-aos="fade-up" data-aos-duration="2000">
-											   <div class="service_content_icon rounded-pill me-2">
-												  <i class="fas fa-shipping-fast"></i>
-											   </div>
-											   <div class="service_content_text">
-												  <div class="service_content_title">
-													 <h6 class="text-uppercase">24/7 Support</h6>
-												  </div>
-												  <div class="service_content_sub_title">
-													 <span>Support every time fast</span>
-												  </div>
-											   </div>
-											</div>
-										 </div>
-									  </div>
-								   </div>
-								</div>
-							 </section> -->
+										<div class="service_content_wrap">
+										   <div class="container">
+											  <div class="row">
+												 <div class="col-6 col-md-4 col-xl-3">
+													<div class="service_inner_content d-flex justify-content-center align-items-center" data-aos="fade-up" data-aos-duration="500">
+													   <div class="service_content_icon rounded-pill me-2">
+														  <i class="fas fa-shipping-fast"></i>
+													   </div>
+													   <div class="service_content_text">
+														  <div class="service_content_title">
+															 <h6 class="text-uppercase">Free Shipping</h6>
+														  </div>
+														  <div class="service_content_sub_title">
+															 <span>Free on order over $300</span>
+														  </div>
+													   </div>
+													</div>
+												 </div>
+												 <div class="col-6 col-md-4 col-xl-3">
+													<div class="service_inner_content d-flex justify-content-center align-items-center" data-aos="fade-up" data-aos-duration="1000">
+													   <div class="service_content_icon rounded-pill me-2">
+														  <i class="fas fa-user-shield"></i>
+													   </div>
+													   <div class="service_content_text">
+														  <div class="service_content_title">
+															 <h6 class="text-uppercase">Security Payment</h6>
+														  </div>
+														  <div class="service_content_sub_title">
+															 <span>100% security payment</span>
+														  </div>
+													   </div>
+													</div>
+												 </div>
+												 <div class="col-6 col-md-4 col-xl-3">
+													<div class="service_inner_content d-flex justify-content-center align-items-center" data-aos="fade-up" data-aos-duration="1500">
+													   <div class="service_content_icon rounded-pill me-2">
+														  <i class="fas fa-exchange-alt"></i>
+													   </div>
+													   <div class="service_content_text">
+														  <div class="service_content_title">
+															 <h6 class="text-uppercase">30 Day Return</h6>
+														  </div>
+														  <div class="service_content_sub_title">
+															 <span>30 day money guarantee</span>
+														  </div>
+													   </div>
+													</div>
+												 </div>
+												 <div class="col-6 col-md-4 col-xl-3">
+													<div class="service_inner_content d-flex justify-content-center align-items-center" data-aos="fade-up" data-aos-duration="2000">
+													   <div class="service_content_icon rounded-pill me-2">
+														  <i class="fas fa-shipping-fast"></i>
+													   </div>
+													   <div class="service_content_text">
+														  <div class="service_content_title">
+															 <h6 class="text-uppercase">24/7 Support</h6>
+														  </div>
+														  <div class="service_content_sub_title">
+															 <span>Support every time fast</span>
+														  </div>
+													   </div>
+													</div>
+												 </div>
+											  </div>
+										   </div>
+										</div>
+									 </section> -->
 	<!-- service section end -->
 
 	<!-- instagram section start -->
 	<!-- <section class="instagram_section instagram_style_1 sec_space_xs_70" data-aos="fade-up" data-aos-duration="2000">
-								<div class="container">
-								   <h2 class="instagram_title pb-5 text-center">Follow on Instagram</h2>
-								   <ul class="zoom-gallery instagram_image_content ul_li">
-									  <li>
-										 <a class="popup_image" href="assets/images/instagram/instagram1.png">
-											<img src="images/instagram1.png" alt="image_not_found">
-											<i class="fab fa-instagram"></i>
-											<span>@_Instagram</span>
-										 </a>
-									  </li>
-									  <li>
-										 <a class="popup_image" href="assets/images/instagram/instagram4.png">
-											<img src="images/instagram4.png" alt="image_not_found">
-											<i class="fab fa-instagram"></i>
-											<span>@_Instagram</span>
-										 </a>
-									  </li>
-									  <li>
-										 <a class="popup_image" href="assets/images/instagram/instagram3.png">
-											<img src="images/instagram3.png" alt="image_not_found">
-											<i class="fab fa-instagram"></i>
-											<span>@_Instagram</span>
-										 </a>
-									  </li>
-									  <li>
-										 <a class="popup_image" href="assets/images/instagram/instagram4.png">
-											<img src="images/instagram4.png" alt="image_not_found">
-											<i class="fab fa-instagram"></i>
-											<span>@_Instagram</span>
-										 </a>
-									  </li>
-									  <li>
-										 <a class="popup_image" href="assets/images/instagram/instagram5.png">
-											<img src="images/instagram5.png" alt="image_not_found">
-											<i class="fab fa-instagram"></i>
-											<span>@_Instagram</span>
-										 </a>
-									  </li>
-								   </ul>
-								</div>
-							 </section> -->
+										<div class="container">
+										   <h2 class="instagram_title pb-5 text-center">Follow on Instagram</h2>
+										   <ul class="zoom-gallery instagram_image_content ul_li">
+											  <li>
+												 <a class="popup_image" href="assets/images/instagram/instagram1.png">
+													<img src="images/instagram1.png" alt="image_not_found">
+													<i class="fab fa-instagram"></i>
+													<span>@_Instagram</span>
+												 </a>
+											  </li>
+											  <li>
+												 <a class="popup_image" href="assets/images/instagram/instagram4.png">
+													<img src="images/instagram4.png" alt="image_not_found">
+													<i class="fab fa-instagram"></i>
+													<span>@_Instagram</span>
+												 </a>
+											  </li>
+											  <li>
+												 <a class="popup_image" href="assets/images/instagram/instagram3.png">
+													<img src="images/instagram3.png" alt="image_not_found">
+													<i class="fab fa-instagram"></i>
+													<span>@_Instagram</span>
+												 </a>
+											  </li>
+											  <li>
+												 <a class="popup_image" href="assets/images/instagram/instagram4.png">
+													<img src="images/instagram4.png" alt="image_not_found">
+													<i class="fab fa-instagram"></i>
+													<span>@_Instagram</span>
+												 </a>
+											  </li>
+											  <li>
+												 <a class="popup_image" href="assets/images/instagram/instagram5.png">
+													<img src="images/instagram5.png" alt="image_not_found">
+													<i class="fab fa-instagram"></i>
+													<span>@_Instagram</span>
+												 </a>
+											  </li>
+										   </ul>
+										</div>
+									 </section> -->
 	<!-- instagram section end -->
 
 @endsection

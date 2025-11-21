@@ -33,8 +33,10 @@ Route::controller(HomeController::class)->group(function () {
 // Public Routes
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/about', [HomeController::class, 'about'])->name('about');
-Route::get('/products', [HomeController::class, 'products'])->name('products');
-Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
+Route::get('/products', [\App\Http\Controllers\Web\ProductController::class, 'product'])->name('products');
+Route::get('/products/{id}', [\App\Http\Controllers\Web\ProductController::class, 'show'])->name('products.show');
+Route::get('/contact', [ContactController::class, 'contact'])->name('contact');
+Route::post('/contact/submit', [ContactController::class, 'submit'])->name('contact.submit');
 
 // Route::get('/shop', [ShopController::class, 'shop'])->name('shop');
 // Route::get('/wishlist', [WhislistController::class, 'wishlist'])->name('wishlist');
