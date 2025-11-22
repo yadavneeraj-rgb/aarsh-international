@@ -123,10 +123,6 @@
                                 </form>
                                 <small class="text-muted d-block mt-1">Quantity (KG)</small>
                             </div>
-                            <button type="button" class="btn custom_btn rounded-pill ms-3 px-5 py-3 text-white add-to-cart"
-                                    data-product-id="{{ $product->id }}">
-                                Add to Cart <i class="fas fa-shopping-cart"></i>
-                            </button>
                         </div>
                         
                         <div class="product_tags_wrap d-flex align-items-center mt-5">

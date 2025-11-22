@@ -12,7 +12,7 @@ class ContactController extends Controller
 {
     public function contact()
     {
-        return view("web.contact.contact");
+        return view("web.Contact.contact");
     }
 
     public function submit(Request $request)

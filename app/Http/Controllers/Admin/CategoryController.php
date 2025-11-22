@@ -16,13 +16,13 @@ class CategoryController extends Controller
             ->withCount('children')
             ->get(); // Removed with('module')
 
-        return view('admin.category.category', compact('categories'));
+        return view('admin.Category.category', compact('categories'));
     }
 
     public function create()
     {
         $mainCategories = Category::mainCategories()->get();
-        return view("admin.category.create", compact('mainCategories'));
+        return view("admin.Category.create", compact('mainCategories'));
     }
 
     public function store(Request $request)
