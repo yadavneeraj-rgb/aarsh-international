@@ -3123,12 +3123,15 @@
 			downloadBtn.disabled = true;
 
 			// Call Laravel backend to generate PDF
-			fetch(`/download-price-list/${categoryId}`, {
-				headers: {
-					'X-Requested-With': 'XMLHttpRequest',
-					'X-CSRF-TOKEN': getCsrfToken()
-				}
-			})
+			let url = "{{ route('download.price.list', ':id') }}";
+				url = url.replace(':id', categoryId);
+
+				fetch(url, {
+					headers: {
+						'X-Requested-With': 'XMLHttpRequest',
+						'X-CSRF-TOKEN': getCsrfToken()
+					}
+				})
 				.then(response => {
 					if (!response.ok) {
 						throw new Error('Network response was not ok');

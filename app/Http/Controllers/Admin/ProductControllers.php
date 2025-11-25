@@ -105,7 +105,7 @@ class ProductControllers extends Controller
     public function updateProduct(Request $request, $id)
     {
         $request->validate([
-            'name' => 'required|string|max:255|unique:product,name,' . $id,
+            'name' => 'required|string|max:255' . $id,
             'description' => 'nullable|string',
             'search_tag' => 'nullable|string|max:255',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
@@ -119,7 +119,6 @@ class ProductControllers extends Controller
 
         try {
             $product = Product::with('pricing')->findOrFail($id);
-
             // Get the current price before update
             $oldPrice = $product->pricing ? $product->pricing->final_price : 0;
 
@@ -135,26 +134,19 @@ class ProductControllers extends Controller
 
             // Handle image upload
             if ($request->hasFile('image')) {
-                // Delete old image if exists
                 if ($product->image) {
                     Storage::disk('public')->delete($product->image);
                 }
-
-                // Store new image
                 $imagePath = $request->file('image')->store('products', 'public');
                 $updateData['image'] = $imagePath;
             }
-
             $product->update($updateData);
-
-            // Update or create pricing
             $pricingData = [
                 'mrp_base_price' => $request->mrp_base_price,
                 'tax_percentage' => $request->tax_percentage,
                 'discount_type' => $request->discount_type,
                 'discount_value' => $request->discount_value ?? 0,
             ];
-
             $productPricing = $product->pricing ?? new ProductPricing(['product_id' => $product->id]);
             $productPricing->fill($pricingData);
             $productPricing->calculateFinalPrice();

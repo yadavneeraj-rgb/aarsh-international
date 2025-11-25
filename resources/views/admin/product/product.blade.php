@@ -100,7 +100,7 @@
                     <h5 class="modal-title" id="editProductModalLabel">Edit Product</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form id="editProductForm" method="POST" enctype="multipart/form-data">
+                <form id="editProductForm" data-url="{{ route('product.update', ['id' => $product->id]) }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
                     <input type="hidden" id="edit_product_id" name="id">
@@ -130,6 +130,7 @@
                             </select>
                             <div class="error-div"><span class="text-danger"></span></div>
                         </div>
+                        
                         <div class="form-group mb-3">
                             <label for="edit_product_image" class="form-label">Product Image</label>
                             <input type="file" name="image" id="edit_product_image" class="form-control" accept="image/*">
@@ -216,7 +217,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary" data-url="{{ route('product.update', ['id' => $product->id]) }}" id="editSubmitBtn">Update Product</button>
+                        <button type="submit" class="btn btn-primary"  id="editSubmitBtn">Update Product</button>
                     </div>
                 </form>
             </div>
@@ -410,8 +411,7 @@
 
                 // Create FormData for file upload
                 var formData = new FormData(this);
-                var url = $(this).attr('action');
-
+                var url = $(this).data('url');
                 $.ajax({
                     url: url,
                     method: 'POST',
