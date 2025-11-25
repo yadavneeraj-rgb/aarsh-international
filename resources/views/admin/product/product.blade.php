@@ -274,6 +274,7 @@
             // Edit Product - Load data into modal
             $(document).on('click', '.edit-product', function () {
                 var productId = $(this).data('id');
+                var url = $(this).data('url');
 
                 // Clear previous errors
                 $('#editProductForm .error-div span').text('');
@@ -281,7 +282,7 @@
 
                 // Load product data
                 $.ajax({
-                    url: '/product/' + productId + '/edit',
+                    url: url,
                     method: 'GET',
                     success: function (response) {
                         $('#edit_product_id').val(response.product.id);
