@@ -51,10 +51,10 @@
                                             <td>{{ $category->created_at->format('M d, Y') }}</td>
                                             <td>
                                                 <button class="btn btn-sm btn-warning edit-category" data-id="{{ $category->id }}"
-                                                    data-bs-toggle="modal" data-bs-target="#editCategoryModal">
+                                                    data-bs-toggle="modal" data-url="{{ route('category.edit', ['id' => $category->id]) }}" data-bs-target="#editCategoryModal">
                                                     <i class="mdi mdi-pencil"></i>
                                                 </button>
-                                                <button class="btn btn-sm btn-danger delete-category" data-id="{{ $category->id }}">
+                                                <button class="btn btn-sm btn-danger delete-category" data-url="{{ route('category.destroy', ['id' => $category->id]) }}" data-id="{{ $category->id }}">
                                                     <i class="mdi mdi-delete"></i>
                                                 </button>
                                                 {{-- <button class="btn btn-sm btn-secondary view-offcanvas" data-size="700px"
@@ -135,7 +135,7 @@
 
             // Edit Category - Load data into modal
             $(document).on('click', '.edit-category', function () {
-                var categoryId = $(this).data('id');
+                var url = $(this).data('url');
 
                 // Clear previous errors
                 $('#editCategoryForm .error-div span').text('');
@@ -143,7 +143,7 @@
 
                 // Load category data
                 $.ajax({
-                    url: '/category/' + categoryId + '/edit',
+                    url: url,
                     method: 'GET',
                     success: function (response) {
                         $('#edit_category_id').val(response.category.id);
@@ -215,10 +215,11 @@
             // Delete Category
             $(document).on('click', '.delete-category', function () {
                 var categoryId = $(this).data('id');
+                var url = $(this).data('url');
 
                 if (confirm('Are you sure you want to delete this category?')) {
                     $.ajax({
-                        url: '/category/' + categoryId,
+                        url: url,
                         method: 'DELETE',
                         success: function (response) {
                             if (response.success) {
