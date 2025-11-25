@@ -66,11 +66,11 @@
                                             </td>
                                             <td>{{ $product->created_at->format('M d, Y') }}</td>
                                             <td>
-                                                <button class="btn btn-sm btn-warning edit-product" data-id="{{ $product->id }}"
+                                                <button class="btn btn-sm btn-warning edit-product" data-url="{{ route('product.edit', ['id' => $product->id]) }}" data-id="{{ $product->id }}"
                                                     data-bs-toggle="modal" data-bs-target="#editProductModal">
                                                     <i class="mdi mdi-pencil"></i>
                                                 </button>
-                                                <button class="btn btn-sm btn-danger delete-product" data-id="{{ $product->id }}">
+                                                <button class="btn btn-sm btn-danger delete-product" data-url="{{ route('product.destroy', ['id' => $product->id]) }}" data-id="{{ $product->id }}">
                                                     <i class="mdi mdi-delete"></i>
                                                 </button>
                                             </td>
@@ -409,9 +409,10 @@
 
                 // Create FormData for file upload
                 var formData = new FormData(this);
+                var url = $(this).attr('action');
 
                 $.ajax({
-                    url: $(this).attr('action'),
+                    url: url,
                     method: 'POST',
                     data: formData,
                     processData: false,
@@ -455,11 +456,12 @@
 
             // Delete Product
             $(document).on('click', '.delete-product', function () {
+                var url = $(this).data('url');
                 var productId = $(this).data('id');
 
                 if (confirm('Are you sure you want to delete this product?')) {
                     $.ajax({
-                        url: '/product/' + productId,
+                        url: url,
                         method: 'DELETE',
                         success: function (response) {
                             if (response.success) {
