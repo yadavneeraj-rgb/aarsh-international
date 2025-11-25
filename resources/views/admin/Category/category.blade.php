@@ -112,7 +112,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary" id="editSubmitBtn">Update Category</button>
+                        <button type="submit" class="btn btn-primary" data-url="{{ route('category.update', ['id' => $category->id]) }}" id="editSubmitBtn">Update Category</button>
                     </div>
                 </form>
 
@@ -177,9 +177,10 @@
 
                 // Create FormData for file upload
                 var formData = new FormData(this);
+                var url = submitBtn.data('url');
 
                 $.ajax({
-                    url: $(this).attr('action'),
+                    url: url,
                     method: 'POST',
                     data: formData,
                     processData: false,
